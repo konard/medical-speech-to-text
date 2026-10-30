@@ -66,14 +66,30 @@ test('ten recordings, partial references, actual timed words and provenance expo
     node.currentTime = 0.35;
   });
   await expect(card.locator('.word[aria-current="true"]')).toHaveCount(0);
-  await audio.evaluate(async (node) => {
+  // Observe transitions in the page: locator polling can miss short word spans.
+  const playedWords = await audio.evaluate(async (node) => {
+    const observed = new Set();
+    const recording = node.closest('article');
+    const observer = new globalThis.MutationObserver(() => {
+      const active = recording.querySelector('.word[aria-current="true"]');
+      if (active && !node.paused) {
+        observed.add(active.textContent);
+      }
+    });
+    observer.observe(recording, {
+      attributes: true,
+      subtree: true,
+      attributeFilter: ['aria-current'],
+    });
     node.currentTime = 0.1;
     await node.play();
+    await new Promise((resolve) =>
+      node.addEventListener('ended', resolve, { once: true })
+    );
+    observer.disconnect();
+    return [...observed];
   });
-  await expect(card.locator('.word[aria-current="true"]')).toHaveText('No');
-  await expect(card.locator('.word[aria-current="true"]')).toHaveText(
-    'allergies.'
-  );
+  expect(playedWords).toEqual(['No', 'allergies.']);
   await expect.poll(() => audio.evaluate((node) => node.ended)).toBe(true);
   await expect(card.locator('.word[aria-current="true"]')).toHaveCount(0);
   const downloaded = page.waitForEvent('download');

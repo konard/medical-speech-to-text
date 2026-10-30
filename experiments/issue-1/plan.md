@@ -30,9 +30,9 @@ Objective: address every requirement of issue #1 in PR #2 on
         candidate revision. Save large logs; read files in <=1500-line chunks.
 12. [ ] Review whole diff and acceptance mapping, commit useful atomic steps,
         push one validated batch exclusively to the prepared branch.
-13. [x] List fresh CI runs with timestamps/SHA, wait for every same-revision run;
+13. [ ] List fresh CI runs with timestamps/SHA, wait for every same-revision run;
         download all failed logs under ci-logs, identify exact errors before next batch.
-14. [x] Update PR title/body with scope, reproduction, tests, screenshots,
+14. [ ] Update PR title/body with scope, reproduction, tests, screenshots,
         limitations, demo link and `Fixes #1`; review gh pr diff, clean git status,
         mark ready after verification; no merge/release without authorization.
 
@@ -45,3 +45,11 @@ output, playback/seek tests, desktop/mobile screenshots; Node 1041 pass, Bun 104
 pass, Deno 1040 pass + one inherited bin-symlink skip. Root check, secret scan,
 workflow policy and browser build pass. Exact committed candidate is checked
 again before the coordinator pushes. Paid cloud/clinical work is a planned stage.
+
+Pre-push browser rerun exposed polling that missed a 300 ms active-word span.
+The playback test now observes actual DOM transitions during playback, asserts
+both words in order and still verifies seeking, gaps and clearing at audio end.
+The failure log is preserved in ignored ci-logs; repeated runs verify the change.
+An intervening HTML edit reset a Vite inference run through live reload; that run
+was interrupted, diagnosed and repeated without editing served files. Model tests
+now log browser status and fail promptly on a completed but unsuccessful batch.

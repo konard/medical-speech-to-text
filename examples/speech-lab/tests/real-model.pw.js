@@ -18,12 +18,21 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
   });
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./index.html');
+  await page.exposeFunction('reportModelStatus', (value) =>
+    console.log(`Browser status: ${value}`)
+  );
+  await page.locator('#status').evaluate((node) => {
+    new globalThis.MutationObserver(() =>
+      globalThis.reportModelStatus(node.textContent)
+    ).observe(node, { childList: true, subtree: true, characterData: true });
+  });
   await page.locator('#samples').click();
   await expect(page.locator('#selection')).toContainText('10 PriMock57');
   await page.locator('#run').click();
-  await expect(page.locator('#status')).toContainText('10 of 10', {
+  await expect(page.locator('#status')).toContainText('Finished', {
     timeout: 540000,
   });
+  await expect(page.locator('#status')).toContainText('10 of 10');
   await expect(page.locator('article[data-status="complete"]')).toHaveCount(10);
   await expect(page.locator('.word').first()).toBeVisible();
   const downloadEvent = page.waitForEvent('download');
@@ -59,9 +68,10 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
   await page.locator('#references').fill('');
   await page.locator('#model').selectOption('base');
   await page.locator('#run').click();
-  await expect(page.locator('#status')).toContainText('1 of 1', {
+  await expect(page.locator('#status')).toContainText('Finished', {
     timeout: 300000,
   });
+  await expect(page.locator('#status')).toContainText('1 of 1');
   await expect(page.locator('.raw')).not.toBeEmpty();
   await expect(
     page.getByText('No reference · accuracy not scored')
