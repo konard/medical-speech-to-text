@@ -31,5 +31,9 @@ model quality from mocked tests.
 Only the coordinator pushes. Merge, release and deployment are separate actions.
 Build sequentially when memory intensive; never remove user caches or weaken tests.
 
-Unfinished acceptance: main Dependency graph enablement and owned npm package /
+Dependency graph enabled through the documented repository API; strict probe passes.
+Unfinished acceptance: owned npm package /
 first-publish credentials. Neither is replaced by passing PR report-mode checks.
+
+This implementation snapshot precedes the coordinated push. Exact-revision local
+checks, hosted verification and CI outcomes are recorded in PR 4 after completion.

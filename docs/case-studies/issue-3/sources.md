@@ -29,3 +29,5 @@ The research selects a small tested browser baseline and preserves the full
 model, deployment and device classes with selection gates; it cannot certify every
 unreleased model, proprietary checkpoint, browser/OS combination or private
 account entitlement. Unknowns remain explicit research inputs rather than passes.
+
+[Enable vulnerability alerts REST API](https://docs.github.com/en/rest/repos/repos#enable-vulnerability-alerts): explicitly enables dependency alerts **and** the graph; used successfully to resolve the main prerequisite.

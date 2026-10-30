@@ -47,5 +47,6 @@ protocol: Australian AWS hosting, clinical datasets, microphone crossover,
 20-engine comparison, CRM confirmation, fine-tuning and lifecycle gates. This PR
 audits that plan and expands its device/browser layer. It does not mislabel a
 future clinical pilot, procurement or private cloud deployment as an execution.
-Main's dependency graph and npm release setup require repository/account actions;
-[their acceptance remains explicitly unfinished](ci-investigation.md).
+The dependency graph prerequisite has been enabled and verified. Main's npm
+release setup still requires package/account credentials; [that acceptance
+remains explicitly unfinished](ci-investigation.md).
