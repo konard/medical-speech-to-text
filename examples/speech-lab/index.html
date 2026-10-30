@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect width=%2724%27 height=%2724%27 rx=%276%27 fill=%27%23256d57%27/%3E%3C/svg%3E"
+    />
+    <title>Speech Lab · Medical speech research</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./index.html"
+        ><span class="mark">∿</span> Speech Lab</a
+      ><span class="badge">RESEARCH WORKBENCH</span
+      ><a
+        href="https://github.com/konard/medical-speech-to-text/tree/issue-1-362226f4199c/docs/case-studies/issue-1"
+        >Research &amp; methods ↗</a
+      >
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">LISTEN. TRANSCRIBE. COMPARE.</p>
+        <h1>Every word, in context.</h1>
+        <p>
+          Explore speech recognition on your own recordings.<br />Compare
+          references and follow each word as you listen.
+        </p>
+        <div class="privacy">
+          <span>◉</span>
+          <p>
+            <strong>Audio stays in this browser.</strong> Model files download
+            from public hosts. Use synthetic or public recordings here; this
+            public demo is not an Australian clinical deployment.
+          </p>
+        </div>
+      </section>
+      <section class="workspace" aria-label="Speech experiment">
+        <div class="setup">
+          <div class="section-title">
+            <span class="step">01</span>
+            <h2>Set up an experiment</h2>
+          </div>
+          <label for="model">Recognition model</label
+          ><select id="model">
+            <option value="tiny">Whisper tiny · English · ~75 MB</option>
+            <option value="base">Whisper base · English · ~145 MB</option>
+          </select>
+          <p class="hint">
+            Runs locally on CPU. First use downloads the model; later runs reuse
+            the browser cache.
+          </p>
+          <label class="drop" for="files"
+            ><span class="upload">↥</span><strong>Choose your recordings</strong
+            ><span>WAV, MP3, FLAC, OGG, M4A or WebM</span
+            ><span class="hint"
+              >1–20 files · 120 seconds each · 25 MiB per file<br />100 MiB
+              total · mono or stereo</span
+            ></label
+          ><input
+            id="files"
+            type="file"
+            accept="audio/*,.wav,.flac,.m4a,.webm,.mp4"
+            multiple
+          />
+          <button id="samples" class="quiet">
+            Try 10 public consultation clips ↗
+          </button>
+          <p id="selection" class="hint">No recordings selected</p>
+          <label for="references"
+            >Reference transcripts <span class="optional">optional</span></label
+          ><textarea
+            id="references"
+            rows="4"
+            spellcheck="false"
+            placeholder='{"consultation.wav": "No known allergies."}'
+          ></textarea
+          ><label class="reference-file" for="reference-file"
+            >Or choose a reference JSON file<input
+              id="reference-file"
+              type="file"
+              accept=".json,application/json"
+          /></label>
+          <p class="hint">
+            Use exact filenames. An empty string means silence. Without
+            references, you still get the model’s actual transcript.
+          </p>
+          <label class="check"
+            ><input id="command-mode" type="checkbox" /> Preview commands in
+            dry-run mode</label
+          >
+          <p class="hint">
+            Only “open patient 123” is allowlisted. Proposals require
+            confirmation in a future CRM integration. Nothing is sent or
+            executed.
+          </p>
+          <div class="actions">
+            <button id="run" class="primary">
+              Transcribe recordings <span>→</span></button
+            ><button id="cancel" disabled>Stop</button>
+          </div>
+        </div>
+        <div class="results-pane">
+          <div class="section-title">
+            <span class="step">02</span>
+            <h2>Listen &amp; review</h2>
+            <button id="export" disabled class="quiet">Export JSON ↓</button>
+          </div>
+          <div class="statusbar">
+            <span id="status-dot"></span>
+            <p id="status" role="status" aria-live="polite">
+              Ready when you are
+            </p>
+          </div>
+          <div id="summary" class="summary" hidden></div>
+          <div id="results">
+            <div class="empty">
+              <span>≋</span>
+              <h3>Your recordings become readable.</h3>
+              <p>
+                Choose a small dataset, then transcribe.<br />Select a timed
+                word to jump to that moment.
+              </p>
+              <div class="pills">
+                <span>Local inference</span><span>Word timing</span
+                ><span>WER &amp; CER</span>
+              </div>
+            </div>
+          </div>
+          <button id="clear" class="quiet">
+            Clear recordings &amp; results
+          </button>
+        </div>
+      </section>
+      <footer>
+        <p>
+          Research only · Review medical terms, doses and negations before any
+          clinical use.
+        </p>
+        <p>
+          English models · Word timestamps are estimates · No CRM connection
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

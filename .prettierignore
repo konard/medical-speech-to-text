@@ -9,3 +9,7 @@ CLAUDE.md
 # Case study raw data files (downloaded from external sources)
 docs/case-studies/*/data/
 dev/log/
+ci-logs/
+.cache/
+**/test-results/
+**/playwright-report/
