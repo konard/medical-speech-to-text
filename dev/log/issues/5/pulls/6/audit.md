@@ -341,3 +341,53 @@ applied (`validation/deno-clean-checkout-fixed.log.gz`). The expected failing
 first phase remains in the same log; the prepared phase starts at line 270 and
 the full suite at line 465. This is Linux evidence; hosted Windows timing is
 still required.
+
+### Verified third source batch and final evidence
+
+Source revision `479121fe5c62968914ad227190619a6eee4439bf` passed all 37
+sequential exact-revision local checks. Node and Bun passed 1077 tests each;
+Deno passed 1076 with its existing bin-symlink limitation skipped. Four fresh
+installs and explicit lock audits reported zero vulnerabilities, without install
+warnings. Browser contracts, speech build, Linux desktop packaging, all three
+native adapters, syntax/docs/line limits, version/changeset guards, workflow and
+status coverage, actionlint/ShellCheck, both zizmor passes and secretlint passed.
+Native JavaScript, strict parity and regeneration passed before Rust validation.
+The command/SHA/result index is `validation/final-479121f-results.json`; complete
+output is archived in `validation/final-479121f.tar.gz`.
+
+All six hosted runs were created at **2026-10-30 20:42:26 UTC**, after the source
+commit, and all passed on that exact SHA:
+
+- [Checks and release 41125311184](https://github.com/konard/medical-speech-to-text/actions/runs/41125311184)
+- [Example app 41125311058](https://github.com/konard/medical-speech-to-text/actions/runs/41125311058)
+- [Workflows 41125310503](https://github.com/konard/medical-speech-to-text/actions/runs/41125310503)
+- [Security 41125310527](https://github.com/konard/medical-speech-to-text/actions/runs/41125310527)
+- [Broken Link Checker 41125310584](https://github.com/konard/medical-speech-to-text/actions/runs/41125310584)
+- [JavaScript-first example 41125310613](https://github.com/konard/medical-speech-to-text/actions/runs/41125310613)
+
+The Checks log records all nine runtime/OS legs passing. Deno finished in
+43 seconds on macOS (line 7525), 29 on Linux (20004), and **54/100 on Windows**
+(16419), below the unchanged 70-second warning threshold. The existing
+runtime/platform skips remain explicit: Bun discovery is covered in Bun legs,
+POSIX shell fixtures run on Linux/macOS, and Deno's bin-symlink limitation is
+unchanged. No new skip or reduced assertion was introduced to obtain these
+results. The speech job passed ten browser contracts (2669) and both complete
+real-model acceptance cases (2853), including ten attributed mock consultations.
+Actual archive transfer/Pages layout, unchanged Pages bundle and all three
+desktop consumer/package probes passed without their former warnings.
+
+Complete logs and API snapshots are in `ci-logs/batch3-479121f.tar.gz`;
+`batch3-result-index.txt` identifies important original line numbers. Review of
+all six logs found only the **unfinished external npm preflight warning**, at
+Checks line 170. No ignored-build, install, dependency-deprecation, low-Scorecard
+or suite-budget warning remains in this hosted batch. The strict main refusal
+and PR report-mode distinction are preserved; successful CI does not resolve
+package ownership or bootstrap credentials.
+
+The full PR diff exceeds GitHub's 300-file combined-diff endpoint limit because
+of the requested investigation evidence. The paginated PR-files API lists all
+308 source-batch paths and matches the full local Git diff exactly. Changed
+source, lock identities and complete evidence diff were reviewed locally.
+Latest main remains an ancestor. This final documentation batch preserves the
+verified source results without changing application or CI behavior. Publication
+readiness and PR readiness remain blocked and unfinished as described above.

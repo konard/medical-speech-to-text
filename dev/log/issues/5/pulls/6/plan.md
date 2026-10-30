@@ -18,14 +18,14 @@ blockers explicit; do not merge, release or deploy. One coordinator owns pushes.
 - [x] Apply fixes across every affected location and report shared template bugs
       upstream with reproducible evidence (explicitly authorized by issue 5).
 - [x] Add an appropriate changeset; preserve manual version guard policy.
-- [ ] Run all required local checks on the exact candidate revision, bounded by
+- [x] Run all required local checks on the exact candidate revision, bounded by
       the 2.92 GiB container memory limit. Save large logs; inspect in chunks of
       at most 1500 lines. Avoid concurrent memory-heavy builds.
-- [ ] Review the complete diff, ensure latest main is merged, commit atomic work,
+- [x] Review the complete diff, ensure latest main is merged, commit atomic work,
       and push one complete batch to issue-5-5e1ddeb3d502 only.
-- [ ] Wait for same-revision CI, collect every failure and warning before the
+- [x] Wait for same-revision CI, collect every failure and warning before the
       next batch, and resolve them without weakening assertions.
-- [ ] Update PR title/body with reproduction, tests, evidence and positive
+- [x] Update PR title/body with reproduction, tests, evidence and positive
       closing reference for issue 5 and every required sub-issue.
 - [ ] Mark PR 6 ready after full verification; ensure clean working tree and
       consistent code, tests, evidence and description.
@@ -37,3 +37,10 @@ install-script policy and Windows cold-install budget pressure. The third batch
 addresses all findings together, preserving the full suite and existing budgets.
 The npm identity/bootstrap criterion remains explicitly blocked; see audit.md.
 PR readiness remains unfinished until that external criterion is resolved.
+
+The third source batch, `479121fe5c62968914ad227190619a6eee4439bf`, passed
+all 37 exact-revision local checks and all six hosted workflows. Full logs show
+Windows Deno at 54/100 seconds and both real-model acceptance tests passing.
+The sole remaining warning is the external npm preflight blocker. This final
+documentation batch archives those results; it does not complete publication
+readiness or authorize merge, release or deployment.

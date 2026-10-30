@@ -32,3 +32,12 @@ The main release failure remains blocked on maintainer npm identity/bootstrap
 configuration. Archive, desktop and Pages warnings have tested native solutions.
 Successful PR checks do not resolve the release criterion. See the audit's
 validation ledger for the exact tested revisions and hosted results.
+
+The final source revision is `479121fe5c62968914ad227190619a6eee4439bf`.
+Its 37 exact-revision local checks are indexed in
+`validation/final-479121f-results.json`; their full output is in
+`validation/final-479121f.tar.gz`. All six complete hosted workflow logs and API
+snapshots are in `ci-logs/batch3-479121f.tar.gz`, with human-readable run URLs,
+timings and the remaining warning in `ci-logs/batch3-result-index.txt`.
+Extract either final archive into an owned temporary directory before reading
+its logs. Both archives contain relative regular-file paths only.
