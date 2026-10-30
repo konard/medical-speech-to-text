@@ -1,0 +1,362 @@
+[
+  {
+    "check": "root-install",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "ci",
+      "--no-fund"
+    ]
+  },
+  {
+    "check": "speech-install",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      "examples/speech-lab",
+      "--no-fund"
+    ]
+  },
+  {
+    "check": "desktop-install",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      "examples/universal-app",
+      "--no-fund"
+    ]
+  },
+  {
+    "check": "artifact-install",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      ".github/actions/artifact-transport",
+      "--ignore-scripts",
+      "--no-fund"
+    ]
+  },
+  {
+    "check": "node",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "test"
+    ]
+  },
+  {
+    "check": "bun",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "bun",
+      "test",
+      "--timeout",
+      "30000"
+    ]
+  },
+  {
+    "check": "deno",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "deno",
+      "test",
+      "-A",
+      "--parallel"
+    ]
+  },
+  {
+    "check": "check",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "run",
+      "check"
+    ]
+  },
+  {
+    "check": "artifact",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-artifact-smoke.mjs"
+    ]
+  },
+  {
+    "check": "desktop",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-desktop-smoke.mjs"
+    ]
+  },
+  {
+    "check": "pages",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "--throw-deprecation",
+      "experiments/issue-5-pages-smoke.mjs",
+      "/tmp/issue-5-deploy-pages-bundle.cjs"
+    ]
+  },
+  {
+    "check": "syntax",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "bash",
+      "scripts/check-mjs-syntax.sh"
+    ]
+  },
+  {
+    "check": "docs",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "bash",
+      "scripts/check-required-docs.sh"
+    ]
+  },
+  {
+    "check": "lines",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "bash",
+      "scripts/check-file-line-limits.sh"
+    ]
+  },
+  {
+    "check": "changeset",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "scripts/validate-changeset.mjs"
+    ]
+  },
+  {
+    "check": "version",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "scripts/check-version.mjs"
+    ]
+  },
+  {
+    "check": "workflows",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "scripts/check-ci-workflows.mjs"
+    ]
+  },
+  {
+    "check": "status",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "scripts/check-status-gate-covers-all-jobs.mjs",
+      ".github/workflows/release.yml",
+      ".github/workflows/links.yml",
+      ".github/workflows/security.yml",
+      ".github/workflows/workflows.yml",
+      ".github/workflows/example-app.yml"
+    ]
+  },
+  {
+    "check": "actionlint",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "actionlint",
+      "-ignore",
+      "unexpected key .queue. for .concurrency. section"
+    ]
+  },
+  {
+    "check": "zizmor",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "zizmor",
+      "--offline",
+      "--config",
+      ".github/zizmor.yml",
+      "--min-confidence",
+      "low",
+      "--persona",
+      "regular",
+      "."
+    ]
+  },
+  {
+    "check": "zizmor-pedantic",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "zizmor",
+      "--offline",
+      "--config",
+      ".github/zizmor.yml",
+      "--persona",
+      "pedantic",
+      "--min-severity",
+      "high",
+      "--min-confidence",
+      "high",
+      "."
+    ]
+  },
+  {
+    "check": "secretlint",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npx",
+      "--yes",
+      "-p",
+      "secretlint@13.0.7",
+      "-p",
+      "@secretlint/secretlint-rule-preset-recommend@13.0.7",
+      "secretlint",
+      "**/*"
+    ]
+  },
+  {
+    "check": "browser",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "--prefix",
+      "examples/speech-lab",
+      "run",
+      "test:browser"
+    ]
+  },
+  {
+    "check": "speech-build",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "--prefix",
+      "examples/speech-lab",
+      "run",
+      "build"
+    ]
+  },
+  {
+    "check": "desktop-package",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "run",
+      "example:desktop:package"
+    ]
+  },
+  {
+    "check": "native",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "--test",
+      "examples/javascript-first/native-check.mjs"
+    ]
+  },
+  {
+    "check": "parity",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "examples/javascript-first/check-parity.mjs",
+      "--strict"
+    ]
+  },
+  {
+    "check": "regenerate",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "node",
+      "examples/javascript-first/generate.mjs",
+      "--check"
+    ]
+  },
+  {
+    "check": "rust-check",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "rustc",
+      "--crate-type",
+      "lib",
+      "--emit",
+      "metadata",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified.rmeta"
+    ]
+  },
+  {
+    "check": "rust-build",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "rustc",
+      "--crate-type",
+      "lib",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified.rlib"
+    ]
+  },
+  {
+    "check": "rust-compile-test",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "rustc",
+      "--test",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified-rust-tests"
+    ]
+  },
+  {
+    "check": "rust-test",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "/tmp/issue-5-verified-rust-tests"
+    ]
+  }
+]

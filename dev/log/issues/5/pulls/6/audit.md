@@ -3,8 +3,9 @@
 This investigation concerns [issue 5](https://github.com/konard/medical-speech-to-text/issues/5)
 and [PR 6](https://github.com/konard/medical-speech-to-text/pull/6).
 It is **not a completed release repair**: initial npm publication requires a
-maintainer credential, and three desktop dependency deprecations remain upstream.
-The PR must remain unmerged while these acceptance criteria are unfinished.
+maintainer-selected package identity and bootstrap credential. Desktop, archive
+and Pages warning fixes have passed their hosted compatibility probes. The PR must remain draft and
+unmerged while the npm configuration criterion is unfinished.
 
 ## Scope and immutable inputs
 
@@ -33,8 +34,8 @@ dependencies/build outputs are outside Git and are not mistaken for source.
 | Investigate every failing workflow with current timestamps and SHA | Trust issue snapshot vs query current runs; query both branches and workflow inventory, preserve older failures separately | `initial-main-runs.json`, `initial-branch-runs.json`, full baseline logs and annotation indexes; initial PR runs passed but do not supersede main's release failure | Audited |
 | Fix all errors, including the release failure | Weaken preflight, rename the public package speculatively, or verify credentials honestly; retain strict preflight and document precise bootstrap action | Main log lines 158–160 names nonexistent package and absent NPM_TOKEN; empty `secret-names.json`; existing preflight refusal/report-mode tests | **Blocked: maintainer npm identity/bootstrap** |
 | Check false positives and false negatives across the whole codebase | Only repair the visible red job vs exercise gate refusal paths; add minimal failing fixtures first | New regression test rejects invalid `.js`, nested `.cjs/.mjs`, empty inventory; positive nested shipped-file fixture; CodeQL now includes examples | Implemented |
-| Fix warnings without concealing failures | Blanket warning suppression vs reviewed policies and compatible dependencies; choose explicit policies, real archive probes and strict deprecation errors | All four npm roots checked for install-script decisions; esbuild/fsevents/Electron approvals pinned; optional PTY denied; artifact glob/reader replaced | Implemented; hosted revalidation pending |
-| Remove every desktop dependency warning | Upgrade released components, force incompatible majors, or adapt the narrow used API; validate ASAR 4 and a scoped native cleanup adapter | ASAR 4.3.1 plus temp-only fs.rm adapter; before/after deprecation tests, real builder/temp API probe, local Linux package and three-platform hosted probe | Implemented; hosted revalidation pending |
+| Fix warnings without concealing failures | Blanket warning suppression vs reviewed policies and compatible dependencies; choose explicit policies, real archive probes and strict deprecation errors | All four npm roots checked for install-script decisions; esbuild/fsevents/Electron approvals pinned; optional PTY denied; artifact glob/reader replaced | Implemented; second-batch hosted probes passed |
+| Remove every desktop dependency warning | Upgrade released components, force incompatible majors, or adapt the narrow used API; validate ASAR 4 and a scoped native cleanup adapter | ASAR 4.3.1 plus temp-only fs.rm adapter; before/after deprecation tests, real builder/temp API probe, local Linux package and three-platform hosted probe | Implemented; second-batch hosted probes passed |
 | Compare all files to both recommended templates | Copy unrelated Python application/release files vs compare all paths and map capabilities; use content hashes and functional mapping | Complete union TSVs; mapping below covers every workflow/script family and relevant supporting configuration | Audited; applicable archive roundtrip adopted |
 | Follow every referenced CI/CD best practice | Copy examples blindly vs verify all 17 principles against local behavior | Seventeen-row checklist below; existing acceptance assertions retained, additional coverage strengthens them | Audited |
 | Report the same defects in upstream templates | File duplicates vs search existing open issues first; no open matching issue found, report with reproductions | JavaScript [issue 275](https://github.com/link-foundation/js-ai-driven-development-pipeline-template/issues/275); Python [issue 128](https://github.com/link-foundation/python-ai-driven-development-pipeline-template/issues/128); exact bodies preserved here | Reported; upstream issue is not local completion |
@@ -245,9 +246,98 @@ four low Scorecard warnings and the example retained desktop deprecations and
 missing author metadata. These findings were collected together before the next
 batch. The ZIP, desktop and Pages adapters above address them and the masked Pages warning. Only the npm
 identity/bootstrap criterion remains externally blocked; the PR stays draft
-until that requirement is resolved. Second-batch results will be recorded after
-exact-revision validation and hosted execution. The intermediate revision
+until that requirement is resolved. Second-batch results and follow-up corrections are recorded below. The intermediate revision
 302572a passed Node/Bun (1076 each), Deno (1075 plus one documented skip),
 lint/format/duplication, native archive/desktop probes, syntax, docs and version
 guards. A local status-check invocation omitted its required workflow arguments;
 that usage error is preserved and corrected in the final validation command.
+
+### Exact second-batch local validation
+
+Source candidate `5526814df703b04bbcf509bfaab122266bdb4a28` passed all 32
+sequential checks in `validation/verified-results.json`, the four explicit npm
+lock audits and ShellCheck in `verified-additional-results.json`, and the
+isolated Changesets dry-run in `verified-release-dryrun-result.json`.
+The commands and candidate SHA are recorded for every check. Node and Bun passed
+1076 tests each; Deno passed 1075 with its existing single documented skip.
+Fresh installs in all four roots emitted no install warnings and reported zero
+vulnerabilities. Real archive/desktop/Pages probes, strict syntax, documentation,
+line limits, changeset/version guards, all five status-gate coverage checks,
+actionlint, both zizmor passes, secretlint, speech browser/build and actual Linux
+desktop packaging all passed. Native JavaScript, strict parity and regeneration
+checks preceded the independent Rust check/build/test fixture; its behavioral
+observation test passed. Ten regular browser tests passed with two explicit
+real-model opt-in skips; hosted CI retains all real-model assertions.
+
+The local browser process uses preinstalled Node 26, whose Playwright loader
+emits DEP0205 for module.register. This environment-specific warning remains
+visible in `verified-browser.log.gz`; hosted tooling uses documented Node 24.
+Electron's duplicate-reference message is informational, not a warning or error.
+The earlier missing-author and deprecated-package warnings are absent from the
+actual local package log. Local offline zizmor must be invoked from repository
+root (`.`), matching CI; targeting `.github` directly also traversed nested
+ignored dependencies, an invocation error preserved in `pages-zizmor.log.gz`.
+The corrected run and both exact-candidate passes found no issues.
+
+Whole-diff review covered the GitHub PR diff, every changed source file and both
+lockfiles' package-identity changes against main. The complete template union
+inventories include the new adapters and probes. Latest main remained ancestor
+`d7ecf1e501de152b0b7829395dcc7458590ea4db`; issue/PR comments, inline reviews and
+review summaries were rechecked and remained empty. The batch was pushed once
+at 20:21 UTC; all six same-SHA runs were created at 20:21:45 UTC, after the source
+commit at 20:15:29 UTC. Hosted conclusions and annotation review follow below.
+
+
+### Second hosted batch and Deno corrections
+
+All six workflows for `5526814df703b04bbcf509bfaab122266bdb4a28` completed.
+Five passed: Example app 41122556113, Workflows 41122555939, Links 41122555884,
+JavaScript-first 41122556468 and Security 41122556351. The real archive SDK/Pages
+roundtrip, unchanged Pages bundle and all three desktop consumers/packages passed
+without their former warnings. Security reported no new low Scorecard warning.
+Complete logs, run timestamps/SHA and the index are preserved as `batch2-*`.
+
+Checks 41122556175 failed all three Deno legs at the Pages warning-preservation
+assertion: lines 7231–7246 (macOS), 16044–16059 (Linux), 19628–19643 (Windows).
+The clean-checkout native reproduction exposes `Cannot find module 'punycode/'`
+in `validation/deno-native-reproduction.log:222`. Local npm installs had
+accidentally supplied a transitive copy; Deno's isolated dependency layout did
+not. Every runtime now uses Node 24 for native fixtures and installs both the
+root and action npm locks explicitly. Deno still runs the entire suite itself
+and validates its independent frozen dependency graph before execution.
+
+The same complete log also contains Deno's ignored-build warning (for example
+lines 6072–6090): npm's `allowScripts` decision does not apply to Deno. Its own
+version-pinned `allowScripts.deny` entry now rejects the unused node-pty build.
+A regression test requires independent decisions for Deno, and the clean-worktree
+experiment verifies the warning disappears while preserving all native tests.
+No optional native compilation is enabled to silence it. The Windows suite
+also warned at 71 seconds and finished at 77/100 (lines 19614, 19642). Cold
+registry initialization ran inside that budget. Root/adapter installation and
+Deno's `--no-run --frozen` graph preparation now precede the timed suite, matching
+the other runtimes' dependency setup. Its 100-second deadline, 70-second early
+warning and every acceptance case remain unchanged. Hosted timing verification
+is required before calling that warning resolved.
+
+`experiments/issue-5-deno-native.mjs` creates an owned detached worktree,
+reproduces the real missing-module failure, installs both locked native trees,
+prepares Deno's frozen graph and executes the complete unchanged-budget suite.
+The initial prepared run passed 1075 tests with one documented skip in 36 seconds
+(`validation/deno-clean-checkout.log.gz`); it revealed the independent Deno
+policy warning above, so the final probe also checks that warning is absent.
+The improved child assertion retains stderr/stdout for future resolution errors.
+
+Primary sources for this correction: [Deno test preparation](https://docs.deno.com/runtime/reference/cli/test/),
+[Deno lifecycle configuration](https://docs.deno.com/examples/npm_lifecycle_scripts_tutorial/),
+and the immutable [Deno 2.9.7 allow/deny parser](https://github.com/denoland/deno/blob/v2.9.7/libs/config/deno_json/mod.rs#L2525)
+and [lifecycle decision implementation](https://github.com/denoland/deno/blob/v2.9.7/libs/npm_installer/lifecycle_scripts.rs#L275).
+These runtime-specific decisions are additional coverage; npm approval alone
+must never be presented as Deno approval.
+
+
+The final clean-checkout probe passed 1076 tests with one documented skip in
+34 seconds, with no Deno ignored-build warning after its independent denial was
+applied (`validation/deno-clean-checkout-fixed.log.gz`). The expected failing
+first phase remains in the same log; the prepared phase starts at line 270 and
+the full suite at line 465. This is Linux evidence; hosted Windows timing is
+still required.

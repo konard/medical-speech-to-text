@@ -1,0 +1,76 @@
+[
+  {
+    "check": "audit-root",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "audit",
+      "--package-lock-only",
+      "--audit-level=high"
+    ]
+  },
+  {
+    "check": "audit-speech",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      "examples/speech-lab",
+      "--package-lock-only",
+      "--audit-level=high"
+    ]
+  },
+  {
+    "check": "audit-desktop",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      "examples/universal-app",
+      "--package-lock-only",
+      "--audit-level=high"
+    ]
+  },
+  {
+    "check": "audit-artifact",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      ".github/actions/artifact-transport",
+      "--package-lock-only",
+      "--audit-level=high"
+    ]
+  },
+  {
+    "check": "shellcheck",
+    "exit": 0,
+    "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+    "command": [
+      "/tmp/issue-5-ci-tools/bin/shellcheck",
+      ".husky/pre-commit",
+      "docs/case-studies/issue-41/data/hive-mind-check-file-line-limits.sh",
+      "docs/case-studies/issue-41/data/js-template-check-file-line-limits-before.sh",
+      "experiments/budget-runner-demo.sh",
+      "experiments/issue-141-multilang-ignore-list.sh",
+      "experiments/test-issue75-buildx-mirror-fallback.sh",
+      "scripts/check-dependency-graph.sh",
+      "scripts/check-file-line-limits.sh",
+      "scripts/check-mjs-syntax.sh",
+      "scripts/check-pages.sh",
+      "scripts/check-pipeline-status.sh",
+      "scripts/check-required-docs.sh",
+      "scripts/preflight-credentials.sh",
+      "scripts/read-job-cancel-in-progress.sh",
+      "scripts/run-with-budget-warning.sh",
+      "scripts/simulate-fresh-merge.sh"
+    ]
+  }
+]

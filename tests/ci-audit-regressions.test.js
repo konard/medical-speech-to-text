@@ -41,6 +41,25 @@ describe('CI audit regressions', () => {
     });
   }
 
+  it('records Deno decisions separately from npm install-script decisions', () => {
+    const { allowScripts } = JSON.parse(readFileSync('deno.json', 'utf8'));
+    const { packages } = JSON.parse(readFileSync('package-lock.json', 'utf8'));
+    const npmPolicy = JSON.parse(
+      readFileSync('package.json', 'utf8')
+    ).allowScripts;
+    for (const [path, dependency] of Object.entries(packages)) {
+      if (!dependency.hasInstallScript) {
+        continue;
+      }
+      const name = path.split('node_modules/').at(-1);
+      const decision = npmPolicy[name] === false ? 'deny' : 'allow';
+      assert.ok(
+        allowScripts?.[decision]?.includes(`npm:${name}@${dependency.version}`),
+        `Deno must independently ${decision} ${name}@${dependency.version}`
+      );
+    }
+  });
+
   it('includes shipped applications in CodeQL analysis', () => {
     const config = readFileSync('.github/codeql/codeql-config.yml', 'utf8');
     assert.doesNotMatch(config, /^\s*-\s*examples\s*$/m);

@@ -1,0 +1,62 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 3a2951a..3809219 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,26 @@
+ # Changelog
+ 
++## 0.12.0
++
++### Minor Changes
++
++- 1b73f2e: Add native speech evaluation utilities, a browser Whisper research demo with ten attributed audio samples, and the Australian medical speech research and delivery plan.
++- 6d324f7: Add a mobile-first React speech lab with local chat, microphone capture, model lifecycle controls and explicit quality-service comparisons. Fix the preview container's missing GitHub CLI prerequisite.
++
++### Patch Changes
++
++- 3e81da5: Close CI syntax and security scan gaps, review dependency install policies, remove artifact/desktop/Pages dependency warnings with tested compatibility adapters, and fix speech-lab's build warning.
++- baa1ee8: Run repository-wide workflow audits on all relevant inputs, report unavailable tests with explicit reasons, and exercise fixture coverage under parallel Deno testing. Give npm propagation a 25.5-minute verification window, keep runtime-owned lockfiles quiet, validate lock/config/install-script policies, and avoid duplicate publish output.
++- baa1ee8: Pin Changesets release formatting to Prettier and validate versioning on pull requests without publishing credentials. Reject unchanged moves of pending changesets while accepting new replacement fragments, and check both paths of code moves.
++- baa1ee8: Fix secrets-scan ordering, optional workflow directories, reproducible release dependency loading, Windows Git hook installation and shell line endings, and transient Web Archive lookup handling.
++- baa1ee8: Make release, preview, security and workflow checks report failures accurately;
++  preserve complete release notes; upgrade supported tooling and audited locks;
++  bound fixture process trees; and add a working opt-in JavaScript-first prerequisite
++  for mixed-language pipelines with immutable tested revisions.
++- baa1ee8: Require complete release and security evidence, retry transient artifact transport failures, preserve lockfile dependency graphs during versioning, and keep archived examples outside maintained checks and release metadata.
++- baa1ee8: Make version and changeset validation fail on unavailable Git comparisons, verify npm trusted publishing with a package-specific OIDC exchange, repair release badge detection and commit quoting, and recover missing GitHub releases without another version bump. Correct process survivor reporting, remove a busy-looping test fixture, pin CI scanners and hosted runner images, and exclude experimental and example code from CodeQL.
++- baa1ee8: Retry transient HTTP link failures with bounded backoff and authenticated GitHub contents fallback, and pin the Bun CI runtime to the supported 1.x line. Refresh vulnerable development dependencies so pipeline security checks can pass.
++
+ ## 0.11.31
+ 
+ ### Patch Changes
+diff --git a/package-lock.json b/package-lock.json
+index 55092b4..922ab8a 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -1,12 +1,12 @@
+ {
+   "name": "@link-foundation/example-package-name",
+-  "version": "0.11.31",
++  "version": "0.12.0",
+   "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "": {
+       "name": "@link-foundation/example-package-name",
+-      "version": "0.11.31",
++      "version": "0.12.0",
+       "license": "Unlicense",
+       "bin": {
+         "example-package-name": "bin/example-package-name.js"
+diff --git a/package.json b/package.json
+index 51a3a8d..a041954 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "@link-foundation/example-package-name",
+-  "version": "0.11.31",
++  "version": "0.12.0",
+   "description": "A JavaScript/TypeScript package template for AI-driven development",
+   "type": "module",
+   "main": "src/index.js",

@@ -30,8 +30,10 @@ blockers explicit; do not merge, release or deploy. One coordinator owns pushes.
 - [ ] Mark PR 6 ready after full verification; ensure clean working tree and
       consistent code, tests, evidence and description.
 
-The first candidate passed every hosted workflow. Full log review found four
-new Scorecard warnings and remaining desktop dependency/metadata warnings; the
-second batch addresses these with native tested adapters. The npm scope/bootstrap
-credential remains explicitly unfinished; see audit.md. Readiness is conditional
-on resolving that criterion and final validation.
+The first candidate passed every hosted workflow but retained dependency warnings.
+The second batch passed five workflows and all actual archive/Pages/desktop
+probes; Checks exposed missing Deno native-adapter dependencies, Deno's independent
+install-script policy and Windows cold-install budget pressure. The third batch
+addresses all findings together, preserving the full suite and existing budgets.
+The npm identity/bootstrap criterion remains explicitly blocked; see audit.md.
+PR readiness remains unfinished until that external criterion is resolved.

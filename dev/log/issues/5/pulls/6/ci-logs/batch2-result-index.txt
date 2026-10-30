@@ -1,0 +1,42 @@
+Second hosted batch 5526814df703b04bbcf509bfaab122266bdb4a28
+All six workflows completed; all non-passing and warning evidence collected before another push.
+
+Broken Link Checker: success https://github.com/konard/medical-speech-to-text/actions/runs/41122555884 (2026-10-30T20:21:45Z)
+Checks and release: failure https://github.com/konard/medical-speech-to-text/actions/runs/41122556175 (2026-10-30T20:21:45Z)
+Workflows: success https://github.com/konard/medical-speech-to-text/actions/runs/41122555939 (2026-10-30T20:21:45Z)
+Security: success https://github.com/konard/medical-speech-to-text/actions/runs/41122556351 (2026-10-30T20:21:45Z)
+JavaScript-first mixed-language example: success https://github.com/konard/medical-speech-to-text/actions/runs/41122556468 (2026-10-30T20:21:45Z)
+Example app: success https://github.com/konard/medical-speech-to-text/actions/runs/41122556113 (2026-10-30T20:21:45Z)
+
+
+batch2-checks-41122556175.log: 21686 lines
+170: Release Preflight	Probe every release credential	2026-10-30T20:21:51.8079263Z ##[warning]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+6072: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:22:33.7183800Z ╭ Warning
+6076: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:22:33.7411370Z │  Ignored build scripts for packages:
+6078: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:22:33.7422640Z │  npm:node-pty@1.1.0
+6427: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:22:48.1523700Z ./tests/pipeline-requirements.test.js => preserves other Node warnings with the deploy setting ... FAILED (84ms)
+7231: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:23:19.5008890Z error: Error: Expected 1 to be 0
+7242: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:23:19.5017170Z FAILED | 1073 passed | 1 failed | 2 ignored (46s)
+7244: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:23:19.5082910Z error: Test failed
+7246: Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:23:20.6185880Z ##[error]Process completed with exit code 1.
+14897: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:22:29.1124563Z ╭ Warning
+14899: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:22:29.1125834Z │  Ignored build scripts for packages:
+14900: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:22:29.1127619Z │  npm:node-pty@1.1.0
+15230: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:22:36.4597961Z ./tests/pipeline-requirements.test.js => preserves other Node warnings with the deploy setting ... FAILED (91ms)
+16044: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:23:02.2228527Z error: Error: Expected 1 to be 0
+16055: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:23:02.2236472Z FAILED | 1073 passed | 1 failed | 2 ignored (33s)
+16057: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:23:02.2257022Z error: Test failed
+16059: Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:23:02.2303564Z ##[error]Process completed with exit code 1.
+18439: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:22:40.2279668Z ╭ Warning
+18441: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:22:40.2285627Z │  Ignored build scripts for packages:
+18442: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:22:40.2287330Z │  npm:node-pty@1.1.0
+18749: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:22:57.8007227Z ./tests/pipeline-requirements.test.js => preserves other Node warnings with the deploy setting ... FAILED (150ms)
+19614: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:23:45.0406566Z ##[warning]Deno test suite has run for 71s of its 100s budget.
+19628: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:23:50.9589897Z error: Error: Expected 1 to be 0
+19639: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:23:50.9600805Z FAILED | 996 passed | 1 failed | 79 ignored (1m10s)
+19641: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:23:51.0253107Z error: Test failed
+19643: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:23:51.0927137Z ##[error]Process completed with exit code 1.
+21669: Pipeline Status	Fail the run when a required job was cancelled or failed	2026-10-30T20:24:47.4615565Z ##[error]Failing jobs: test
+21670: Pipeline Status	Fail the run when a required job was cancelled or failed	2026-10-30T20:24:47.4628126Z ##[error]Process completed with exit code 1.
+
+Other five complete workflow logs: no warning/error annotation or dependency deprecation found.

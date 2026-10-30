@@ -1,6 +1,6 @@
 status	path	local-sha256	template-sha256	disposition
 local-only	.changeset/README.md	bf33c79d7e0477dcad0e0b98c8d364db6fdb794d62ef68b6153d61e868b3bdf0		documentation, release fragments or assets: retain local project content
-local-only	.changeset/ci-audit-coverage.md	a4a8c25120da70bfb6e1d3ad24cd03761a4c6dfb4e8f26f9ab7a150142c76f47		documentation, release fragments or assets: retain local project content
+local-only	.changeset/ci-audit-coverage.md	95fb7e7ee34779539424c0d974d40864795880603a2cd5eba2bf149d3d909a68		documentation, release fragments or assets: retain local project content
 local-only	.changeset/config.json	cc08534f44426097c7ba6114a6377caf79717fadda1fe11418a213c84bd4cc16		documentation, release fragments or assets: retain local project content
 local-only	.changeset/fix-repository-audits-and-test-coverage.md	770732ea296d743ec6f264246bb2cea30a5af87fd9233ffd286a7294f40f8beb		documentation, release fragments or assets: retain local project content
 local-only	.changeset/medical-speech-lab.md	9501cdbd8ae21380301111c8e1827dbd25e9d57af20eea7adc165ece8fc02795		documentation, release fragments or assets: retain local project content
@@ -40,7 +40,7 @@ local-only	.github/workflows/example-app.yml	ed7badeb461c1cf2c89ad1b6dbfee282846
 local-only	.github/workflows/javascript-first-example.yml	66e64c4d8ae2f9096daf25a30b2495fd3f31e39eb4304d835b060bda39eb503a		pipeline: see audit.md functional comparison
 local-only	.github/workflows/javascript-first-gate.yml	918fbe3ad1d3c4f179bf02af43ba449ce2eed433439b10eb5784e98c9fef383e		pipeline: see audit.md functional comparison
 different	.github/workflows/links.yml	48ed1515ad3e72a09a66bc394efdce14488d328687e9368cd879f14bd7c74f49	ba767651c1e7686b078a76020afb192af6d2f59e8d717a42f1d110569fbd9620	pipeline: see audit.md functional comparison
-different	.github/workflows/release.yml	658e2c3d2c6f58a7832cb234a7602b56a6424aaab1341ca0b48fbcb3383fe362	787ec7c457dd8a724c0f96c2ffbe6b12bcb952de1bba1738fc443123b415dee8	pipeline: see audit.md functional comparison
+different	.github/workflows/release.yml	a4799cc1972c888a2b94d7c5c994e00f551eede6f1e3a2690598512934953bde	787ec7c457dd8a724c0f96c2ffbe6b12bcb952de1bba1738fc443123b415dee8	pipeline: see audit.md functional comparison
 different	.github/workflows/security.yml	ddc6b3c68a1870afef8b18c4e0a059a2c7e5b7f5883f74cbd630e627c9f5d676	d413ee1ebca7979bdb6de5d8d3596082fa3b1cb906a9f3d4654da8e590f89f60	pipeline: see audit.md functional comparison
 different	.github/workflows/workflows.yml	af0c33ee9030b9b9a29105b549e4b479fba7cc06383b234782e50cf1d65adcd2	b4d32ad4b8bda96e6296bec21d8379f1b2b4e7d6591cb31b7962ee7ffdcc33d4	pipeline: see audit.md functional comparison
 different	.github/zizmor.yml	86dabc7f0b74ec7cf236da421cf6ceba7f82316fd7d8b0bccf0df940dd417a07	172c7481e1de4bcf0e9c01b39d752dd0ab3ec6be86e969705957141c9c667872	pipeline: see audit.md functional comparison
@@ -102,11 +102,11 @@ template-only	changelog.d/20261024_pipeline_safeguards.md		0efb8a049263a474941f1
 template-only	changelog.d/20261029_issue_126_ci_evidence.md		61ffdf7dca8c72eb26eba343a963061145a66dda9a47cbdc10b9743124e0be87	documentation, release fragments or assets: retain local project content
 template-only	changelog.d/README.md		fe8d4b1dc0e865e9c70698cb9e3927e118451cf0dcca885e84dca491285994ab	documentation, release fragments or assets: retain local project content
 template-only	changelog.d/fragment_template.md.j2		1417d68060218437cea3cdfc3e1f72182e4997b2fff6ede26b5c46bf379c3551	documentation, release fragments or assets: retain local project content
-local-only	deno.json	8e5566ac8a4515d4a2b9d55a28b08ee844e035c7a006d54b48f93a931f4efb4e		tooling/configuration: see audit.md language and dependency decisions
+local-only	deno.json	574f58c58de79cb6ef664054b715c98700b41daec706be7ddf8ee1f0f9f5fd34		tooling/configuration: see audit.md language and dependency decisions
 local-only	deno.lock	5034e62fa1d6d612ee8748c54bc7b4078416c4d5d83eaba1a9bf9e05d2fa29c2		tooling/configuration: see audit.md language and dependency decisions
 local-only	docs/BEST-PRACTICES.md	2e24cf6f39efa0d7fb1abccf41c4558d1ede689f455925588cf6e094832e47bd		documentation, release fragments or assets: retain local project content
 local-only	docs/CI-TIMEOUT-BUDGETS.md	9eab1b26308ebe1915819d58d6c85cccb2a159cb1f8bed37aa4a70a205693382		documentation, release fragments or assets: retain local project content
-local-only	docs/CONTRIBUTING.md	9bee2b3c143070e6c487555a183a339d68ff78d6f3501d48c729cecb17df484b		documentation, release fragments or assets: retain local project content
+local-only	docs/CONTRIBUTING.md	5ac9cdd08fe38ea6d8fb3b63e336c4c12a782767455229548df6c56e54e17392		documentation, release fragments or assets: retain local project content
 local-only	docs/ISSUE-199-RELEASE-ANALYSIS.md	769dd470c7b0b477e586bad6abdde1a6c0a65c1371cded9f3d5f569e7b34672d		documentation, release fragments or assets: retain local project content
 local-only	docs/ISSUE-203-ANALYSIS.md	232a385e9c78154c8d24f9e2fe0a483941b23714cce0caf626de8f1c6419f8b8		documentation, release fragments or assets: retain local project content
 local-only	docs/ISSUE-216-ANALYSIS.md	26d1113d8a2c7a9fd075a6f2c6e96b629320fa923e59efa0fa91356111c5cb8e		documentation, release fragments or assets: retain local project content
@@ -504,10 +504,12 @@ local-only	experiments/issue-273-plan.md	613b87bb28140cf012f0aa53a1562173f9f336c
 local-only	experiments/issue-273-release-fixture.mjs	e845c96109ea33bff19f059c149d0c9be7cf4bebe944efebeae1624b12f15687		historical research: retain, do not import as product behavior
 local-only	experiments/issue-3-model-check.mjs	2b7e798476900b48c51b28f89afb414714696ff1617c06ff71499c060338bd83		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-artifact-smoke.mjs	9b5315d2a87e77a9396f4959fcdc61326a3e3609bdfb218102600528b75e320f		historical research: retain, do not import as product behavior
+local-only	experiments/issue-5-deno-native.mjs	478e7582365ed97d248344ae4e8c4b04495119ea0157042c8b433ea9303daf72		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-desktop-apis.mjs	996a54cae46599c8eb80f1d3c31c390eede854230679b6240675a7867fdb1443		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-desktop-smoke.mjs	8994f694888c60d3a0bb37135c42fbbc008be36b7ee0b03fd1583d8ca2d48558		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-pages-smoke.mjs	a7fa6aa9d69cbb7f01ffebfc17b311dc005aede1688338fcf79802d055af1e50		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-template-audit.mjs	86d528f4193a226073c79338e1bb1b84717eda07c0c79773e64ef8a8c9584509		historical research: retain, do not import as product behavior
+local-only	experiments/issue-5-validate.mjs	d25c8d237cd814cc5b7e2448e8718e36baa8ceaba1e77005831c3ba2917a2c11		historical research: retain, do not import as product behavior
 template-only	experiments/issue_126_plan.md		69be5b1acfed4968220a25cd6ebb065d84b9520b0f583ad38bbf59603d05dea8	historical research: retain, do not import as product behavior
 template-only	experiments/issue_98_analysis.md		28d2558d734b4b4b43934bf0d9fbcefe733781c164cf5dafed9dc1f4fd595cce	historical research: retain, do not import as product behavior
 local-only	experiments/release-notes-fixture.mjs	4e0ec035ac6d652119aad058e35b025c9528c59244b9093f3db8501166b88b7d		historical research: retain, do not import as product behavior
@@ -636,7 +638,7 @@ local-only	tests/check-release-needed.test.js	486013f30600586113ac8683dd305a7657
 local-only	tests/check-staged-formatting.test.js	380f913ad0b0c5b3912f5faefad497bd0d6c91ce5dac8029a8ea535a238def82		acceptance and policy tests: preserve or strengthen
 local-only	tests/check-web-archive.test.js	05ceba0747f2cd3126956958b46e2400677891f69b295bf9c66ab21cf64bc6d9		acceptance and policy tests: preserve or strengthen
 local-only	tests/checkout-credentials.test.js	9947f8d50a17bca9495f347b66085e95aa849eb375024d00bd6b1653a2f3124f		acceptance and policy tests: preserve or strengthen
-local-only	tests/ci-audit-regressions.test.js	043c05c602db1936e6d2b362f555d7d9676771ce09bda7aaa4c89bf32fc02fe7		acceptance and policy tests: preserve or strengthen
+local-only	tests/ci-audit-regressions.test.js	1b49249235e267d942f711b54c7ca69c2ed1c72149d43d179de7373e92d7c07d		acceptance and policy tests: preserve or strengthen
 local-only	tests/ci-timeouts.test.js	04869d1ff5325db93f439957d6fbde346e8d696d99805c324d689f814fda68eb		acceptance and policy tests: preserve or strengthen
 local-only	tests/ci-workflow-policy.test.js	0108241191e12dfd7f25db1832a4a726eae82cda4759b7cc463847714049bbea		acceptance and policy tests: preserve or strengthen
 local-only	tests/codeql-results.test.js	bec1c8752a8cdab57c46eacc8a0f04f78facdf8bd01d7ac3892db9b34314f5bb		acceptance and policy tests: preserve or strengthen
@@ -674,7 +676,7 @@ local-only	tests/npm-registry.test.js	3c83bdf85ed17fcccd495160dd9e54390bba352705
 local-only	tests/package-info.test.js	747334fc13a00270565d76d8eca2e64e14bb0588f75c3011af90fd0f6db705c5		acceptance and policy tests: preserve or strengthen
 local-only	tests/package-manager.test.js	a8153b59b812c474cc72cb288bb20007744c0af3e1108bee9556003d77aadfc2		acceptance and policy tests: preserve or strengthen
 local-only	tests/package-metadata.test.js	698e025398663f34a85c1418357f1b6e51786eb9bcc9876e05043d521d79e9f5		acceptance and policy tests: preserve or strengthen
-local-only	tests/pipeline-requirements.test.js	9790613796a1b539b9e3e0b9159b332054d5c76777cab1bb225f0031f6d53a7c		acceptance and policy tests: preserve or strengthen
+local-only	tests/pipeline-requirements.test.js	2e05345a727187ba9095638f1c102dee00e23b38c95a9f0f5d6d3d2401499c60		acceptance and policy tests: preserve or strengthen
 local-only	tests/pipeline-status.test.js	7591064f57bb662bb162d9f442675f827501f300ff1980cb2281ac62e372b56d		acceptance and policy tests: preserve or strengthen
 local-only	tests/pr-guards.test.js	e422a50cac520e329e06e1c4dc39167f11c39f58c63e91cf26daa80de6780aed		acceptance and policy tests: preserve or strengthen
 local-only	tests/publish-failure-classifier.test.js	63cf1bdc06f08ae1f8e7f048e3a6408f6eaa1c82aff2052d40cfd0e04d9e0963		acceptance and policy tests: preserve or strengthen

@@ -1,0 +1,6 @@
+{
+  "sha": "5526814df703b04bbcf509bfaab122266bdb4a28",
+  "exit": 0,
+  "command": "npm run changeset:version; prettier --check package.json package-lock.json CHANGELOG.md",
+  "scope": "isolated owned temporary worktree; no publication"
+}

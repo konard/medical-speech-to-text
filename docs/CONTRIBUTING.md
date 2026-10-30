@@ -250,6 +250,13 @@ silently enabling a native compilation. Review new versions before approving
 them; the regression suite checks all four npm lockfiles, including optional
 platform-specific packages.
 
+Deno reads its own install-script policy from `deno.json`; npm's decision alone
+does not apply to it. Its version-pinned denial keeps the unused PTY build off.
+Every CI runtime installs the native Node fixtures and action dependencies from
+their owning npm locks. The Deno leg additionally prepares its frozen module
+graph with `deno test -A --parallel --no-run --frozen` before the timed suite;
+the subsequent command runs every acceptance test with the existing deadline.
+
 `bash scripts/check-mjs-syntax.sh` checks all tracked `.js`, `.mjs` and `.cjs`
 files recursively, including shipped examples and local actions. Historical
 experiments, development logs and case studies are data outside this syntax gate.

@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'test-anywhere';
+import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { itUnless, noPosixShell, sandboxed } from './helpers/skip.js';
@@ -96,7 +97,7 @@ describe('complete pipeline requirements', () => {
           env: { ...process.env, NODE_OPTIONS: '' },
         }
       );
-      expect(result.status).toBe(0);
+      assert.equal(result.status, 0, result.stdout + result.stderr);
       expect(result.stderr).not.toContain('DEP0040');
       expect(result.stderr).toContain('TEST_WARNING');
     }
