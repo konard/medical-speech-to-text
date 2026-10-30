@@ -1,0 +1,57 @@
+## example-app-41091166960.log
+
+690: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6194610Z ^[[36;1mecho "landed=true" >> "$GITHUB_OUTPUT"^[[0m
+691: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6195073Z shell: bash --noprofile --norc -e -o pipefail {0}
+692: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6195377Z env:
+693: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6195569Z   GIT_CONFIG_COUNT: 1
+694: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6195799Z   GIT_CONFIG_KEY_0: init.defaultBranch
+695: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6196073Z   GIT_CONFIG_VALUE_0: main
+696: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6196331Z   PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+697: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6196619Z   RELEASE_PR_TOKEN:
+698: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6199842Z   BUILT_IN_TOKEN: ***
+699: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6200257Z   SECRETS_URL: https://github.com/konard/medical-speech-to-text/settings/secrets/actions
+700: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6200696Z ##[endgroup]
+701: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6745936Z /__w/_temp/338ba177-7c78-4461-8efe-06d2f48b8083.sh: line 4: gh: command not found
+702: Regenerate Preview Images	Commit drift back to main	2026-10-30T16:35:41.6800935Z ##[error]Process completed with exit code 127.
+703: Regenerate Preview Images	Upload screenshot failure artifacts	﻿2026-10-30T16:35:41.6970993Z Prepare all required actions
+704: Regenerate Preview Images	Upload screenshot failure artifacts	2026-10-30T16:35:41.6971603Z Getting action download info
+705: Regenerate Preview Images	Upload screenshot failure artifacts	2026-10-30T16:35:41.7063858Z ##[group]Run ./.github/actions/artifact-transport
+706: Regenerate Preview Images	Upload screenshot failure artifacts	2026-10-30T16:35:41.7064205Z with:
+707: Regenerate Preview Images	Upload screenshot failure artifacts	2026-10-30T16:35:41.7064427Z   name: preview-regen-failure-41091166960
+
+## security-41091167226.log
+
+5184: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.3875568Z   REPO: konard/medical-speech-to-text
+5185: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.3876571Z   BASE_SHA: baa1ee8c1b8e67dd6b6d09f6a161bf13edcd7793
+5186: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.3878121Z   HEAD_SHA: edb7095699b99a8efbf99f54018609295d172628
+5187: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.3879130Z   REQUIRE_GRAPH: 1
+5188: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.3879735Z ##[endgroup]
+5189: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.9174271Z GitHub answered: {"message":"Forbidden","documentation_url":"https://docs.github.com/rest/dependency-graph/dependency-review#get-a-diff-of-the-dependencies-between-commits","status":"403"}gh: Forbidden (HTTP 403)
+5190: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.9204316Z ##[error]The dependency graph of konard/medical-speech-to-text is disabled, so dependency review cannot run. A repository administrator has to enable "Dependency graph" at https://github.com/konard/medical-speech-to-text/settings/security_analysis.
+5191: Dependency Graph Prerequisite	Check dependency graph availability	2026-10-30T16:34:56.9223101Z ##[error]Process completed with exit code 1.
+5192: Dependency Graph Prerequisite	Post Run actions/checkout@v7	﻿2026-10-30T16:34:56.9526019Z Post job cleanup.
+5193: Dependency Graph Prerequisite	Post Run actions/checkout@v7	2026-10-30T16:34:57.0548832Z [command]/usr/bin/git version
+5194: Dependency Graph Prerequisite	Post Run actions/checkout@v7	2026-10-30T16:34:57.0604896Z git version 2.56.0
+5195: Dependency Graph Prerequisite	Post Run actions/checkout@v7	2026-10-30T16:34:57.0652557Z Temporarily overriding HOME='/home/runner/work/_temp/fbebcbb3-8b31-482c-a465-aa59faca57ee' before making global git config changes
+
+## release-41091167136.log
+
+145: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2644517Z   PREFLIGHT_MODE: release
+146: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2645344Z   NPM_TOKEN:
+147: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2646224Z   DOCKERHUB_IMAGE:
+148: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2646993Z   DOCKERHUB_USERNAME:
+149: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2647786Z   DOCKERHUB_TOKEN:
+150: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2648528Z ##[endgroup]
+151: Release Preflight	Probe every release credential	2026-10-30T16:34:50.2731132Z npm:
+152: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3465784Z   FAIL: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+153: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3468473Z   SKIP: NPM_TOKEN is not set; OIDC trusted publishing is the publish path (NPM_TOKEN is the bootstrap fallback for a package npm does not have yet)
+154: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3468998Z Docker Hub:
+155: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3469376Z   SKIP: DOCKERHUB_IMAGE is not set -- Docker publishing is disabled (scripts/check-docker-publish.mjs)
+156: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3469737Z
+157: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3469883Z Release preflight: 0 verified, 1 failed, 0 unknown
+158: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3493326Z ##[error]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+159: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3502375Z ##[error]release-preflight: refusing to release with 1 refused credential(s)
+160: Release Preflight	Probe every release credential	2026-10-30T16:34:51.3507337Z ##[error]Process completed with exit code 1.
+161: Release Preflight	Post Run actions/checkout@v7	﻿2026-10-30T16:34:51.3704301Z Post job cleanup.
+162: Release Preflight	Post Run actions/checkout@v7	2026-10-30T16:34:51.4428959Z [command]/usr/bin/git version
+163: Release Preflight	Post Run actions/checkout@v7	2026-10-30T16:34:51.4466490Z git version 2.56.0

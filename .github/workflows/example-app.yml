@@ -299,6 +299,15 @@ jobs:
       - name: Trust the checkout
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
+      - name: Install GitHub CLI
+        run: |
+          # The Playwright image does not include gh; install before auth/push.
+          apt-get update &
+          wait "$!"
+          apt-get install --no-install-recommends -y gh &
+          wait "$!"
+          gh --version
+
       - name: Install example app dependencies
         run: npm ci --prefix examples/universal-app --no-audit --no-fund
 

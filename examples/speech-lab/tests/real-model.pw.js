@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
+import { CHAT_MODEL } from '../config.js';
 
 test('real pinned Whisper model on ten attributed mock-consultation clips', async ({
   page,
@@ -122,4 +123,117 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
     `${evidence}/browser-network.json`,
     JSON.stringify({ requests, hostingAcknowledgements, errors }, null, 2)
   );
+});
+
+test('real pinned local chat, warm offline reply and model cache removal', async ({
+  page,
+}) => {
+  test.skip(
+    process.env.REAL_ASR !== '1',
+    'Explicit network/model integration run'
+  );
+  test.setTimeout(600000);
+  const requests = [];
+  const errors = [];
+  // The source host's empty acknowledgement is separate from app traffic.
+  let acknowledgingHost = false;
+  const hostingAcknowledgements = [];
+  page.on('request', (request) => {
+    if (
+      acknowledgingHost &&
+      request.method() === 'POST' &&
+      !request.postData() &&
+      request.url() === page.url()
+    ) {
+      hostingAcknowledgements.push({
+        url: request.url(),
+        method: 'POST',
+        bodyBytes: 0,
+      });
+      return;
+    }
+    requests.push({
+      url: new URL(request.url()).origin + new URL(request.url()).pathname,
+      method: request.method(),
+    });
+  });
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto('./index.html');
+  if (
+    new URL(page.url()).hostname === 'raw.githack.com' &&
+    (await page.title()) === 'External Content Notice | rawgit.hack'
+  ) {
+    acknowledgingHost = true;
+    try {
+      await page
+        .getByRole('button', { name: 'Open the page', exact: true })
+        .click();
+    } finally {
+      acknowledgingHost = false;
+    }
+    expect(hostingAcknowledgements).toHaveLength(1);
+  }
+  await page.getByRole('button', { name: 'Local chat', exact: true }).click();
+  await page
+    .locator('#chat-prompt')
+    .fill('What is speech recognition? Answer in one sentence.');
+  await page.locator('#send-chat').click();
+  await expect(page.locator('#status')).toContainText('Local reply', {
+    timeout: 540000,
+  });
+  await expect(page.locator('.message.assistant')).not.toBeEmpty();
+  const first = await page.locator('.message.assistant').textContent();
+  await page.context().setOffline(true);
+  await page.locator('#chat-prompt').fill('Say hello briefly.');
+  await page.locator('#send-chat').click();
+  await expect(page.locator('#status')).toContainText('warm model', {
+    timeout: 120000,
+  });
+  const messages = await page.locator('.message').allTextContents();
+  expect(messages).toHaveLength(4);
+  await page.context().setOffline(false);
+  await page.getByText('Device & storage', { exact: true }).click();
+  await expect(page.locator('details').first()).toContainText(
+    'cached model files'
+  );
+  const cache = page
+    .locator('details')
+    .first()
+    .getByText(/^\d+ cached model files/);
+  await expect(cache).toContainText(/[1-9]\d* cached model files/);
+  const cachedBefore = await cache.textContent();
+  const evidence = 'test-results/model-evidence';
+  await mkdir(evidence, { recursive: true });
+  await writeFile(
+    `${evidence}/chat-results.json`,
+    JSON.stringify(
+      {
+        observedAt: new Date().toISOString(),
+        model: {
+          ...CHAT_MODEL,
+          runtime: 'Transformers.js 3.8.1',
+          device: 'wasm',
+          threads: 1,
+        },
+        first,
+        messages,
+        status: await page.locator('#status').textContent(),
+        cachedBefore,
+        hostingAcknowledgements,
+        requests,
+        errors,
+      },
+      null,
+      2
+    )
+  );
+  expect(
+    requests.every((request) => ['GET', 'HEAD'].includes(request.method))
+  ).toBe(true);
+  expect(errors).toEqual([]);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: `${evidence}/chat.png`, fullPage: true });
+  await page.locator('#delete-models').click();
+  await expect(page.locator('#status')).toContainText('Deleted');
+  await expect(cache).toContainText(/^0 cached model files/);
 });

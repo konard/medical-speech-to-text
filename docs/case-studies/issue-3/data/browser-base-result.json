@@ -1,0 +1,253 @@
+{
+  "schema": "speech-lab/v1",
+  "startedAt": "2026-10-30T17:48:16.661Z",
+  "exportedAt": "2026-10-30T17:48:32.849Z",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+  "notes": "Research only. Word timestamps are estimates. No missing reference is scored.",
+  "results": [
+    {
+      "index": 0,
+      "status": "complete",
+      "name": "primock-01.wav",
+      "text": " Okay, and how many times a day are you going let's say we lost a couple of days",
+      "chunks": [
+        {
+          "text": " Okay,",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            0.86,
+            1.04
+          ]
+        },
+        {
+          "text": " how",
+          "timestamp": [
+            1.04,
+            1.2
+          ]
+        },
+        {
+          "text": " many",
+          "timestamp": [
+            1.2,
+            1.3
+          ]
+        },
+        {
+          "text": " times",
+          "timestamp": [
+            1.3,
+            1.5
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            1.5,
+            1.68
+          ]
+        },
+        {
+          "text": " day",
+          "timestamp": [
+            1.68,
+            1.84
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            1.84,
+            1.98
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            1.98,
+            2.1
+          ]
+        },
+        {
+          "text": " going",
+          "timestamp": [
+            2.1,
+            2.3
+          ]
+        },
+        {
+          "text": " let's",
+          "timestamp": [
+            2.3,
+            2.56
+          ]
+        },
+        {
+          "text": " say",
+          "timestamp": [
+            2.56,
+            2.68
+          ]
+        },
+        {
+          "text": " we",
+          "timestamp": [
+            2.68,
+            3
+          ]
+        },
+        {
+          "text": " lost",
+          "timestamp": [
+            3,
+            3.1
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            3.1,
+            3.1
+          ]
+        },
+        {
+          "text": " couple",
+          "timestamp": [
+            3.1,
+            3.54
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            3.54,
+            3.62
+          ]
+        },
+        {
+          "text": " days",
+          "timestamp": [
+            3.62,
+            3.82
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 0,
+          "end": 0.52
+        },
+        {
+          "text": "and",
+          "start": 0.86,
+          "end": 1.04
+        },
+        {
+          "text": "how",
+          "start": 1.04,
+          "end": 1.2
+        },
+        {
+          "text": "many",
+          "start": 1.2,
+          "end": 1.3
+        },
+        {
+          "text": "times",
+          "start": 1.3,
+          "end": 1.5
+        },
+        {
+          "text": "a",
+          "start": 1.5,
+          "end": 1.68
+        },
+        {
+          "text": "day",
+          "start": 1.68,
+          "end": 1.84
+        },
+        {
+          "text": "are",
+          "start": 1.84,
+          "end": 1.98
+        },
+        {
+          "text": "you",
+          "start": 1.98,
+          "end": 2.1
+        },
+        {
+          "text": "going",
+          "start": 2.1,
+          "end": 2.3
+        },
+        {
+          "text": "let's",
+          "start": 2.3,
+          "end": 2.56
+        },
+        {
+          "text": "say",
+          "start": 2.56,
+          "end": 2.68
+        },
+        {
+          "text": "we",
+          "start": 2.68,
+          "end": 3
+        },
+        {
+          "text": "lost",
+          "start": 3,
+          "end": 3.1
+        },
+        {
+          "text": "couple",
+          "start": 3.1,
+          "end": 3.54
+        },
+        {
+          "text": "of",
+          "start": 3.54,
+          "end": 3.62
+        },
+        {
+          "text": "days",
+          "start": 3.62,
+          "end": 3.82
+        }
+      ],
+      "duration": 4.318231292517007,
+      "score": null,
+      "model": {
+        "id": "Xenova/whisper-base.en",
+        "revision": "95bf40a508535962c6483ead40270b2e32267508",
+        "label": "Whisper base · English · ~145 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "2679aa2fff927af156ca61c83db4c4700ef2de4f204736adec962e49e37cbeef",
+        "bytes": 138228,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 6003,
+        "inferenceMs": 9265,
+        "cold": true
+      }
+    }
+  ]
+}

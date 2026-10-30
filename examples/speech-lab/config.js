@@ -19,3 +19,10 @@ export const MODELS = Object.freeze({
   },
 });
 export const DEADLINE_MS = 300000;
+export const CHAT_MODEL = Object.freeze({
+  id: 'HuggingFaceTB/SmolLM2-135M-Instruct',
+  revision: '12fd25f77366fa6b3b4b768ec3050bf629380bac',
+  label: 'SmolLM2 135M · English · ~185 MB',
+  task: 'text-generation',
+  dtype: 'q4',
+});

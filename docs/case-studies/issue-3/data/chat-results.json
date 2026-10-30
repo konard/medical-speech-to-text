@@ -1,0 +1,94 @@
+{
+  "observedAt": "2026-10-30T17:48:52.851Z",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "label": "SmolLM2 135M · English · ~185 MB",
+    "task": "text-generation",
+    "dtype": "q4",
+    "runtime": "Transformers.js 3.8.1",
+    "device": "wasm",
+    "threads": 1
+  },
+  "first": "Local modelSpreading your voice through text.",
+  "messages": [
+    "YouWhat is speech recognition? Answer in one sentence.",
+    "Local modelSpreading your voice through text.",
+    "YouSay hello briefly.",
+    "Local modelI'm glad you like the chat."
+  ],
+  "status": "Local reply · 3.8s generation · 1899ms to first text · warm model",
+  "cachedBefore": "5 cached model files. Partial downloads may need internet. Browser storage may be evicted; this is not an offline-install guarantee.",
+  "hostingAcknowledgements": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4175/index.html",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/index-DHBMonjz.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/index-BHliEUjV.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/worker-BcJkGrGm.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolLM2-135M-Instruct/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolLM2-135M-Instruct/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolLM2-135M-Instruct/12fd25f77366fa6b3b4b768ec3050bf629380bac/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/onnx/model_q4.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolLM2-135M-Instruct/12fd25f77366fa6b3b4b768ec3050bf629380bac/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/672388f6e1133cff79766318/c0eb23b8d78e87204b0d87a3dc42fe734516a894fe1719a5f898c5c372ca880e",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "method": "GET"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-30T17:51:20Z",
+  "repository": "konard/medical-speech-to-text",
+  "enableCommand": "gh api --method PUT repos/konard/medical-speech-to-text/vulnerability-alerts",
+  "enableHTTPStatus": 204,
+  "before": {
+    "message": "Forbidden",
+    "documentation_url": "https://docs.github.com/rest/dependency-graph/dependency-review#get-a-diff-of-the-dependencies-between-commits",
+    "status": "403"
+  },
+  "compareAfter": [],
+  "compareAfterHTTPStatus": 200,
+  "base": "edb7095699b99a8efbf99f54018609295d172628",
+  "head": "edb7095699b99a8efbf99f54018609295d172628"
+}

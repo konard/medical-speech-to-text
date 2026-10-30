@@ -4,7 +4,8 @@ Research and evaluate speech recognition for medical histories and confirmed CRM
 commands, with an Australian AWS deployment plan.
 
 - [Research case study and complete requirement inventory](docs/case-studies/issue-1/README.md)
-- [Try the browser speech lab](https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html)
+- [Try the browser speech lab](https://raw.githack.com/konard/medical-speech-to-text/issue-3-60721261c8eb/examples/speech-lab/index.html)
+- [Mobile React, device research and CI audit](docs/case-studies/issue-3/README.md)
 - [Run locally and reproduce the browser checks](examples/speech-lab/README.md)
 - [Actual model results and limitations](docs/case-studies/issue-1/verification.md)
 
