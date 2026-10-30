@@ -1,0 +1,473 @@
+[
+  {
+    "check": "root-install",
+    "command": [
+      "npm",
+      "ci",
+      "--no-fund"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 5093
+  },
+  {
+    "check": "speech-install",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      "examples/speech-lab",
+      "--no-fund"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 2368
+  },
+  {
+    "check": "desktop-install",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      "examples/universal-app",
+      "--no-fund"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 7489
+  },
+  {
+    "check": "artifact-install",
+    "command": [
+      "npm",
+      "ci",
+      "--prefix",
+      ".github/actions/artifact-transport",
+      "--ignore-scripts",
+      "--no-fund"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 10033
+  },
+  {
+    "check": "node",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 34418
+  },
+  {
+    "check": "bun",
+    "command": [
+      "bun",
+      "test",
+      "--timeout",
+      "30000"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 91500
+  },
+  {
+    "check": "deno",
+    "command": [
+      "deno",
+      "test",
+      "-A",
+      "--parallel"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 33492
+  },
+  {
+    "check": "check",
+    "command": [
+      "npm",
+      "run",
+      "check"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 17229
+  },
+  {
+    "check": "artifact",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-artifact-smoke.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 758
+  },
+  {
+    "check": "desktop",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-desktop-smoke.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 577
+  },
+  {
+    "check": "pages",
+    "command": [
+      "node",
+      "--throw-deprecation",
+      "experiments/issue-5-pages-smoke.mjs",
+      "/tmp/issue-5-deploy-pages-bundle.cjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 1002
+  },
+  {
+    "check": "syntax",
+    "command": [
+      "bash",
+      "scripts/check-mjs-syntax.sh"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 10468
+  },
+  {
+    "check": "docs",
+    "command": [
+      "bash",
+      "scripts/check-required-docs.sh"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 68
+  },
+  {
+    "check": "lines",
+    "command": [
+      "bash",
+      "scripts/check-file-line-limits.sh"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 2419
+  },
+  {
+    "check": "changeset",
+    "command": [
+      "node",
+      "scripts/validate-changeset.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 124
+  },
+  {
+    "check": "version",
+    "command": [
+      "node",
+      "scripts/check-version.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 110
+  },
+  {
+    "check": "workflows",
+    "command": [
+      "node",
+      "scripts/check-ci-workflows.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 77
+  },
+  {
+    "check": "status",
+    "command": [
+      "node",
+      "scripts/check-status-gate-covers-all-jobs.mjs",
+      ".github/workflows/release.yml",
+      ".github/workflows/links.yml",
+      ".github/workflows/security.yml",
+      ".github/workflows/workflows.yml",
+      ".github/workflows/example-app.yml"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 63
+  },
+  {
+    "check": "actionlint",
+    "command": [
+      "actionlint",
+      "-ignore",
+      "unexpected key .queue. for .concurrency. section"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 376
+  },
+  {
+    "check": "zizmor",
+    "command": [
+      "zizmor",
+      "--offline",
+      "--config",
+      ".github/zizmor.yml",
+      "--min-confidence",
+      "low",
+      "--persona",
+      "regular",
+      "."
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 235
+  },
+  {
+    "check": "zizmor-pedantic",
+    "command": [
+      "zizmor",
+      "--offline",
+      "--config",
+      ".github/zizmor.yml",
+      "--persona",
+      "pedantic",
+      "--min-severity",
+      "high",
+      "--min-confidence",
+      "high",
+      "."
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 188
+  },
+  {
+    "check": "secretlint",
+    "command": [
+      "npx",
+      "--yes",
+      "-p",
+      "secretlint@13.0.7",
+      "-p",
+      "@secretlint/secretlint-rule-preset-recommend@13.0.7",
+      "secretlint",
+      "**/*"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 3243
+  },
+  {
+    "check": "browser",
+    "command": [
+      "npm",
+      "--prefix",
+      "examples/speech-lab",
+      "run",
+      "test:browser"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 21004
+  },
+  {
+    "check": "speech-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "examples/speech-lab",
+      "run",
+      "build"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 2438
+  },
+  {
+    "check": "desktop-package",
+    "command": [
+      "npm",
+      "run",
+      "example:desktop:package"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 19271
+  },
+  {
+    "check": "native",
+    "command": [
+      "node",
+      "--test",
+      "examples/javascript-first/native-check.mjs"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 194
+  },
+  {
+    "check": "parity",
+    "command": [
+      "node",
+      "examples/javascript-first/check-parity.mjs",
+      "--strict"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 64
+  },
+  {
+    "check": "regenerate",
+    "command": [
+      "node",
+      "examples/javascript-first/generate.mjs",
+      "--check"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 79
+  },
+  {
+    "check": "rust-check",
+    "command": [
+      "rustc",
+      "--crate-type",
+      "lib",
+      "--emit",
+      "metadata",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified.rmeta"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 106
+  },
+  {
+    "check": "rust-build",
+    "command": [
+      "rustc",
+      "--crate-type",
+      "lib",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified.rlib"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 99
+  },
+  {
+    "check": "rust-compile-test",
+    "command": [
+      "rustc",
+      "--test",
+      "examples/javascript-first/generated/lib.rs",
+      "-o",
+      "/tmp/issue-5-verified-rust-tests"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 280
+  },
+  {
+    "check": "rust-test",
+    "command": [
+      "/tmp/issue-5-verified-rust-tests"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 7
+  },
+  {
+    "check": "audit-root",
+    "command": [
+      "npm",
+      "audit",
+      "--package-lock-only",
+      "--audit-level=high"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 868
+  },
+  {
+    "check": "audit-speech",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      "examples/speech-lab",
+      "--package-lock-only",
+      "--audit-level=high"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 835
+  },
+  {
+    "check": "audit-desktop",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      "examples/universal-app",
+      "--package-lock-only",
+      "--audit-level=high"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 988
+  },
+  {
+    "check": "audit-artifact",
+    "command": [
+      "npm",
+      "audit",
+      "--prefix",
+      ".github/actions/artifact-transport",
+      "--package-lock-only",
+      "--audit-level=high"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 900
+  },
+  {
+    "check": "shellcheck",
+    "command": [
+      "/tmp/issue-5-ci-tools/bin/shellcheck",
+      ".husky/pre-commit",
+      "docs/case-studies/issue-41/data/hive-mind-check-file-line-limits.sh",
+      "docs/case-studies/issue-41/data/js-template-check-file-line-limits-before.sh",
+      "experiments/budget-runner-demo.sh",
+      "experiments/issue-141-multilang-ignore-list.sh",
+      "experiments/test-issue75-buildx-mirror-fallback.sh",
+      "scripts/check-dependency-graph.sh",
+      "scripts/check-file-line-limits.sh",
+      "scripts/check-mjs-syntax.sh",
+      "scripts/check-pages.sh",
+      "scripts/check-pipeline-status.sh",
+      "scripts/check-required-docs.sh",
+      "scripts/preflight-credentials.sh",
+      "scripts/read-job-cancel-in-progress.sh",
+      "scripts/run-with-budget-warning.sh",
+      "scripts/simulate-fresh-merge.sh"
+    ],
+    "sha": "479121fe5c62968914ad227190619a6eee4439bf",
+    "exit": 0,
+    "elapsedMs": 1380
+  }
+]

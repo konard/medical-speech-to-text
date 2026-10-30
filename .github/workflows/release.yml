@@ -87,7 +87,7 @@ jobs:
   # === FAST CHECKS - run before slow tests for fastest feedback ===
   # See: hive-mind CI/CD best practices principle #5 (fast-fail job ordering)
 
-  # Syntax check all .mjs files with node --check (~7s)
+  # Syntax check tracked JavaScript recursively with node --check.
   test-compilation:
     name: Test Compilation
     runs-on: ubuntu-24.04
@@ -104,7 +104,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check .mjs syntax
+      - name: Check tracked JavaScript syntax
         run: bash scripts/check-mjs-syntax.sh
 
   # Enforce 1500-line limit on .mjs files and release.yml
@@ -337,14 +337,18 @@ jobs:
         run: bash scripts/simulate-fresh-merge.sh
 
       - name: Setup Node.js
-        if: matrix.runtime == 'node' || matrix.runtime == 'bun'
         uses: actions/setup-node@v7
         with:
           node-version: '24.x'
 
-      - name: Install dependencies (Node.js)
-        if: matrix.runtime == 'node'
+      # Every runtime also exercises native Node fixtures (Changesets, scripts
+      # and the Pages adapter). Install their owning locks explicitly instead
+      # of relying on dependencies hoisted incidentally by another runtime.
+      - name: Install dependencies (runtime tests and native fixtures)
         run: npm ci
+
+      - name: Install native CI adapter dependencies
+        run: npm ci --prefix .github/actions/artifact-transport --ignore-scripts --no-audit --no-fund
 
       - name: Run tests (Node.js)
         if: matrix.runtime == 'node'
@@ -356,11 +360,6 @@ jobs:
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: '1.x'
-
-      # Reuse the npm lockfile; Bun still executes this matrix leg's tests.
-      - name: Install dependencies (Bun)
-        if: matrix.runtime == 'bun'
-        run: npm ci
 
       - name: Run tests (Bun)
         if: matrix.runtime == 'bun'
@@ -377,6 +376,12 @@ jobs:
         uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
         with:
           deno-version: v2.x
+
+      # Resolve Deno's own frozen graph before the suite deadline, as npm does
+      # for the other runtimes. --no-run executes no acceptance assertions.
+      - name: Prepare Deno test dependencies
+        if: matrix.runtime == 'deno'
+        run: deno test -A --parallel --no-run --frozen
 
       - name: Run tests (Deno)
         if: matrix.runtime == 'deno'
@@ -950,7 +955,7 @@ jobs:
       - name: Download image digests
         uses: ./.github/actions/artifact-transport
         env:
-          NODE_OPTIONS: --disable-warning=DEP0005
+          NODE_OPTIONS: --pending-deprecation --throw-deprecation
         with:
           path: /tmp/digests
           pattern: docker-digest-*

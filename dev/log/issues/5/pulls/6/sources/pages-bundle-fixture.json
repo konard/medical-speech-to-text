@@ -1,0 +1,9 @@
+{
+  "repository": "actions/deploy-pages",
+  "revision": "368f82528645a54fb793d4d04e342629a3f51346",
+  "files": {
+    "dist/index.js": "63fd34d89cd23d8848618a019f978f2225880a38afe2328e6e7d72f20fc44e89",
+    "dist/sourcemap-register.js": "1e19cfe548608e6501c19941746f85eadf71a72c4a52a1426b770e30f4f9bdf3"
+  },
+  "verification": "Unmodified bundle startup under Node; no credentials or OIDC endpoint; deployment refused."
+}

@@ -1,4 +1,5 @@
 import { scoreTranscript } from '../../src/speech/index.js';
+import { MODELS, CHAT_MODEL } from './config.js';
 
 export function capabilityReport(scope = globalThis) {
   return {
@@ -194,7 +195,6 @@ export async function modelCache(scope = globalThis, remove = false) {
     return 0;
   }
   // Transformers.js shares a named cache. Only touch this demo's pinned models.
-  const { MODELS, CHAT_MODEL } = await import('./config.js');
   const models = [...Object.values(MODELS), CHAT_MODEL];
   let count = 0;
   for (const name of await scope.caches.keys()) {

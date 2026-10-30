@@ -1,0 +1,37 @@
+Verified source revision 479121fe5c62968914ad227190619a6eee4439bf
+All six hosted workflows passed; created 2026-10-30T20:42:26Z.
+
+Broken Link Checker: https://github.com/konard/medical-speech-to-text/actions/runs/41125310584
+JavaScript-first mixed-language example: https://github.com/konard/medical-speech-to-text/actions/runs/41125310613
+Workflows: https://github.com/konard/medical-speech-to-text/actions/runs/41125310503
+Security: https://github.com/konard/medical-speech-to-text/actions/runs/41125310527
+Example app: https://github.com/konard/medical-speech-to-text/actions/runs/41125311058
+Checks and release: https://github.com/konard/medical-speech-to-text/actions/runs/41125311184
+
+170:Release Preflight	Probe every release credential	2026-10-30T20:42:35.2455442Z ##[warning]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+7523:Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:44:10.6325820Z ^[[0m^[[32mok^[[0m | 1075 passed | 0 failed | 2 ignored ^[[0m^[[38;5;245m(42s)^[[0m
+7525:Test runtimes (macos-15, deno)	Run tests (Deno)	2026-10-30T20:44:10.6529480Z Deno test suite finished in 43s of its 100s budget (exit 0).
+9271:Test runtimes (macos-15, bun)	Run tests (Bun)	2026-10-30T20:44:59.2355220Z M^@src.js^@Bun test suite finished in 83s of its 200s budget (exit 0).
+11013:Test runtimes (macos-15, node)	Run tests (Node.js)	2026-10-30T20:44:15.3100960Z Node.js test suite finished in 49s of its 300s budget (exit 0).
+12766:Test runtimes (windows-2025, node)	Run tests (Node.js)	2026-10-30T20:44:27.7277481Z Node.js test suite finished in 49s of its 300s budget (exit 0).
+14593:Test runtimes (windows-2025, bun)	Run tests (Bun)	2026-10-30T20:45:30.3695530Z Bun test suite finished in 106s of its 200s budget (exit 0).
+16417:Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:44:42.7544440Z ^[[0m^[[32mok^[[0m | 998 passed | 0 failed | 79 ignored ^[[0m^[[38;5;245m(52s)^[[0m
+16419:Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T20:44:42.8259121Z Deno test suite finished in 54s of its 100s budget (exit 0).
+18177:Test runtimes (ubuntu-24.04, node)	Run tests (Node.js)	2026-10-30T20:43:46.7429178Z Node.js test suite finished in 32s of its 300s budget (exit 0).
+20002:Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:43:44.0323066Z ^[[0m^[[32mok^[[0m | 1075 passed | 0 failed | 2 ignored ^[[0m^[[38;5;245m(27s)^[[0m
+20004:Test runtimes (ubuntu-24.04, deno)	Run tests (Deno)	2026-10-30T20:43:44.0350388Z Deno test suite finished in 29s of its 100s budget (exit 0).
+21761:Test runtimes (ubuntu-24.04, bun)	Run tests (Bun)	2026-10-30T20:44:21.4492228Z Bun test suite finished in 61s of its 200s budget (exit 0).
+
+dev/log/issues/5/pulls/6/ci-logs/batch3-example-41125311058.log:180:Package desktop app (macos-15)	Verify desktop compatibility APIs	2026-10-30T20:42:45.0132640Z Desktop consumers: ASAR packed/unpacked bytes and temp cleanup passed.
+dev/log/issues/5/pulls/6/ci-logs/batch3-example-41125311058.log:556:Package desktop app (ubuntu-24.04)	Verify desktop compatibility APIs	2026-10-30T20:42:37.7491971Z Desktop consumers: ASAR packed/unpacked bytes and temp cleanup passed.
+dev/log/issues/5/pulls/6/ci-logs/batch3-example-41125311058.log:914:Package desktop app (windows-2025)	Verify desktop compatibility APIs	2026-10-30T20:43:05.4669663Z Desktop consumers: ASAR packed/unpacked bytes and temp cleanup passed.
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5898:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2762513Z ##[group]Scorecard
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5899:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2763096Z npm/@zip.js/zip.js: OpenSSF Scorecard Score: 3.9
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5900:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2763664Z npm/glob: OpenSSF Scorecard Score: 5
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5901:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2764213Z npm/lru-cache: OpenSSF Scorecard Score: 4.1
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5902:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2764833Z npm/path-scurry: OpenSSF Scorecard Score: 4.4
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5903:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2765452Z npm/punycode: OpenSSF Scorecard Score: 3.2
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5904:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2766037Z npm/@electron/asar: OpenSSF Scorecard Score: 7
+dev/log/issues/5/pulls/6/ci-logs/batch3-security-41125310527.log:5905:Dependency Review	Review dependency changes	2026-10-30T20:42:48.2766714Z npm/compat/temp-rimraf: OpenSSF Scorecard Score: undefined
+
+Only the external npm identity/bootstrap warning remains unfinished. No merge, release or deployment authorized.

@@ -238,3 +238,31 @@ scanner and its preset resolve from the same npm execution tree.
 Shell scripts and Git hooks use LF on every platform through `.gitattributes`.
 The prepare script calls Husky's installed API and verifies `core.hooksPath`.
 Set `CI_SCRIPTS_DEBUG=1` for optional dependency and hook installation tracing.
+
+### Dependency install scripts and syntax coverage
+
+Every dependency with an install script needs an explicit `allowScripts` decision
+in its owning package manifest. Approvals include the exact locked version.
+Vite's esbuild binary, macOS fsevents and the Electron installer are approved;
+the optional node-pty adapter is denied because CI tooling uses command-stream's
+ordinary process API. This preserves the existing default behavior without
+silently enabling a native compilation. Review new versions before approving
+them; the regression suite checks all four npm lockfiles, including optional
+platform-specific packages.
+
+Deno reads its own install-script policy from `deno.json`; npm's decision alone
+does not apply to it. Its version-pinned denial keeps the unused PTY build off.
+Every CI runtime installs the native Node fixtures and action dependencies from
+their owning npm locks. The Deno leg additionally prepares its frozen module
+graph with `deno test -A --parallel --no-run --frozen` before the timed suite;
+the subsequent command runs every acceptance test with the existing deadline.
+
+`bash scripts/check-mjs-syntax.sh` checks all tracked `.js`, `.mjs` and `.cjs`
+files recursively, including shipped examples and local actions. Historical
+experiments, development logs and case studies are data outside this syntax gate.
+An empty inventory or failed file check is an error. CodeQL also scans the
+shipped examples. Artifact compatibility decisions and their executable probes
+are documented in the [artifact action](../.github/actions/artifact-transport/README.md).
+
+The speech-lab production build rejects Vite warnings. Keep its strict logger
+when changing bundling or imports; a generated bundle alone is not a clean build.
