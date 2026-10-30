@@ -1,6 +1,6 @@
 status	path	local-sha256	template-sha256	disposition
 local-only	.changeset/README.md	bf33c79d7e0477dcad0e0b98c8d364db6fdb794d62ef68b6153d61e868b3bdf0		documentation, release fragments or assets: retain local project content
-local-only	.changeset/ci-audit-coverage.md	60db000545184ce9e95ec1e9eb00f46c84209b2cb7a6777a0d33cfd31bc7e580		documentation, release fragments or assets: retain local project content
+local-only	.changeset/ci-audit-coverage.md	a4a8c25120da70bfb6e1d3ad24cd03761a4c6dfb4e8f26f9ab7a150142c76f47		documentation, release fragments or assets: retain local project content
 local-only	.changeset/config.json	cc08534f44426097c7ba6114a6377caf79717fadda1fe11418a213c84bd4cc16		documentation, release fragments or assets: retain local project content
 local-only	.changeset/fix-repository-audits-and-test-coverage.md	770732ea296d743ec6f264246bb2cea30a5af87fd9233ffd286a7294f40f8beb		documentation, release fragments or assets: retain local project content
 local-only	.changeset/medical-speech-lab.md	9501cdbd8ae21380301111c8e1827dbd25e9d57af20eea7adc165ece8fc02795		documentation, release fragments or assets: retain local project content
@@ -13,12 +13,13 @@ local-only	.changeset/repository-pipeline-repairs.md	967cb0e75e019fd4ce6b320f9da
 local-only	.changeset/transient-links-bun-pin.md	e11c863cadefd68b77b275854d390d8d7bd9805e1f83487e6db6eaa9284e7c24		documentation, release fragments or assets: retain local project content
 different	.gitattributes	f8197ba4a31ba9d4a82f59050a2e5de8601e17c6d1e870e8531f57ed274886c4	9a702e1f90aa4f0a8cacbf742c50d66046465d163e958e1d2e566848f3f64cec	tooling/configuration: see audit.md language and dependency decisions
 template-only	.github/actionlint.yaml		b9922bd7672ca2fd2f4b7e466a97c440a9cabf9dae7ccbdea18822c3141ca205	pipeline: see audit.md functional comparison
-local-only	.github/actions/artifact-transport/README.md	3485ea216dc279b56edf8a863f2238d5fbee4b10ffa38944d1ee3e5006be3e0a		pipeline: see audit.md functional comparison
+local-only	.github/actions/artifact-transport/README.md	5b3809b560fa719bceefcf52f7797cf6648175ddc0fc5ec57c07bec412cd6192		pipeline: see audit.md functional comparison
 local-only	.github/actions/artifact-transport/action.yml	37a38b3125c2668d36535606de0a235646fb5c8311ef86db64eccf188a99e7d5		pipeline: see audit.md functional comparison
 local-only	.github/actions/artifact-transport/extract.mjs	5389151f224eea9a7e31618aa4f756bf1a6e8fb112b7cbeeb7ad72b624fbe38c		pipeline: see audit.md functional comparison
 local-only	.github/actions/artifact-transport/index.mjs	80c50c9d16640413d3934b280d4fa496b04353e309f1c5019827b4046e8ce1d0		pipeline: see audit.md functional comparison
-local-only	.github/actions/artifact-transport/package-lock.json	9680b080edd070d5f57e731c17f5ef9a5762bdb7e9a769bf7ddd7c9d8bff0890		pipeline: see audit.md functional comparison
-local-only	.github/actions/artifact-transport/package.json	f85f295772f8f97febb856012b9323d18dd0d3baa5d105128c2aa43a431d277e		pipeline: see audit.md functional comparison
+local-only	.github/actions/artifact-transport/package-lock.json	54acf79e7db166ecdaaee4a7dafe909addfc1b11b52e1999ec7c623a145f76d5		pipeline: see audit.md functional comparison
+local-only	.github/actions/artifact-transport/package.json	1fe3d74a23d15bc29dafeddf7facedbf2116168b9ca37f92f399d4ae62f784c2		pipeline: see audit.md functional comparison
+local-only	.github/actions/artifact-transport/punycode.mjs	2bbebc4547223aa04679a96f7b9d46843394708bf7937319db474ea2a84dd682		pipeline: see audit.md functional comparison
 local-only	.github/actions/artifact-transport/run/action.yml	f5db953759589bf8c4eef6e65e317a6a9cb099dd79d2c56f2bfbc8e7c57ecd55		pipeline: see audit.md functional comparison
 template-only	.github/actions/artifact/action.yml		d64435687e636d9524be823da5206112c1254eff4d944e57e70e06361cd34c4f	pipeline: see audit.md functional comparison
 template-only	.github/actions/artifact/dist/835.index.mjs		f421fba4ec6a5622017503ba19ee5c54e16247a26ea6c9902c5fb7d06b0176b5	pipeline: see audit.md functional comparison
@@ -35,13 +36,13 @@ local-only	.github/actions/publish-dockerhub/action.yml	49c0360324c80a47a5d2f022
 local-only	.github/actions/setup-buildx-resilient/action.yml	80f52dfc74c387180aa65694cf9c2f5329862daedfdf28bb499be770345209e1		pipeline: see audit.md functional comparison
 different	.github/codeql/codeql-config.yml	287db0205e5969004ebb69e48716fa0cce1b5623955671ff73a64a6751745e3b	fe47e90d27b74328306bd63d754e53b4ea703455a86bde74ec61fd29878639f5	pipeline: see audit.md functional comparison
 template-only	.github/workflows/docs.yml		91bf3d3d3da0487c9c4d857f57168ce05de4b97ac9d717973f59ccc5bb9f4bd0	pipeline: see audit.md functional comparison
-local-only	.github/workflows/example-app.yml	e5cae94659d22014628d0cd175137606262d875302d998be1cfddb88a85bbcf9		pipeline: see audit.md functional comparison
+local-only	.github/workflows/example-app.yml	ed7badeb461c1cf2c89ad1b6dbfee2828466cbc1b13f16c36e783da788d42b4a		pipeline: see audit.md functional comparison
 local-only	.github/workflows/javascript-first-example.yml	66e64c4d8ae2f9096daf25a30b2495fd3f31e39eb4304d835b060bda39eb503a		pipeline: see audit.md functional comparison
 local-only	.github/workflows/javascript-first-gate.yml	918fbe3ad1d3c4f179bf02af43ba449ce2eed433439b10eb5784e98c9fef383e		pipeline: see audit.md functional comparison
 different	.github/workflows/links.yml	48ed1515ad3e72a09a66bc394efdce14488d328687e9368cd879f14bd7c74f49	ba767651c1e7686b078a76020afb192af6d2f59e8d717a42f1d110569fbd9620	pipeline: see audit.md functional comparison
 different	.github/workflows/release.yml	658e2c3d2c6f58a7832cb234a7602b56a6424aaab1341ca0b48fbcb3383fe362	787ec7c457dd8a724c0f96c2ffbe6b12bcb952de1bba1738fc443123b415dee8	pipeline: see audit.md functional comparison
 different	.github/workflows/security.yml	ddc6b3c68a1870afef8b18c4e0a059a2c7e5b7f5883f74cbd630e627c9f5d676	d413ee1ebca7979bdb6de5d8d3596082fa3b1cb906a9f3d4654da8e590f89f60	pipeline: see audit.md functional comparison
-different	.github/workflows/workflows.yml	cef10ede5c3d5ef90d7b50a6adb4d5813fb8a118d41a57c835f4a354dc2c9ab3	b4d32ad4b8bda96e6296bec21d8379f1b2b4e7d6591cb31b7962ee7ffdcc33d4	pipeline: see audit.md functional comparison
+different	.github/workflows/workflows.yml	af0c33ee9030b9b9a29105b549e4b479fba7cc06383b234782e50cf1d65adcd2	b4d32ad4b8bda96e6296bec21d8379f1b2b4e7d6591cb31b7962ee7ffdcc33d4	pipeline: see audit.md functional comparison
 different	.github/zizmor.yml	86dabc7f0b74ec7cf236da421cf6ceba7f82316fd7d8b0bccf0df940dd417a07	172c7481e1de4bcf0e9c01b39d752dd0ab3ec6be86e969705957141c9c667872	pipeline: see audit.md functional comparison
 different	.gitignore	c01bb50488fe02782a5b7fc20ab408026f2ed4aab5d69469889da55e838c2bd2	9f65f8a55ddf71a2389fcb722100f73f92d9e081a0fe9c60043860886b357281	tooling/configuration: see audit.md language and dependency decisions
 local-only	.gitkeep	42b39e117b809224e2cf5d117186df85330a06818f81668264aa440a04e2c2d3		tooling/configuration: see audit.md language and dependency decisions
@@ -505,6 +506,7 @@ local-only	experiments/issue-3-model-check.mjs	2b7e798476900b48c51b28f89afb41471
 local-only	experiments/issue-5-artifact-smoke.mjs	9b5315d2a87e77a9396f4959fcdc61326a3e3609bdfb218102600528b75e320f		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-desktop-apis.mjs	996a54cae46599c8eb80f1d3c31c390eede854230679b6240675a7867fdb1443		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-desktop-smoke.mjs	8994f694888c60d3a0bb37135c42fbbc008be36b7ee0b03fd1583d8ca2d48558		historical research: retain, do not import as product behavior
+local-only	experiments/issue-5-pages-smoke.mjs	a7fa6aa9d69cbb7f01ffebfc17b311dc005aede1688338fcf79802d055af1e50		historical research: retain, do not import as product behavior
 local-only	experiments/issue-5-template-audit.mjs	86d528f4193a226073c79338e1bb1b84717eda07c0c79773e64ef8a8c9584509		historical research: retain, do not import as product behavior
 template-only	experiments/issue_126_plan.md		69be5b1acfed4968220a25cd6ebb065d84b9520b0f583ad38bbf59603d05dea8	historical research: retain, do not import as product behavior
 template-only	experiments/issue_98_analysis.md		28d2558d734b4b4b43934bf0d9fbcefe733781c164cf5dafed9dc1f4fd595cce	historical research: retain, do not import as product behavior
@@ -672,7 +674,7 @@ local-only	tests/npm-registry.test.js	3c83bdf85ed17fcccd495160dd9e54390bba352705
 local-only	tests/package-info.test.js	747334fc13a00270565d76d8eca2e64e14bb0588f75c3011af90fd0f6db705c5		acceptance and policy tests: preserve or strengthen
 local-only	tests/package-manager.test.js	a8153b59b812c474cc72cb288bb20007744c0af3e1108bee9556003d77aadfc2		acceptance and policy tests: preserve or strengthen
 local-only	tests/package-metadata.test.js	698e025398663f34a85c1418357f1b6e51786eb9bcc9876e05043d521d79e9f5		acceptance and policy tests: preserve or strengthen
-local-only	tests/pipeline-requirements.test.js	8b18972d0d801b6f1c9d2006317bcde3db15ac3693e5f57366e16e143472edba		acceptance and policy tests: preserve or strengthen
+local-only	tests/pipeline-requirements.test.js	9790613796a1b539b9e3e0b9159b332054d5c76777cab1bb225f0031f6d53a7c		acceptance and policy tests: preserve or strengthen
 local-only	tests/pipeline-status.test.js	7591064f57bb662bb162d9f442675f827501f300ff1980cb2281ac62e372b56d		acceptance and policy tests: preserve or strengthen
 local-only	tests/pr-guards.test.js	e422a50cac520e329e06e1c4dc39167f11c39f58c63e91cf26daa80de6780aed		acceptance and policy tests: preserve or strengthen
 local-only	tests/publish-failure-classifier.test.js	63cf1bdc06f08ae1f8e7f048e3a6408f6eaa1c82aff2052d40cfd0e04d9e0963		acceptance and policy tests: preserve or strengthen

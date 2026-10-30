@@ -42,3 +42,27 @@ dependency. Remove the extraction adapter and reader pin when the official SDK
 provides a maintained reader without runtime deprecations. Retain the local and
 hosted assertions when updating versions. All four locks are audited on every
 PR and the weekly security schedule.
+
+## Pages dependency adapter
+
+`punycode.mjs` is a native Node 24 resolution adapter scoped to the Pages action's
+process. Its CommonJS `punycode` / `node:punycode` imports resolve to the pinned
+userland implementation 2.3.1; other module resolution is unchanged. This follows
+the library's documented replacement for the deprecated built-in import. Node's
+normal runtime warnings remain enabled and deprecations fail the deployment
+step. No warning filter remains.
+
+The executable inventory covers encode/decode, domain conversion, UCS-2,
+invalid-input errors, unrelated module loading and preservation of other Node
+warnings. The Workflows probe runs the unmodified upstream bundle at immutable
+revision 368f82528645a54fb793d4d04e342629a3f51346, reproduces the original warning,
+then verifies clean startup and the existing OIDC refusal with the adapter.
+Its child environment contains no credentials or OIDC endpoint, so the probe
+cannot publish a deployment. Production deployment permissions and preconditions
+are preserved. General ESM named-import adaptation is outside this bundled
+CommonJS consumer's contract. Remove this adapter when the upstream bundle
+replaces its old artifact dependency; keep the startup and warning assertions.
+
+Sources: [known upstream defect](https://github.com/actions/deploy-pages/issues/413),
+[userland import instructions](https://github.com/mathiasbynens/punycode.js#installation),
+[Node module hooks](https://nodejs.org/docs/latest-v24.x/api/module.html#moduleregisterhooksoptions).

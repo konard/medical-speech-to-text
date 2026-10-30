@@ -79,6 +79,14 @@ prove that a default-branch release can publish.
   ZIP64 probe verifies binary/empty/nested/Unicode/dot-prefixed files, CRC errors,
   both traversal spellings, symlink refusal and cleanup. Hosted CI additionally
   verifies real SDK transfer and Pages layout. The threshold remains unchanged.
+- Pages used a DEP0040 filter for deploy-pages v5's bundled deprecated punycode
+  import. The actual immutable upstream bundle reproduces the failure under
+  Node's normal runtime deprecation enforcement. A process-scoped module
+  resolution adapter now supplies userland punycode 2.3.1 (recorded Scorecard 3.2).
+  Conversion/error fixtures and the unchanged upstream bundle verify the API,
+  clean startup and OIDC refusal. The child receives no credentials or OIDC
+  endpoint; this is not a deployment. Other warnings remain visible, and normal
+  runtime deprecations fail the real action. The old suppression is removed.
 - Speech-lab's production build warned that `config.js` was imported both
   statically and dynamically. A strict Vite logger reproduced the warning as a
   failing automated build before the fix (`speech-warning-reproduction.log`).
@@ -235,7 +243,11 @@ The complete speech real-model acceptance tests passed on the hosted runner.
 Successful workflow conclusions did not end the audit: the security log added
 four low Scorecard warnings and the example retained desktop deprecations and
 missing author metadata. These findings were collected together before the next
-batch. The ZIP adapter and desktop changes above address them. Only the npm
+batch. The ZIP, desktop and Pages adapters above address them and the masked Pages warning. Only the npm
 identity/bootstrap criterion remains externally blocked; the PR stays draft
 until that requirement is resolved. Second-batch results will be recorded after
-exact-revision validation and hosted execution.
+exact-revision validation and hosted execution. The intermediate revision
+302572a passed Node/Bun (1076 each), Deno (1075 plus one documented skip),
+lint/format/duplication, native archive/desktop probes, syntax, docs and version
+guards. A local status-check invocation omitted its required workflow arguments;
+that usage error is preserved and corrected in the final validation command.

@@ -1,0 +1,128 @@
+[
+  {
+    "check": "node",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "npm",
+      "test"
+    ]
+  },
+  {
+    "check": "bun",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "bun",
+      "test",
+      "--timeout",
+      "30000"
+    ]
+  },
+  {
+    "check": "deno",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "deno",
+      "test",
+      "-A",
+      "--parallel"
+    ]
+  },
+  {
+    "check": "check",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "npm",
+      "run",
+      "check"
+    ]
+  },
+  {
+    "check": "artifact",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-artifact-smoke.mjs"
+    ]
+  },
+  {
+    "check": "desktop",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "--pending-deprecation",
+      "--throw-deprecation",
+      "experiments/issue-5-desktop-smoke.mjs"
+    ]
+  },
+  {
+    "check": "syntax",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "bash",
+      "scripts/check-mjs-syntax.sh"
+    ]
+  },
+  {
+    "check": "docs",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "bash",
+      "scripts/check-required-docs.sh"
+    ]
+  },
+  {
+    "check": "lines",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "bash",
+      "scripts/check-file-line-limits.sh"
+    ]
+  },
+  {
+    "check": "changeset",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "scripts/validate-changeset.mjs"
+    ]
+  },
+  {
+    "check": "version",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "scripts/check-version.mjs"
+    ]
+  },
+  {
+    "check": "workflows",
+    "exit": 0,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "scripts/check-ci-workflows.mjs"
+    ]
+  },
+  {
+    "check": "status",
+    "exit": 2,
+    "sha": "302572a4e807b0fb12012693ef5a8b5a7c270ae5",
+    "command": [
+      "node",
+      "scripts/check-status-gate-covers-all-jobs.mjs"
+    ]
+  }
+]

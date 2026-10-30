@@ -125,11 +125,20 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Pages compatibility dependency
+        run: npm ci --prefix .github/actions/artifact-transport --ignore-scripts --no-audit --no-fund
+
       - name: Deploy Pages artifact
         id: deployment
         uses: actions/deploy-pages@v5
         env:
-          NODE_OPTIONS: --disable-warning=DEP0040
+          NODE_OPTIONS: >-
+            --import="${{ github.workspace }}/.github/actions/artifact-transport/punycode.mjs"
+            --throw-deprecation
 
   desktop-package:
     name: Package desktop app (${{ matrix.os }})

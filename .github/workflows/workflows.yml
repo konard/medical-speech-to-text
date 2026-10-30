@@ -12,6 +12,7 @@ on:
       - 'scripts/check-status-gate-covers-all-jobs.mjs'
       - 'scripts/check-pipeline-status.sh'
       - 'experiments/issue-5-artifact-smoke.mjs'
+      - 'experiments/issue-5-pages-smoke.mjs'
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
@@ -22,6 +23,7 @@ on:
       - 'scripts/check-status-gate-covers-all-jobs.mjs'
       - 'scripts/check-pipeline-status.sh'
       - 'experiments/issue-5-artifact-smoke.mjs'
+      - 'experiments/issue-5-pages-smoke.mjs'
   workflow_dispatch:
 
 # Least-privilege default; these jobs only need to read the checked-out tree.
@@ -182,6 +184,17 @@ jobs:
 
       - name: Exercise actual SDK archive dependencies
         run: node --pending-deprecation --throw-deprecation experiments/issue-5-artifact-smoke.mjs
+
+      - name: Check out pinned Pages bundle fixture
+        uses: actions/checkout@v7
+        with:
+          repository: actions/deploy-pages
+          ref: 368f82528645a54fb793d4d04e342629a3f51346 # v5
+          path: .cache/deploy-pages-fixture
+          persist-credentials: false
+
+      - name: Verify Pages dependency without deployment credentials
+        run: node --throw-deprecation experiments/issue-5-pages-smoke.mjs .cache/deploy-pages-fixture/dist/index.js
 
       - name: Prepare roundtrip evidence
         run: |

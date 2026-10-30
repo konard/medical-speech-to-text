@@ -1,6 +1,7 @@
 {
   "added": {
-    "node_modules/@zip.js/zip.js": "2.24.0"
+    "node_modules/@zip.js/zip.js": "2.24.0",
+    "node_modules/punycode": "2.3.1"
   },
   "removed": {
     "node_modules/@isaacs/cliui": "8.0.2",
