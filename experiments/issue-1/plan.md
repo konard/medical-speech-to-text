@@ -22,19 +22,23 @@ Objective: address every requirement of issue #1 in PR #2 on
        result export. No audio upload or CRM writes. Preserve inherited APIs.
 8. [x] Validate in a real browser; record model/revision, actual ASR observations,
        screenshots and network/privacy behavior. Bound inference and memory.
-9. [ ] Prepare online demo with an appropriate explicit deployment path; verify
+9. [x] Prepare online demo with an appropriate explicit deployment path; verify
        the actual published URL or record any exact external blocker as unfinished.
 10. [x] Add changeset and automated PR checks; native JS first. No production Rust
         added; any future port needs strict inventory, native fixtures and gate.
-11. [ ] Run full required local checks, all tests, docs/line/secrets checks on exact
+11. [x] Run full required local checks, all tests, docs/line/secrets checks on exact
         candidate revision. Save large logs; read files in <=1500-line chunks.
-12. [ ] Review whole diff and acceptance mapping, commit useful atomic steps,
+12. [x] Review whole diff and acceptance mapping, commit useful atomic steps,
         push one validated batch exclusively to the prepared branch.
-13. [ ] List fresh CI runs with timestamps/SHA, wait for every same-revision run;
+13. [x] List fresh CI runs with timestamps/SHA, wait for every same-revision run;
         download all failed logs under ci-logs, identify exact errors before next batch.
-14. [ ] Update PR title/body with scope, reproduction, tests, screenshots,
-        limitations, demo link and `Fixes #1`; review gh pr diff, clean git status,
-        mark ready after verification; no merge/release without authorization.
+14. [x] Prepare PR title/body with scope, reproduction, tests, screenshots,
+        limitations, demo link and `Fixes #1`; review gh pr diff and clean git
+        status for publication. Final readiness is recorded in PR metadata.
+
+Final handoff requires all CI for the current head to pass, a clean tree and PR #2
+marked ready. Verify these live on the PR after each batch, without recursively
+committing a claim about the next revision. No merge/release is authorized.
 
 Resource policy: no Rust needed for this JS-first work. Run expensive tasks
 sequentially, no unbounded probes, no deletions of user dependencies/caches.
@@ -53,3 +57,11 @@ The failure log is preserved in ignored ci-logs; repeated runs verify the change
 An intervening HTML edit reset a Vite inference run through live reload; that run
 was interrupted, diagnosed and repeated without editing served files. Model tests
 now log browser status and fail promptly on a completed but unsuccessful batch.
+
+All five workflows for published revision `7576fc3` completed successfully before
+the next batch. Fresh-browser online tests reproduced the source host's notice
+and a deferred-module navigation race; the test now records the empty host
+acknowledgement separately and waits for load. The public ten-clip tiny and
+unreferenced base run passed, with the same 27.9% WER / 17.7% CER and no page
+exceptions. The receipt is in the case-study data directory. Every later batch
+receives appropriate local checks and all same-revision CI before final handoff.

@@ -30,6 +30,10 @@ content: store them according to the dataset's policy. The public demo retrieves
 assets from global GitHub/CDN/Hugging Face infrastructure, exposing ordinary
 connection metadata. It is limited to public/synthetic or expressly approved
 research data; local inference alone does not establish Australian residency.
+The source host's initial notice has its own advertising and an empty confirmation
+POST. The hosted test acknowledges it before selecting recordings, waits for
+module initialization, records that hosting request separately and preserves the
+GET/HEAD-only assertion for application and inference requests.
 
 ## JavaScript and adapter inventory
 

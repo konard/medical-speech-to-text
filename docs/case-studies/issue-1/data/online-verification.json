@@ -1,0 +1,75 @@
+{
+  "url": "https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html",
+  "testedSourceRevision": "7576fc31afe728082f5bc0c558a5808660af8ea3",
+  "startedAt": "2026-10-30T16:15:33.467Z",
+  "completedAt": "2026-10-30T16:16:32.835Z",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "tiny": {
+    "completed": 10,
+    "model": {
+      "id": "Xenova/whisper-tiny.en",
+      "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+      "label": "Whisper tiny · English · ~75 MB",
+      "runtime": "Transformers.js 3.8.1",
+      "device": "wasm",
+      "dtype": "q8",
+      "threads": 1
+    },
+    "scores": {
+      "scored": 10,
+      "word": {
+        "errors": 41,
+        "referenceLength": 147,
+        "rate": 0.2789115646258503
+      },
+      "character": {
+        "errors": 103,
+        "referenceLength": 583,
+        "rate": 0.17667238421955403
+      }
+    },
+    "audioSha256": [
+      "2679aa2fff927af156ca61c83db4c4700ef2de4f204736adec962e49e37cbeef",
+      "8b1634c1fc2a63dd3ea46fd339516193af21376056ab88a68d60960cab555e49",
+      "9659c3fa9932fe6a49c5a7ecdcb62178ad90edc4a2523de99dbd116b818ad700",
+      "e4e53783417c5f7d6be960c001fbbc3b85f3c033ba48e54b9fcba8e1240c7afe",
+      "9a1bf31312389551f91e0c4a5ffb11ebbe01bb79cfffdd33ed9041547c2a4cbd",
+      "c28d9d39f31f379f2489c16e32769dba0ec9c39c4d25c3aa4901cd7435670d15",
+      "bc60964ce94ff0da1f446061b2afa0c95769dce7020b00d968035bf248eaa1f9",
+      "78dd38929ae2264d0c7ebdeed0e8a276d857585c5beea08126ea79c155487446",
+      "c03706cf81409555364fc46bee450e5bd97b12eab826de38c7fcc78f17b68d9c",
+      "4cb8098b111c9f06079fd398bd0deb8f6667a163443bf0a1a241590383358154"
+    ]
+  },
+  "baseWithoutReference": {
+    "model": {
+      "id": "Xenova/whisper-base.en",
+      "revision": "95bf40a508535962c6483ead40270b2e32267508",
+      "label": "Whisper base · English · ~145 MB",
+      "runtime": "Transformers.js 3.8.1",
+      "device": "wasm",
+      "dtype": "q8",
+      "threads": 1
+    },
+    "text": " Okay, and how many times a day are you going let's say we lost a couple of days",
+    "score": null
+  },
+  "hostingAcknowledgements": [
+    {
+      "url": "https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html",
+      "method": "POST",
+      "bodyBytes": 0
+    }
+  ],
+  "applicationRequestMethods": [
+    "GET"
+  ],
+  "pageErrors": [],
+  "assertions": [
+    "ten actual outputs",
+    "optional reference",
+    "word seek and active highlight",
+    "model and audio provenance",
+    "no application upload requests"
+  ]
+}

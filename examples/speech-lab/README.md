@@ -5,6 +5,9 @@ and play audio with word highlighting. [Research plan](../../docs/case-studies/i
 and [measured results](../../docs/case-studies/issue-1/verification.md).
 
 [Open the online demo](https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html).
+If the source host shows **External Content Notice**, select **Open the page**.
+That host page has its own advertising and connection metadata; its empty
+acknowledgement POST happens before any recordings or references are selected.
 Use public/synthetic recordings: the demonstration loads global CDN/model assets
 and is **not an Australian clinical deployment**. Audio inference runs locally;
 there is no audio-upload endpoint, analytics or CRM executor.
@@ -62,6 +65,9 @@ Node inference or image-processing package is installed for this static example.
 `CHROME_PATH=/path/to/chrome` can reuse an installed compatible Chromium.
 Set `SPEECH_LAB_URL` to a served `index.html` URL to run the actual model test
 against that static deployment instead of the local Vite server.
+The test handles the source host's notice, records that empty hosting request
+separately, waits for deferred modules, and still rejects application upload
+requests. UI/navigation actions are bounded independently of model inference.
 The build produces `dist/` and can be served by a static HTTPS host. Raw source
 also works on an HTTPS host with correct JavaScript MIME types and relative paths;
 global model/runtime delivery needs CORS. For restricted Australian deployment,

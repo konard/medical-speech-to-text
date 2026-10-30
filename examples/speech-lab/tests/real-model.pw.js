@@ -11,13 +11,46 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
   test.setTimeout(600000);
   const evidence = 'test-results/model-evidence';
   const requests = [];
+  const hostingAcknowledgements = [];
   const errors = [];
+  let acknowledgingHost = false;
   page.on('request', (request) => {
     const url = new URL(request.url());
+    // The source host requires an empty acknowledgement before loading the app.
+    // Capture it separately, before any recordings or references are selected.
+    if (
+      acknowledgingHost &&
+      request.method() === 'POST' &&
+      url.href === page.url() &&
+      !request.postData()
+    ) {
+      hostingAcknowledgements.push({
+        url: url.href,
+        method: 'POST',
+        bodyBytes: 0,
+      });
+      return;
+    }
     requests.push({ url: url.origin + url.pathname, method: request.method() });
   });
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./index.html');
+  if (
+    new URL(page.url()).hostname === 'raw.githack.com' &&
+    (await page.title()) === 'External Content Notice | rawgit.hack'
+  ) {
+    acknowledgingHost = true;
+    try {
+      await page
+        .getByRole('button', { name: 'Open the page', exact: true })
+        .click();
+    } finally {
+      acknowledgingHost = false;
+    }
+    expect(hostingAcknowledgements).toHaveLength(1);
+  }
+  // A host-notice navigation can commit before deferred module imports finish.
+  await page.waitForLoadState('load');
   await page.exposeFunction('reportModelStatus', (value) =>
     console.log(`Browser status: ${value}`)
   );
@@ -42,7 +75,7 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
   await download.saveAs(`${evidence}/browser-results.json`);
   await writeFile(
     `${evidence}/browser-network.json`,
-    JSON.stringify({ requests, errors }, null, 2)
+    JSON.stringify({ requests, hostingAcknowledgements, errors }, null, 2)
   );
   const posts = requests.filter(
     (request) => request.method !== 'GET' && request.method !== 'HEAD'
@@ -87,6 +120,6 @@ test('real pinned Whisper model on ten attributed mock-consultation clips', asyn
   ).toBe(true);
   await writeFile(
     `${evidence}/browser-network.json`,
-    JSON.stringify({ requests, errors }, null, 2)
+    JSON.stringify({ requests, hostingAcknowledgements, errors }, null, 2)
   );
 });

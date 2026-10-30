@@ -30,6 +30,7 @@ clinical vocabulary and deployment hardware.
 ## Try the experiment
 
 [Open Speech Lab](https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html).
+If the source host displays **External Content Notice**, select **Open the page**.
 Select **Try 10 public consultation clips**, then **Transcribe recordings**.
 Alternatively select 1–20 local audio files and optionally supply a JSON object
 mapping exact filenames to reference transcripts. Play a recording or select a
