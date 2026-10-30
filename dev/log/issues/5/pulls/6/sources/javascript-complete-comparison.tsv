@@ -368,14 +368,13 @@ identical	examples/javascript-first/pins.json	e3f019bce90a8530c1bd2204fd2b44273e
 local-only	examples/speech-lab/README.md	5052358c370e3378ed22e86cb7f3246eed133a2b0da6b308467161d882a33451		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/app.js	ec3e4f4ea75c3f1d6af624858507035336016085f9f810b9430ecd49433677d7		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/audio.js	4c263eb59228c714dbb610897ec4266d650f86b8a854b5b03b626481b345c9ca		language/product behavior: retain local APIs and shipped examples
-local-only	examples/speech-lab/build.mjs	e7150cb5cf4e5856fe2f0e91e72562b2798f590e429ce4ca3283ae08b35447bf		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/capture.js	86494a061d8a983a52e008c2d6f55faa2374cc68e9effccafd99e8b0beede2ab		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/config.js	488700f25666bf579354e507fbe72d48dce26b47f98f4947c7770ab6a3f826e3		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/device.js	9a0a571a5c5ad3dbca7c0e083bfc3497c4dbb69d99e3485745095331910294dd		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/index.html	8fd021fefd9ca51a70ee81d4d01151989c9ba283eb6cc276f19e02aa3829ff67		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/inference.js	8a63407045a00ea4f54d8e10332d21b82080652d36ea00b11597144536fe6dd4		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/package-lock.json	788a3298bd9dde7183b80a07abbfe987662dd300ada24439b44d36d34a205b23		language/product behavior: retain local APIs and shipped examples
-local-only	examples/speech-lab/package.json	bc2096e820c40630e5d11ed168a3d6c4e19c3029dba4c8eaecc72f10442d3165		language/product behavior: retain local APIs and shipped examples
+local-only	examples/speech-lab/package.json	c662235ef7049bd2abfe3b86eb8b28808cc3d15618bd50890a3d55e4a0dae5bd		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/playwright.config.js	f8c70ab3d783dd8eb2e60a6a5bcfe95b6df02713777b6f287d4ca894f87e47cf		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/public/samples/ATTRIBUTION.md	f269fed47246aac39d64650a5fc3997e9e97d97e14fc8f24cae27e0c6c28d4af		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/public/samples/manifest.json	b5105aa5b03ed08768dcf02fe89576b35b4dc09b2c7d1b9080e8446e26d8d5f5		language/product behavior: retain local APIs and shipped examples
@@ -393,11 +392,12 @@ local-only	examples/speech-lab/public/samples/references.json	001e27985489101e4b
 local-only	examples/speech-lab/render.js	15947cb34634e7e2c704efb3d7b973f41fd2866452aab2c19ed895ebeca502b0		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/samples.js	20db667e867afcffe3b45e838cb8d1583dfd451b945702a72d5899a659c7efc6		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/style.css	2356b75a2ffeee3448d6f62826d8625bc5e789959e2e6385d5ac4490efe19e8e		language/product behavior: retain local APIs and shipped examples
+local-only	examples/speech-lab/tests/build.pw.js	103ab066ec4c6e904c3c8cdeec006bcc3ca0f9706e1a411829581dc38617833f		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/tests/device.pw.js	a72bad1f91ee0dcd2bef20ba18a9d0a35c0a3558e70349102311b35539cdc1ea		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/tests/real-model.pw.js	e0876f082da408d0fa783a2de22359acd2a2a64456a93c304c1374020e389280		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/tests/workbench.pw.js	e4169c211e9954e43c94ee67d3ee26bb6ae7518653a3b5310ce42b631ab47fc9		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/views.js	149be74c346a671a8e822c8f18661873ddd935238f66cff9bedd80b0db27bd41		language/product behavior: retain local APIs and shipped examples
-local-only	examples/speech-lab/vite.config.js	06a250e310e1b0334df3d68e8d4c5b99a89107ef923747251f7cf9496cc4ae34		language/product behavior: retain local APIs and shipped examples
+local-only	examples/speech-lab/vite.config.js	bd6cd8948f941ec8fcfbd37b2c16577d756c94a07f65e7e30f039fbd7e587b14		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-lab/worker.js	58a6a7c9cb0687fcdb6b6af6d77574e58c30b366a6dafb123020b59d9bdb9014		language/product behavior: retain local APIs and shipped examples
 local-only	examples/speech-provenance.js	ac47ee866a3d834e7e1fc63a1431351152d0ea293fc47c1bdd0390568741e00d		language/product behavior: retain local APIs and shipped examples
 identical	examples/universal-app/README.md	443eed2e8cdc0272667dc82af86279c29bc78d29a7ae4b04d57ce6b51f7d9e44	443eed2e8cdc0272667dc82af86279c29bc78d29a7ae4b04d57ce6b51f7d9e44	language/product behavior: retain local APIs and shipped examples

@@ -88,6 +88,11 @@ prove that a default-branch release can publish.
   visible, exact and explicitly unfinished, with zero high-severity npm audit
   findings. A nonexistent released electron-builder 27 is no longer claimed as
   an available fix in the allowlist.
+  Asar 4.3.1 was also inspected as an alternative: its declarations retain
+  `createPackageFromStreams`, but it raises Node's minimum to 22.12 and does not
+  remove temp's separate rimraf 2 → glob 7 → inflight chain. Its current glob 13
+  dependencies are saved in `asar-latest-dependencies.json`. This is distinct
+  from the demonstrated incompatibility of overriding glob inside asar 3.
 - Windows Deno baseline emitted an intentional 70-second budget warning and
   succeeded at **75/100 seconds**, lines **18237–18249**. Logs show repeated
   Git/process fixtures at 0.7–2 seconds each, plus the bounded HTTP-429 fixture.
@@ -193,8 +198,11 @@ are recorded in the PR and validation logs after the complete batch is committed
 
 Local runtime results before candidate commit: Node and Bun 1069 passed each;
 Deno 1068 passed and its documented npm-bin-symlink import limitation skipped.
-Speech browser: nine
-passed, two opt-in model cases skipped. The real-model run was stopped at
+Speech browser: ten
+passed, two opt-in model cases skipped, including a build regression that
+rejects mixed imports and preserves Vite CLI options. Warning enforcement lives
+in Vite's configuration so the existing `vite build` CLI stays intact.
+The real-model run was stopped at
 3,014,524,928 bytes of container memory (limit 3,135,369,216) while downloading
 Whisper, rather than risk exhausting the shared host. Hosted CI retains the
 complete real-model assertions. Local Chrome was selected with the existing
