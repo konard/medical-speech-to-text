@@ -510,6 +510,45 @@ jobs:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         run: bash scripts/preflight-credentials.sh
 
+  speech-lab:
+    name: Speech Lab Browser Acceptance
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    concurrency:
+      group: check-${{ github.workflow }}-${{ github.ref }}-speech-lab
+      cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+      - name: Validate native JavaScript before browser adapters
+        run: |
+          npm ci
+          npm test
+      - name: Install browser demo and Chromium
+        working-directory: examples/speech-lab
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Build and exercise browser contracts
+        working-directory: examples/speech-lab
+        run: |
+          npm run build
+          npm run test:browser
+      - name: Exercise both pinned models on public mock consultations
+        working-directory: examples/speech-lab
+        run: npm run test:model
+      - name: Preserve model and browser evidence
+        if: ${{ !cancelled() }}
+        uses: ./.github/actions/artifact-transport
+        with:
+          name: speech-lab-browser-evidence
+          path: examples/speech-lab/test-results
+          if-no-files-found: error
+
   # Release - only runs on main after tests pass (for push events)
   release:
     name: Release
@@ -521,6 +560,7 @@ jobs:
         version-check,
         changeset-check,
         lint,
+        speech-lab,
         test,
         docker-build,
         validate-docs,
@@ -672,6 +712,7 @@ jobs:
         version-check,
         changeset-check,
         lint,
+        speech-lab,
         test,
         docker-build,
         validate-docs,
@@ -1053,6 +1094,7 @@ jobs:
       - version-check
       - changeset-check
       - lint
+      - speech-lab
       - test
       - docker-build
       - docker-publish-config

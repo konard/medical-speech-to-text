@@ -1,0 +1,91 @@
+{
+  "dataset": "PriMock57",
+  "license": "CC-BY-4.0",
+  "sourceRevision": "cd2ac707ad03cb4d2531f4ec6b90c659bf4357c5",
+  "source": "https://github.com/babylonhealth/primock57/tree/cd2ac707ad03cb4d2531f4ec6b90c659bf4357c5",
+  "sourceAudioSha256": "a93ca69f49da821b2d10b03f3189fd0d82200a697805c18f316719ba328ff96b",
+  "sourceTranscriptSha256": "a727b4f53fd0c21750405fa683a0079585d9cf3cf763d3ced51bde9673a3eb04",
+  "selection": "First ten complete doctor utterances of 0.7\u201312 seconds without uncertainty tags; interval cropping only. Single speaker, one mock consultation. Smoke test, not clinical benchmark.",
+  "records": [
+    {
+      "file": "primock-01.wav",
+      "start": 43.69872761682924,
+      "end": 48.01698848639446,
+      "sourceFrames": [699179, 768271],
+      "sha256": "2679aa2fff927af156ca61c83db4c4700ef2de4f204736adec962e49e37cbeef",
+      "reference": "Okay. And how many times a day are you going, let's say, in the last couple of days?"
+    },
+    {
+      "file": "primock-02.wav",
+      "start": 74.35745476625836,
+      "end": 78.06455506806859,
+      "sourceFrames": [1189719, 1249032],
+      "sha256": "8b1634c1fc2a63dd3ea46fd339516193af21376056ab88a68d60960cab555e49",
+      "reference": "Left side. Okay, and can you describe the pain to me?"
+    },
+    {
+      "file": "primock-03.wav",
+      "start": 86.80327309910236,
+      "end": 91.15847202728304,
+      "sourceFrames": [1388852, 1458535],
+      "sha256": "9659c3fa9932fe6a49c5a7ecdcb62178ad90edc4a2523de99dbd116b818ad700",
+      "reference": "Okay. And is the pain, is that, is it there all the time, or does it come and go?"
+    },
+    {
+      "file": "primock-04.wav",
+      "start": 99.04597212173863,
+      "end": 106.85720856656965,
+      "sourceFrames": [1584735, 1709715],
+      "sha256": "e4e53783417c5f7d6be960c001fbbc3b85f3c033ba48e54b9fcba8e1240c7afe",
+      "reference": "Okay, fine. And you mentioned you've been feeling quite weak and shaky as well. What do you mean by shaky? Do you mean you've been having, uh have you been feeling feverish, for example?"
+    },
+    {
+      "file": "primock-05.wav",
+      "start": 154.22489987639068,
+      "end": 164.32857354758966,
+      "sourceFrames": [2467598, 2629257],
+      "sha256": "9a1bf31312389551f91e0c4a5ffb11ebbe01bb79cfffdd33ed9041547c2a4cbd",
+      "reference": "No, okay. Um, and um, any any other symptoms at all? So you mentioned tummy pain, you mentioned diarrhea, you mentioned your vomiting, uh, anything else that comes to mind?"
+    },
+    {
+      "file": "primock-06.wav",
+      "start": 250.65377530067468,
+      "end": 253.10151950718688,
+      "sourceFrames": [4010460, 4049624],
+      "sha256": "c28d9d39f31f379f2489c16e32769dba0ec9c39c4d25c3aa4901cd7435670d15",
+      "reference": "Okay. And, is your asthma well-controlled?"
+    },
+    {
+      "file": "primock-07.wav",
+      "start": 258.773611811871,
+      "end": 262.9974545810115,
+      "sourceFrames": [4140377, 4207959],
+      "sha256": "bc60964ce94ff0da1f446061b2afa0c95769dce7020b00d968035bf248eaa1f9",
+      "reference": "Fine. And you don't have any other tummy problem, bowel problems I should be aware of?"
+    },
+    {
+      "file": "primock-08.wav",
+      "start": 285.0712819008507,
+      "end": 286.0712819008507,
+      "sourceFrames": [4561140, 4577140],
+      "sha256": "78dd38929ae2264d0c7ebdeed0e8a276d857585c5beea08126ea79c155487446",
+      "reference": "Okay."
+    },
+    {
+      "file": "primock-09.wav",
+      "start": 288.56377823408627,
+      "end": 289.56377823408627,
+      "sourceFrames": [4617020, 4633020],
+      "sha256": "c03706cf81409555364fc46bee450e5bd97b12eab826de38c7fcc78f17b68d9c",
+      "reference": "Yeah."
+    },
+    {
+      "file": "primock-10.wav",
+      "start": 318.011193898504,
+      "end": 319.9813317688472,
+      "sourceFrames": [5088179, 5119701],
+      "sha256": "4cb8098b111c9f06079fd398bd0deb8f6667a163443bf0a1a241590383358154",
+      "reference": "And do you drink much in the way of alcohol?"
+    }
+  ]
+}

@@ -104,6 +104,17 @@ export default [
     },
   },
   {
+    files: ['examples/speech-lab/**/*.js'],
+    languageOptions: {
+      globals: {
+        Worker: 'readonly',
+        performance: 'readonly',
+        URL: 'readonly',
+        Blob: 'readonly',
+      },
+    },
+  },
+  {
     // Test files have different requirements
     files: ['tests/**/*.js', '**/*.test.js'],
     rules: {

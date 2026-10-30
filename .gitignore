@@ -141,3 +141,8 @@ vite.config.ts.timestamp-*
 
 # jscpd reports
 reports/
+
+# Local speech experiments and browser traces
+ci-logs/
+**/test-results/
+**/playwright-report/

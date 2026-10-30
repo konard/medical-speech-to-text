@@ -1,0 +1,2063 @@
+{
+  "schema": "speech-lab/v1",
+  "startedAt": "2026-10-30T15:46:07.763Z",
+  "exportedAt": "2026-10-30T15:46:50.210Z",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "notes": "Research only. Word timestamps are estimates. No missing reference is scored.",
+  "results": [
+    {
+      "index": 0,
+      "status": "complete",
+      "name": "primock-01.wav",
+      "text": " Okay, and how many times a day are you going? Let's see, we've lost a couple of days.",
+      "chunks": [
+        {
+          "text": " Okay,",
+          "timestamp": [
+            0,
+            0.78
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            1.18,
+            1.22
+          ]
+        },
+        {
+          "text": " how",
+          "timestamp": [
+            1.22,
+            1.3
+          ]
+        },
+        {
+          "text": " many",
+          "timestamp": [
+            1.3,
+            1.44
+          ]
+        },
+        {
+          "text": " times",
+          "timestamp": [
+            1.44,
+            1.7
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            1.7,
+            1.82
+          ]
+        },
+        {
+          "text": " day",
+          "timestamp": [
+            1.82,
+            2
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            2,
+            2.1
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            2.1,
+            2.26
+          ]
+        },
+        {
+          "text": " going?",
+          "timestamp": [
+            2.26,
+            2.48
+          ]
+        },
+        {
+          "text": " Let's",
+          "timestamp": [
+            2.68,
+            2.7
+          ]
+        },
+        {
+          "text": " see,",
+          "timestamp": [
+            2.7,
+            3.02
+          ]
+        },
+        {
+          "text": " we've",
+          "timestamp": [
+            3.12,
+            3.22
+          ]
+        },
+        {
+          "text": " lost",
+          "timestamp": [
+            3.22,
+            3.36
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            3.36,
+            3.62
+          ]
+        },
+        {
+          "text": " couple",
+          "timestamp": [
+            3.62,
+            3.64
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            3.64,
+            3.78
+          ]
+        },
+        {
+          "text": " days.",
+          "timestamp": [
+            3.78,
+            4.64
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 0,
+          "end": 0.78
+        },
+        {
+          "text": "and",
+          "start": 1.18,
+          "end": 1.22
+        },
+        {
+          "text": "how",
+          "start": 1.22,
+          "end": 1.3
+        },
+        {
+          "text": "many",
+          "start": 1.3,
+          "end": 1.44
+        },
+        {
+          "text": "times",
+          "start": 1.44,
+          "end": 1.7
+        },
+        {
+          "text": "a",
+          "start": 1.7,
+          "end": 1.82
+        },
+        {
+          "text": "day",
+          "start": 1.82,
+          "end": 2
+        },
+        {
+          "text": "are",
+          "start": 2,
+          "end": 2.1
+        },
+        {
+          "text": "you",
+          "start": 2.1,
+          "end": 2.26
+        },
+        {
+          "text": "going?",
+          "start": 2.26,
+          "end": 2.48
+        },
+        {
+          "text": "Let's",
+          "start": 2.68,
+          "end": 2.7
+        },
+        {
+          "text": "see,",
+          "start": 2.7,
+          "end": 3.02
+        },
+        {
+          "text": "we've",
+          "start": 3.12,
+          "end": 3.22
+        },
+        {
+          "text": "lost",
+          "start": 3.22,
+          "end": 3.36
+        },
+        {
+          "text": "a",
+          "start": 3.36,
+          "end": 3.62
+        },
+        {
+          "text": "couple",
+          "start": 3.62,
+          "end": 3.64
+        },
+        {
+          "text": "of",
+          "start": 3.64,
+          "end": 3.78
+        }
+      ],
+      "duration": 4.318231292517007,
+      "reference": "Okay. And how many times a day are you going, let's say, in the last couple of days?",
+      "score": {
+        "word": {
+          "errors": 4,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 0,
+          "referenceLength": 18,
+          "rate": 0.2222222222222222
+        },
+        "character": {
+          "errors": 8,
+          "substitutions": 7,
+          "deletions": 0,
+          "insertions": 1,
+          "referenceLength": 63,
+          "rate": 0.12698412698412698
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "2679aa2fff927af156ca61c83db4c4700ef2de4f204736adec962e49e37cbeef",
+        "bytes": 138228,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 4853.300000011921,
+        "inferenceMs": 4453.200000047684,
+        "cold": true
+      }
+    },
+    {
+      "index": 1,
+      "status": "complete",
+      "name": "primock-02.wav",
+      "text": " So I like it. Then can you describe the painting to me?",
+      "chunks": [
+        {
+          "text": " So",
+          "timestamp": [
+            0,
+            0.62
+          ]
+        },
+        {
+          "text": " I",
+          "timestamp": [
+            0.62,
+            0.78
+          ]
+        },
+        {
+          "text": " like",
+          "timestamp": [
+            0.78,
+            0.86
+          ]
+        },
+        {
+          "text": " it.",
+          "timestamp": [
+            0.86,
+            1.14
+          ]
+        },
+        {
+          "text": " Then",
+          "timestamp": [
+            1.32,
+            1.82
+          ]
+        },
+        {
+          "text": " can",
+          "timestamp": [
+            1.82,
+            1.94
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            1.94,
+            2.1
+          ]
+        },
+        {
+          "text": " describe",
+          "timestamp": [
+            2.1,
+            2.58
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            2.58,
+            2.8
+          ]
+        },
+        {
+          "text": " painting",
+          "timestamp": [
+            2.8,
+            3.04
+          ]
+        },
+        {
+          "text": " to",
+          "timestamp": [
+            3.04,
+            4.16
+          ]
+        },
+        {
+          "text": " me?",
+          "timestamp": [
+            4.16,
+            4.18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "So",
+          "start": 0,
+          "end": 0.62
+        },
+        {
+          "text": "I",
+          "start": 0.62,
+          "end": 0.78
+        },
+        {
+          "text": "like",
+          "start": 0.78,
+          "end": 0.86
+        },
+        {
+          "text": "it.",
+          "start": 0.86,
+          "end": 1.14
+        },
+        {
+          "text": "Then",
+          "start": 1.32,
+          "end": 1.82
+        },
+        {
+          "text": "can",
+          "start": 1.82,
+          "end": 1.94
+        },
+        {
+          "text": "you",
+          "start": 1.94,
+          "end": 2.1
+        },
+        {
+          "text": "describe",
+          "start": 2.1,
+          "end": 2.58
+        },
+        {
+          "text": "the",
+          "start": 2.58,
+          "end": 2.8
+        },
+        {
+          "text": "painting",
+          "start": 2.8,
+          "end": 3.04
+        }
+      ],
+      "duration": 3.7070521541950114,
+      "reference": "Left side. Okay, and can you describe the pain to me?",
+      "score": {
+        "word": {
+          "errors": 6,
+          "substitutions": 5,
+          "deletions": 0,
+          "insertions": 1,
+          "referenceLength": 11,
+          "rate": 0.5454545454545454
+        },
+        "character": {
+          "errors": 16,
+          "substitutions": 10,
+          "deletions": 2,
+          "insertions": 4,
+          "referenceLength": 40,
+          "rate": 0.4
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "8b1634c1fc2a63dd3ea46fd339516193af21376056ab88a68d60960cab555e49",
+        "bytes": 118670,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 3168.300000011921,
+        "cold": false
+      }
+    },
+    {
+      "index": 2,
+      "status": "complete",
+      "name": "primock-03.wav",
+      "text": " Okay, and there's a pain, is it there all the time, or does it come and go?",
+      "chunks": [
+        {
+          "text": " Okay,",
+          "timestamp": [
+            0,
+            0.62
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            1,
+            1.06
+          ]
+        },
+        {
+          "text": " there's",
+          "timestamp": [
+            1.06,
+            1.26
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            1.26,
+            1.4
+          ]
+        },
+        {
+          "text": " pain,",
+          "timestamp": [
+            1.4,
+            1.72
+          ]
+        },
+        {
+          "text": " is",
+          "timestamp": [
+            1.92,
+            2.1
+          ]
+        },
+        {
+          "text": " it",
+          "timestamp": [
+            2.1,
+            2.22
+          ]
+        },
+        {
+          "text": " there",
+          "timestamp": [
+            2.22,
+            2.42
+          ]
+        },
+        {
+          "text": " all",
+          "timestamp": [
+            2.42,
+            2.6
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            2.6,
+            2.78
+          ]
+        },
+        {
+          "text": " time,",
+          "timestamp": [
+            2.78,
+            3.02
+          ]
+        },
+        {
+          "text": " or",
+          "timestamp": [
+            3.02,
+            3.16
+          ]
+        },
+        {
+          "text": " does",
+          "timestamp": [
+            3.16,
+            3.16
+          ]
+        },
+        {
+          "text": " it",
+          "timestamp": [
+            3.16,
+            3.34
+          ]
+        },
+        {
+          "text": " come",
+          "timestamp": [
+            3.34,
+            3.42
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            3.42,
+            3.58
+          ]
+        },
+        {
+          "text": " go?",
+          "timestamp": [
+            3.58,
+            4.18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 0,
+          "end": 0.62
+        },
+        {
+          "text": "and",
+          "start": 1,
+          "end": 1.06
+        },
+        {
+          "text": "there's",
+          "start": 1.06,
+          "end": 1.26
+        },
+        {
+          "text": "a",
+          "start": 1.26,
+          "end": 1.4
+        },
+        {
+          "text": "pain,",
+          "start": 1.4,
+          "end": 1.72
+        },
+        {
+          "text": "is",
+          "start": 1.92,
+          "end": 2.1
+        },
+        {
+          "text": "it",
+          "start": 2.1,
+          "end": 2.22
+        },
+        {
+          "text": "there",
+          "start": 2.22,
+          "end": 2.42
+        },
+        {
+          "text": "all",
+          "start": 2.42,
+          "end": 2.6
+        },
+        {
+          "text": "the",
+          "start": 2.6,
+          "end": 2.78
+        },
+        {
+          "text": "time,",
+          "start": 2.78,
+          "end": 3.02
+        },
+        {
+          "text": "or",
+          "start": 3.02,
+          "end": 3.16
+        },
+        {
+          "text": "it",
+          "start": 3.16,
+          "end": 3.34
+        },
+        {
+          "text": "come",
+          "start": 3.34,
+          "end": 3.42
+        },
+        {
+          "text": "and",
+          "start": 3.42,
+          "end": 3.58
+        },
+        {
+          "text": "go?",
+          "start": 3.58,
+          "end": 4.18
+        }
+      ],
+      "duration": 4.355170068027211,
+      "reference": "Okay. And is the pain, is that, is it there all the time, or does it come and go?",
+      "score": {
+        "word": {
+          "errors": 4,
+          "substitutions": 2,
+          "deletions": 2,
+          "insertions": 0,
+          "referenceLength": 19,
+          "rate": 0.21052631578947367
+        },
+        "character": {
+          "errors": 11,
+          "substitutions": 6,
+          "deletions": 4,
+          "insertions": 1,
+          "referenceLength": 58,
+          "rate": 0.1896551724137931
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "9659c3fa9932fe6a49c5a7ecdcb62178ad90edc4a2523de99dbd116b818ad700",
+        "bytes": 139410,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 3711.100000023842,
+        "cold": false
+      }
+    },
+    {
+      "index": 3,
+      "status": "complete",
+      "name": "primock-04.wav",
+      "text": " Okay, boy, and you mentioned you've been feeling quite weak and shaky as well, would you be by shaky? Do you mean you've been having a feeling feverish for example?",
+      "chunks": [
+        {
+          "text": " Okay,",
+          "timestamp": [
+            0,
+            0.82
+          ]
+        },
+        {
+          "text": " boy,",
+          "timestamp": [
+            0.9,
+            1.14
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            1.58,
+            1.62
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            1.62,
+            1.72
+          ]
+        },
+        {
+          "text": " mentioned",
+          "timestamp": [
+            1.72,
+            1.86
+          ]
+        },
+        {
+          "text": " you've",
+          "timestamp": [
+            1.86,
+            2.14
+          ]
+        },
+        {
+          "text": " been",
+          "timestamp": [
+            2.14,
+            2.22
+          ]
+        },
+        {
+          "text": " feeling",
+          "timestamp": [
+            2.22,
+            2.28
+          ]
+        },
+        {
+          "text": " quite",
+          "timestamp": [
+            2.28,
+            2.54
+          ]
+        },
+        {
+          "text": " weak",
+          "timestamp": [
+            2.54,
+            2.8
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            2.8,
+            3.02
+          ]
+        },
+        {
+          "text": " shaky",
+          "timestamp": [
+            3.02,
+            3.2
+          ]
+        },
+        {
+          "text": " as",
+          "timestamp": [
+            3.2,
+            3.44
+          ]
+        },
+        {
+          "text": " well,",
+          "timestamp": [
+            3.44,
+            3.64
+          ]
+        },
+        {
+          "text": " would",
+          "timestamp": [
+            3.8,
+            3.8
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            3.8,
+            3.92
+          ]
+        },
+        {
+          "text": " be",
+          "timestamp": [
+            3.92,
+            3.98
+          ]
+        },
+        {
+          "text": " by",
+          "timestamp": [
+            3.98,
+            4.22
+          ]
+        },
+        {
+          "text": " shaky?",
+          "timestamp": [
+            4.22,
+            4.56
+          ]
+        },
+        {
+          "text": " Do",
+          "timestamp": [
+            4.7,
+            4.7
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            4.7,
+            4.72
+          ]
+        },
+        {
+          "text": " mean",
+          "timestamp": [
+            4.72,
+            4.86
+          ]
+        },
+        {
+          "text": " you've",
+          "timestamp": [
+            4.86,
+            5.02
+          ]
+        },
+        {
+          "text": " been",
+          "timestamp": [
+            5.02,
+            5.7
+          ]
+        },
+        {
+          "text": " having",
+          "timestamp": [
+            5.7,
+            6.16
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            6.16,
+            6.4
+          ]
+        },
+        {
+          "text": " feeling",
+          "timestamp": [
+            6.4,
+            6.62
+          ]
+        },
+        {
+          "text": " feverish",
+          "timestamp": [
+            6.62,
+            7.22
+          ]
+        },
+        {
+          "text": " for",
+          "timestamp": [
+            7.22,
+            7.32
+          ]
+        },
+        {
+          "text": " example?",
+          "timestamp": [
+            7.32,
+            7.76
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 0,
+          "end": 0.82
+        },
+        {
+          "text": "boy,",
+          "start": 0.9,
+          "end": 1.14
+        },
+        {
+          "text": "and",
+          "start": 1.58,
+          "end": 1.62
+        },
+        {
+          "text": "you",
+          "start": 1.62,
+          "end": 1.72
+        },
+        {
+          "text": "mentioned",
+          "start": 1.72,
+          "end": 1.86
+        },
+        {
+          "text": "you've",
+          "start": 1.86,
+          "end": 2.14
+        },
+        {
+          "text": "been",
+          "start": 2.14,
+          "end": 2.22
+        },
+        {
+          "text": "feeling",
+          "start": 2.22,
+          "end": 2.28
+        },
+        {
+          "text": "quite",
+          "start": 2.28,
+          "end": 2.54
+        },
+        {
+          "text": "weak",
+          "start": 2.54,
+          "end": 2.8
+        },
+        {
+          "text": "and",
+          "start": 2.8,
+          "end": 3.02
+        },
+        {
+          "text": "shaky",
+          "start": 3.02,
+          "end": 3.2
+        },
+        {
+          "text": "as",
+          "start": 3.2,
+          "end": 3.44
+        },
+        {
+          "text": "well,",
+          "start": 3.44,
+          "end": 3.64
+        },
+        {
+          "text": "you",
+          "start": 3.8,
+          "end": 3.92
+        },
+        {
+          "text": "be",
+          "start": 3.92,
+          "end": 3.98
+        },
+        {
+          "text": "by",
+          "start": 3.98,
+          "end": 4.22
+        },
+        {
+          "text": "shaky?",
+          "start": 4.22,
+          "end": 4.56
+        },
+        {
+          "text": "you",
+          "start": 4.7,
+          "end": 4.72
+        },
+        {
+          "text": "mean",
+          "start": 4.72,
+          "end": 4.86
+        },
+        {
+          "text": "you've",
+          "start": 4.86,
+          "end": 5.02
+        },
+        {
+          "text": "been",
+          "start": 5.02,
+          "end": 5.7
+        },
+        {
+          "text": "having",
+          "start": 5.7,
+          "end": 6.16
+        },
+        {
+          "text": "a",
+          "start": 6.16,
+          "end": 6.4
+        },
+        {
+          "text": "feeling",
+          "start": 6.4,
+          "end": 6.62
+        },
+        {
+          "text": "feverish",
+          "start": 6.62,
+          "end": 7.22
+        },
+        {
+          "text": "for",
+          "start": 7.22,
+          "end": 7.32
+        },
+        {
+          "text": "example?",
+          "start": 7.32,
+          "end": 7.76
+        }
+      ],
+      "duration": 7.81124716553288,
+      "reference": "Okay, fine. And you mentioned you've been feeling quite weak and shaky as well. What do you mean by shaky? Do you mean you've been having, uh have you been feeling feverish, for example?",
+      "score": {
+        "word": {
+          "errors": 8,
+          "substitutions": 4,
+          "deletions": 4,
+          "insertions": 0,
+          "referenceLength": 34,
+          "rate": 0.23529411764705882
+        },
+        "character": {
+          "errors": 23,
+          "substitutions": 7,
+          "deletions": 16,
+          "insertions": 0,
+          "referenceLength": 146,
+          "rate": 0.15753424657534246
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "e4e53783417c5f7d6be960c001fbbc3b85f3c033ba48e54b9fcba8e1240c7afe",
+        "bytes": 250004,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 4278,
+        "cold": false
+      }
+    },
+    {
+      "index": 4,
+      "status": "complete",
+      "name": "primock-05.wav",
+      "text": " Right, okay. And any other symptoms at all, so you mentioned Tommy Pei, you mentioned diarrhea, you mentioned vomiting, anything else that comes to mind?",
+      "chunks": [
+        {
+          "text": " Right,",
+          "timestamp": [
+            0,
+            0.72
+          ]
+        },
+        {
+          "text": " okay.",
+          "timestamp": [
+            1.68,
+            1.7
+          ]
+        },
+        {
+          "text": " And",
+          "timestamp": [
+            3.06,
+            3.52
+          ]
+        },
+        {
+          "text": " any",
+          "timestamp": [
+            3.52,
+            3.86
+          ]
+        },
+        {
+          "text": " other",
+          "timestamp": [
+            3.86,
+            4.1
+          ]
+        },
+        {
+          "text": " symptoms",
+          "timestamp": [
+            4.1,
+            4.32
+          ]
+        },
+        {
+          "text": " at",
+          "timestamp": [
+            4.32,
+            4.56
+          ]
+        },
+        {
+          "text": " all,",
+          "timestamp": [
+            4.56,
+            4.66
+          ]
+        },
+        {
+          "text": " so",
+          "timestamp": [
+            4.76,
+            4.78
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            4.78,
+            4.88
+          ]
+        },
+        {
+          "text": " mentioned",
+          "timestamp": [
+            4.88,
+            5.1
+          ]
+        },
+        {
+          "text": " Tommy",
+          "timestamp": [
+            5.1,
+            5.48
+          ]
+        },
+        {
+          "text": " Pei,",
+          "timestamp": [
+            5.48,
+            5.72
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            5.82,
+            5.84
+          ]
+        },
+        {
+          "text": " mentioned",
+          "timestamp": [
+            5.84,
+            6.14
+          ]
+        },
+        {
+          "text": " diarrhea,",
+          "timestamp": [
+            6.14,
+            6.54
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            6.66,
+            6.72
+          ]
+        },
+        {
+          "text": " mentioned",
+          "timestamp": [
+            6.72,
+            6.94
+          ]
+        },
+        {
+          "text": " vomiting,",
+          "timestamp": [
+            6.94,
+            7.52
+          ]
+        },
+        {
+          "text": " anything",
+          "timestamp": [
+            8.68,
+            8.88
+          ]
+        },
+        {
+          "text": " else",
+          "timestamp": [
+            8.88,
+            9.12
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            9.12,
+            9.26
+          ]
+        },
+        {
+          "text": " comes",
+          "timestamp": [
+            9.26,
+            9.44
+          ]
+        },
+        {
+          "text": " to",
+          "timestamp": [
+            9.44,
+            9.62
+          ]
+        },
+        {
+          "text": " mind?",
+          "timestamp": [
+            9.62,
+            10.18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Right,",
+          "start": 0,
+          "end": 0.72
+        },
+        {
+          "text": "okay.",
+          "start": 1.68,
+          "end": 1.7
+        },
+        {
+          "text": "And",
+          "start": 3.06,
+          "end": 3.52
+        },
+        {
+          "text": "any",
+          "start": 3.52,
+          "end": 3.86
+        },
+        {
+          "text": "other",
+          "start": 3.86,
+          "end": 4.1
+        },
+        {
+          "text": "symptoms",
+          "start": 4.1,
+          "end": 4.32
+        },
+        {
+          "text": "at",
+          "start": 4.32,
+          "end": 4.56
+        },
+        {
+          "text": "all,",
+          "start": 4.56,
+          "end": 4.66
+        },
+        {
+          "text": "so",
+          "start": 4.76,
+          "end": 4.78
+        },
+        {
+          "text": "you",
+          "start": 4.78,
+          "end": 4.88
+        },
+        {
+          "text": "mentioned",
+          "start": 4.88,
+          "end": 5.1
+        },
+        {
+          "text": "Tommy",
+          "start": 5.1,
+          "end": 5.48
+        },
+        {
+          "text": "Pei,",
+          "start": 5.48,
+          "end": 5.72
+        },
+        {
+          "text": "you",
+          "start": 5.82,
+          "end": 5.84
+        },
+        {
+          "text": "mentioned",
+          "start": 5.84,
+          "end": 6.14
+        },
+        {
+          "text": "diarrhea,",
+          "start": 6.14,
+          "end": 6.54
+        },
+        {
+          "text": "you",
+          "start": 6.66,
+          "end": 6.72
+        },
+        {
+          "text": "mentioned",
+          "start": 6.72,
+          "end": 6.94
+        },
+        {
+          "text": "vomiting,",
+          "start": 6.94,
+          "end": 7.52
+        },
+        {
+          "text": "anything",
+          "start": 8.68,
+          "end": 8.88
+        },
+        {
+          "text": "else",
+          "start": 8.88,
+          "end": 9.12
+        },
+        {
+          "text": "that",
+          "start": 9.12,
+          "end": 9.26
+        },
+        {
+          "text": "comes",
+          "start": 9.26,
+          "end": 9.44
+        },
+        {
+          "text": "to",
+          "start": 9.44,
+          "end": 9.62
+        }
+      ],
+      "duration": 10.103673469387756,
+      "reference": "No, okay. Um, and um, any any other symptoms at all? So you mentioned tummy pain, you mentioned diarrhea, you mentioned your vomiting, uh, anything else that comes to mind?",
+      "score": {
+        "word": {
+          "errors": 8,
+          "substitutions": 3,
+          "deletions": 5,
+          "insertions": 0,
+          "referenceLength": 30,
+          "rate": 0.26666666666666666
+        },
+        "character": {
+          "errors": 21,
+          "substitutions": 4,
+          "deletions": 14,
+          "insertions": 3,
+          "referenceLength": 133,
+          "rate": 0.15789473684210525
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "9a1bf31312389551f91e0c4a5ffb11ebbe01bb79cfffdd33ed9041547c2a4cbd",
+        "bytes": 323362,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 4800.800000011921,
+        "cold": false
+      }
+    },
+    {
+      "index": 5,
+      "status": "complete",
+      "name": "primock-06.wav",
+      "text": " Okay, and did you ask my well-controlled?",
+      "chunks": [
+        {
+          "text": " Okay,",
+          "timestamp": [
+            0,
+            0.84
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            1.06,
+            1.12
+          ]
+        },
+        {
+          "text": " did",
+          "timestamp": [
+            1.12,
+            1.18
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            1.18,
+            1.34
+          ]
+        },
+        {
+          "text": " ask",
+          "timestamp": [
+            1.34,
+            1.56
+          ]
+        },
+        {
+          "text": " my",
+          "timestamp": [
+            1.56,
+            1.72
+          ]
+        },
+        {
+          "text": " well",
+          "timestamp": [
+            1.72,
+            1.94
+          ]
+        },
+        {
+          "text": "-controlled?",
+          "timestamp": [
+            1.94,
+            2.44
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 0,
+          "end": 0.84
+        },
+        {
+          "text": "and",
+          "start": 1.06,
+          "end": 1.12
+        },
+        {
+          "text": "did",
+          "start": 1.12,
+          "end": 1.18
+        },
+        {
+          "text": "you",
+          "start": 1.18,
+          "end": 1.34
+        },
+        {
+          "text": "ask",
+          "start": 1.34,
+          "end": 1.56
+        },
+        {
+          "text": "my",
+          "start": 1.56,
+          "end": 1.72
+        },
+        {
+          "text": "well",
+          "start": 1.72,
+          "end": 1.94
+        },
+        {
+          "text": "-controlled?",
+          "start": 1.94,
+          "end": 2.44
+        }
+      ],
+      "duration": 2.4477324263038547,
+      "reference": "Okay. And, is your asthma well-controlled?",
+      "score": {
+        "word": {
+          "errors": 4,
+          "substitutions": 3,
+          "deletions": 0,
+          "insertions": 1,
+          "referenceLength": 7,
+          "rate": 0.5714285714285714
+        },
+        "character": {
+          "errors": 6,
+          "substitutions": 3,
+          "deletions": 2,
+          "insertions": 1,
+          "referenceLength": 33,
+          "rate": 0.18181818181818182
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "c28d9d39f31f379f2489c16e32769dba0ec9c39c4d25c3aa4901cd7435670d15",
+        "bytes": 78372,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 3442.100000023842,
+        "cold": false
+      }
+    },
+    {
+      "index": 6,
+      "status": "complete",
+      "name": "primock-07.wav",
+      "text": " And you don't have any other tummy problem, bowel problem, that should be aware of.",
+      "chunks": [
+        {
+          "text": " And",
+          "timestamp": [
+            0,
+            0.86
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            0.86,
+            0.94
+          ]
+        },
+        {
+          "text": " don't",
+          "timestamp": [
+            0.94,
+            1.08
+          ]
+        },
+        {
+          "text": " have",
+          "timestamp": [
+            1.08,
+            1.2
+          ]
+        },
+        {
+          "text": " any",
+          "timestamp": [
+            1.2,
+            1.36
+          ]
+        },
+        {
+          "text": " other",
+          "timestamp": [
+            1.36,
+            1.7
+          ]
+        },
+        {
+          "text": " tummy",
+          "timestamp": [
+            1.7,
+            2.08
+          ]
+        },
+        {
+          "text": " problem,",
+          "timestamp": [
+            2.08,
+            2.56
+          ]
+        },
+        {
+          "text": " bowel",
+          "timestamp": [
+            2.64,
+            2.86
+          ]
+        },
+        {
+          "text": " problem,",
+          "timestamp": [
+            2.86,
+            3.16
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            3.16,
+            3.32
+          ]
+        },
+        {
+          "text": " should",
+          "timestamp": [
+            3.32,
+            3.38
+          ]
+        },
+        {
+          "text": " be",
+          "timestamp": [
+            3.38,
+            3.54
+          ]
+        },
+        {
+          "text": " aware",
+          "timestamp": [
+            3.54,
+            3.8
+          ]
+        },
+        {
+          "text": " of.",
+          "timestamp": [
+            3.8,
+            5.52
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "And",
+          "start": 0,
+          "end": 0.86
+        },
+        {
+          "text": "you",
+          "start": 0.86,
+          "end": 0.94
+        },
+        {
+          "text": "don't",
+          "start": 0.94,
+          "end": 1.08
+        },
+        {
+          "text": "have",
+          "start": 1.08,
+          "end": 1.2
+        },
+        {
+          "text": "any",
+          "start": 1.2,
+          "end": 1.36
+        },
+        {
+          "text": "other",
+          "start": 1.36,
+          "end": 1.7
+        },
+        {
+          "text": "tummy",
+          "start": 1.7,
+          "end": 2.08
+        },
+        {
+          "text": "problem,",
+          "start": 2.08,
+          "end": 2.56
+        },
+        {
+          "text": "bowel",
+          "start": 2.64,
+          "end": 2.86
+        },
+        {
+          "text": "problem,",
+          "start": 2.86,
+          "end": 3.16
+        },
+        {
+          "text": "that",
+          "start": 3.16,
+          "end": 3.32
+        },
+        {
+          "text": "should",
+          "start": 3.32,
+          "end": 3.38
+        },
+        {
+          "text": "be",
+          "start": 3.38,
+          "end": 3.54
+        },
+        {
+          "text": "aware",
+          "start": 3.54,
+          "end": 3.8
+        }
+      ],
+      "duration": 4.223854875283447,
+      "reference": "Fine. And you don't have any other tummy problem, bowel problems I should be aware of?",
+      "score": {
+        "word": {
+          "errors": 3,
+          "substitutions": 2,
+          "deletions": 1,
+          "insertions": 0,
+          "referenceLength": 16,
+          "rate": 0.1875
+        },
+        "character": {
+          "errors": 8,
+          "substitutions": 2,
+          "deletions": 4,
+          "insertions": 2,
+          "referenceLength": 68,
+          "rate": 0.11764705882352941
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "bc60964ce94ff0da1f446061b2afa0c95769dce7020b00d968035bf248eaa1f9",
+        "bytes": 135208,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 3360.5,
+        "cold": false
+      }
+    },
+    {
+      "index": 7,
+      "status": "complete",
+      "name": "primock-08.wav",
+      "text": " Okay.",
+      "chunks": [
+        {
+          "text": " Okay.",
+          "timestamp": [
+            0,
+            1.22
+          ]
+        }
+      ],
+      "words": [],
+      "duration": 1,
+      "reference": "Okay.",
+      "score": {
+        "word": {
+          "errors": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "referenceLength": 1,
+          "rate": 0
+        },
+        "character": {
+          "errors": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "referenceLength": 4,
+          "rate": 0
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "78dd38929ae2264d0c7ebdeed0e8a276d857585c5beea08126ea79c155487446",
+        "bytes": 32044,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 2791.699999988079,
+        "cold": false
+      }
+    },
+    {
+      "index": 8,
+      "status": "complete",
+      "name": "primock-09.wav",
+      "text": " Yeah.",
+      "chunks": [
+        {
+          "text": " Yeah.",
+          "timestamp": [
+            0,
+            1.8
+          ]
+        }
+      ],
+      "words": [],
+      "duration": 1,
+      "reference": "Yeah.",
+      "score": {
+        "word": {
+          "errors": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "referenceLength": 1,
+          "rate": 0
+        },
+        "character": {
+          "errors": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "referenceLength": 4,
+          "rate": 0
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "c03706cf81409555364fc46bee450e5bd97b12eab826de38c7fcc78f17b68d9c",
+        "bytes": 32044,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 2955.699999988079,
+        "cold": false
+      }
+    },
+    {
+      "index": 9,
+      "status": "complete",
+      "name": "primock-10.wav",
+      "text": " And you drink much of alcohol.",
+      "chunks": [
+        {
+          "text": " And",
+          "timestamp": [
+            0.16,
+            0.54
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            0.54,
+            0.66
+          ]
+        },
+        {
+          "text": " drink",
+          "timestamp": [
+            0.66,
+            0.8
+          ]
+        },
+        {
+          "text": " much",
+          "timestamp": [
+            0.8,
+            1.02
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            1.02,
+            1.16
+          ]
+        },
+        {
+          "text": " alcohol.",
+          "timestamp": [
+            1.16,
+            1.68
+          ]
+        }
+      ],
+      "words": [
+        {
+          "text": "And",
+          "start": 0.16,
+          "end": 0.54
+        },
+        {
+          "text": "you",
+          "start": 0.54,
+          "end": 0.66
+        },
+        {
+          "text": "drink",
+          "start": 0.66,
+          "end": 0.8
+        },
+        {
+          "text": "much",
+          "start": 0.8,
+          "end": 1.02
+        },
+        {
+          "text": "of",
+          "start": 1.02,
+          "end": 1.16
+        },
+        {
+          "text": "alcohol.",
+          "start": 1.16,
+          "end": 1.68
+        }
+      ],
+      "duration": 1.9701133786848073,
+      "reference": "And do you drink much in the way of alcohol?",
+      "score": {
+        "word": {
+          "errors": 4,
+          "substitutions": 0,
+          "deletions": 4,
+          "insertions": 0,
+          "referenceLength": 10,
+          "rate": 0.4
+        },
+        "character": {
+          "errors": 10,
+          "substitutions": 0,
+          "deletions": 10,
+          "insertions": 0,
+          "referenceLength": 34,
+          "rate": 0.29411764705882354
+        }
+      },
+      "model": {
+        "id": "Xenova/whisper-tiny.en",
+        "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+        "label": "Whisper tiny · English · ~75 MB",
+        "runtime": "Transformers.js 3.8.1",
+        "device": "wasm",
+        "dtype": "q8",
+        "threads": 1
+      },
+      "audio": {
+        "sha256": "4cb8098b111c9f06079fd398bd0deb8f6667a163443bf0a1a241590383358154",
+        "bytes": 63088,
+        "channels": 1,
+        "decodedSampleRate": 44100,
+        "inferenceSampleRate": 16000
+      },
+      "timing": {
+        "loadMs": 0,
+        "inferenceMs": 2817.099999964237,
+        "cold": false
+      }
+    }
+  ]
+}

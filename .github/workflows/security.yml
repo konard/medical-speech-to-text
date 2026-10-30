@@ -129,7 +129,12 @@ jobs:
       fail-fast: false
       matrix:
         directory:
-          ['.', examples/universal-app, .github/actions/artifact-transport]
+          [
+            '.',
+            examples/universal-app,
+            examples/speech-lab,
+            .github/actions/artifact-transport,
+          ]
     steps:
       - uses: actions/checkout@v7
         with:
