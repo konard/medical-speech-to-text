@@ -29,5 +29,5 @@ checks run before Rust validation. No publication, deployment or merge is part
 of this investigation.
 
 The main release failure remains blocked on maintainer npm identity/bootstrap
-configuration, and three desktop deprecations remain upstream. Successful PR
-checks must not be read as completion of those criteria.
+configuration. Desktop deprecations have a tested native solution awaiting final
+hosted revalidation. Successful PR checks do not resolve the release criterion.

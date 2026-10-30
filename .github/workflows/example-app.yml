@@ -10,6 +10,7 @@ on:
       - 'package-lock.json'
       - 'scripts/update-preview-images.mjs'
       - 'scripts/check-pages.sh'
+      - 'experiments/issue-5-desktop-smoke.mjs'
       - '.github/workflows/example-app.yml'
       - '.github/actions/artifact-transport/**'
       - 'scripts/artifact-transport.mjs'
@@ -24,6 +25,7 @@ on:
       - 'package-lock.json'
       - 'scripts/update-preview-images.mjs'
       - 'scripts/check-pages.sh'
+      - 'experiments/issue-5-desktop-smoke.mjs'
       - '.github/workflows/example-app.yml'
       - '.github/actions/artifact-transport/**'
       - 'scripts/artifact-transport.mjs'
@@ -154,6 +156,9 @@ jobs:
 
       - name: Install app dependencies
         run: npm ci --prefix examples/universal-app --no-audit --no-fund
+
+      - name: Verify desktop compatibility APIs
+        run: node --pending-deprecation --throw-deprecation experiments/issue-5-desktop-smoke.mjs
 
       - name: Package Electron app
         shell: bash

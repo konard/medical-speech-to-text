@@ -33,8 +33,8 @@ dependencies/build outputs are outside Git and are not mistaken for source.
 | Investigate every failing workflow with current timestamps and SHA | Trust issue snapshot vs query current runs; query both branches and workflow inventory, preserve older failures separately | `initial-main-runs.json`, `initial-branch-runs.json`, full baseline logs and annotation indexes; initial PR runs passed but do not supersede main's release failure | Audited |
 | Fix all errors, including the release failure | Weaken preflight, rename the public package speculatively, or verify credentials honestly; retain strict preflight and document precise bootstrap action | Main log lines 158–160 names nonexistent package and absent NPM_TOKEN; empty `secret-names.json`; existing preflight refusal/report-mode tests | **Blocked: maintainer npm identity/bootstrap** |
 | Check false positives and false negatives across the whole codebase | Only repair the visible red job vs exercise gate refusal paths; add minimal failing fixtures first | New regression test rejects invalid `.js`, nested `.cjs/.mjs`, empty inventory; positive nested shipped-file fixture; CodeQL now includes examples | Implemented |
-| Fix warnings without concealing failures | Blanket warning suppression vs reviewed policies and compatible dependencies; choose explicit policies, real archive probes and strict deprecation errors | All four npm roots checked for install-script decisions; esbuild/fsevents/Electron approvals pinned; optional PTY denied; artifact glob/reader replaced | Implemented except desktop warnings below |
-| Remove every desktop dependency warning | Upgrade released direct components, force incompatible majors, fork their APIs, or wait for upstream; latest registry and actual consumers checked | `desktop-dependency-tree.txt`, registry snapshots and reviewed exact deprecation allowlist; callback glob and rimraf consumers prevent a safe major-only override | **Blocked: Electron upstream dependency migrations** |
+| Fix warnings without concealing failures | Blanket warning suppression vs reviewed policies and compatible dependencies; choose explicit policies, real archive probes and strict deprecation errors | All four npm roots checked for install-script decisions; esbuild/fsevents/Electron approvals pinned; optional PTY denied; artifact glob/reader replaced | Implemented; hosted revalidation pending |
+| Remove every desktop dependency warning | Upgrade released components, force incompatible majors, or adapt the narrow used API; validate ASAR 4 and a scoped native cleanup adapter | ASAR 4.3.1 plus temp-only fs.rm adapter; before/after deprecation tests, real builder/temp API probe, local Linux package and three-platform hosted probe | Implemented; hosted revalidation pending |
 | Compare all files to both recommended templates | Copy unrelated Python application/release files vs compare all paths and map capabilities; use content hashes and functional mapping | Complete union TSVs; mapping below covers every workflow/script family and relevant supporting configuration | Audited; applicable archive roundtrip adopted |
 | Follow every referenced CI/CD best practice | Copy examples blindly vs verify all 17 principles against local behavior | Seventeen-row checklist below; existing acceptance assertions retained, additional coverage strengthens them | Audited |
 | Report the same defects in upstream templates | File duplicates vs search existing open issues first; no open matching issue found, report with reproductions | JavaScript [issue 275](https://github.com/link-foundation/js-ai-driven-development-pipeline-template/issues/275); Python [issue 128](https://github.com/link-foundation/python-ai-driven-development-pipeline-template/issues/128); exact bodies preserved here | Reported; upstream issue is not local completion |
@@ -71,28 +71,35 @@ prove that a default-branch release can publish.
   root/speech installs now report no unreviewed scripts.
 - Artifact installs warn about deprecated `glob@10.5.0`. The SDK's reader also
   uses `new Buffer` (`artifact-deprecation-reproduction.log`, stack points to
-  `unzip-stream/lib/unzip-stream.js:47`). Scoped glob 13.0.6 and unzipper 0.12.5
-  overrides preserve the used APIs. The local ZIP probe and hosted job verify
-  bytes, empty/nested files, exclusions, traversal refusal and Pages layout.
+  `unzip-stream/lib/unzip-stream.js:47`). Scoped glob 13.0.6 preserves the used sync API. The first candidate used an
+  unzipper alias and passed archive assertions, but Dependency Review exposed
+  four low Scorecard dependencies (candidate security log lines 5903–5906).
+  The revised adapter uses the official SDK raw-download API and zip.js 2.24.0,
+  which has no runtime dependencies and a recorded Scorecard of 3.9. The native
+  ZIP64 probe verifies binary/empty/nested/Unicode/dot-prefixed files, CRC errors,
+  both traversal spellings, symlink refusal and cleanup. Hosted CI additionally
+  verifies real SDK transfer and Pages layout. The threshold remains unchanged.
 - Speech-lab's production build warned that `config.js` was imported both
   statically and dynamically. A strict Vite logger reproduced the warning as a
   failing automated build before the fix (`speech-warning-reproduction.log`).
   Its inert configuration now uses a consistent static import; `npm run build`
   passes and permanently rejects future build warnings. Cache behavior is
   preserved by the existing native and browser acceptance tests.
-- Desktop installs still report glob 7.2.3, inflight 1.0.6 and rimraf 2.6.3.
-  Latest electron-builder 26.18.0 pins asar 3.4.1, which promisifies glob's
-  callback API. Latest temp 0.9.4 calls `rimraf(path, options, callback)` and
-  `rimraf.sync`. Modern replacements remove these APIs; replacing just versions
-  would risk hangs or broken cleanup/package creation. These warnings remain
-  visible, exact and explicitly unfinished, with zero high-severity npm audit
-  findings. A nonexistent released electron-builder 27 is no longer claimed as
-  an available fix in the allowlist.
-  Asar 4.3.1 was also inspected as an alternative: its declarations retain
-  `createPackageFromStreams`, but it raises Node's minimum to 22.12 and does not
-  remove temp's separate rimraf 2 → glob 7 → inflight chain. Its current glob 13
-  dependencies are saved in `asar-latest-dependencies.json`. This is distinct
-  from the demonstrated incompatibility of overriding glob inside asar 3.
+- Desktop baseline installs report glob 7.2.3, inflight 1.0.6 and rimraf 2.6.3.
+  Blind glob/rimraf major overrides break callback contracts; the bounded API
+  experiment preserves that evidence. A failing zero-deprecation test first
+  reproduced all three warnings (`desktop-warning-reproduction.log`). The
+  solution upgrades ASAR itself to released 4.3.1 and supplies a native fs.rm
+  adapter only for temp 0.9.4's four cleanup calls. Node 24 is already required
+  for development tooling and supports the CommonJS/ESM boundary. The native
+  consumer probe exercises actual builder archive creation, packed/unpacked
+  reads and metadata, electron-winstaller loading and temp async/sync cleanup.
+  Literal-path, symlink and unsupported-option unit tests supplement it. Local
+  Linux Electron packaging passes; the same consumer probe runs before all
+  three platform packages. All four lockfiles now reject every deprecated
+  dependency. Adapter contracts and unsupported options are explicit in
+  `examples/universal-app/compat/README.md`; no warning is suppressed. Packaging
+  also exposed missing author metadata; the example now attributes contributors.
 - Windows Deno baseline emitted an intentional 70-second budget warning and
   succeeded at **75/100 seconds**, lines **18237–18249**. Logs show repeated
   Git/process fixtures at 0.7–2 seconds each, plus the bounded HTTP-429 fixture.
@@ -175,11 +182,17 @@ absence of identically named scripts as a missing capability.
   inventing a transport. Registry snapshots establish latest dependency versions.
 - [Archiver's glob issue](https://github.com/archiverjs/node-archiver/issues/822)
   and actual `archiver-utils/file.js` API support a narrow sync-API override.
-- [unzipper's documented Extract API](https://github.com/ZJONSSON/node-unzipper)
-  matches the SDK's stream/close contract. Its historical
-  [prefix-boundary traversal report](https://github.com/ZJONSSON/node-unzipper/issues/357)
-  prompted explicit forward/backslash traversal fixtures; the pinned 0.12.5 code
-  uses a relative-path boundary check. Do not infer safety solely from npm audit.
+- [zip.js](https://github.com/gildas-lormeau/zip.js) supplies ZIP64 and streamed
+  extraction without runtime dependencies. The official SDK's
+  [raw download implementation](https://github.com/actions/toolkit/blob/main/packages/artifact/src/internal/download/download-artifact.ts)
+  retains authentication, transport and digest checks. Alternatives researched:
+  unzipper fixed Buffer usage but added four low Scorecard packages; yauzl's
+  recorded score was 2.8. The chosen reader's score was 3.9 at research time.
+- [ASAR releases](https://github.com/electron/asar/releases) document the released
+  major used by the actual builder probe. The narrow cleanup adapter uses
+  [Node's removal APIs](https://nodejs.org/docs/latest-v24.x/api/fs.html#fsrmpath-options-callback)
+  to preserve the consumer's callback/sync and retry contracts. A general rimraf
+  API port is unnecessary and explicitly unsupported.
 - [actionlint](https://github.com/rhysd/actionlint),
   [ShellCheck](https://github.com/koalaman/shellcheck),
   [zizmor](https://docs.zizmor.sh/), CodeQL, npm audit and Changesets already
@@ -209,3 +222,20 @@ complete real-model assertions. Local Chrome was selected with the existing
 `CHROME_PATH` option because the preinstalled Playwright browser version differed
 from the package's pinned version. Node 26 emitted Playwright's module.register
 deprecation; hosted CI uses the repository's documented Node 24.
+
+### First hosted candidate and second batch
+
+Candidate `c50a3fb4fa0a658e8d6bc24487797f0b67846ff5`, created 2026-10-30
+19:46:21 UTC, passed all six workflows: Checks 41117962603, Example app
+41117962638, Workflows 41117962687, Links 41117962607, JavaScript-first
+41117962693 and Security 41117962630. Full logs and the annotation index are
+preserved under `ci-logs/candidate-*`; API snapshots include timestamps and SHA.
+The complete speech real-model acceptance tests passed on the hosted runner.
+
+Successful workflow conclusions did not end the audit: the security log added
+four low Scorecard warnings and the example retained desktop deprecations and
+missing author metadata. These findings were collected together before the next
+batch. The ZIP adapter and desktop changes above address them. Only the npm
+identity/bootstrap criterion remains externally blocked; the PR stays draft
+until that requirement is resolved. Second-batch results will be recorded after
+exact-revision validation and hosted execution.
