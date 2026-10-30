@@ -1,0 +1,350 @@
+{
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4175/index.html",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/index-DHBMonjz.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/index-BHliEUjV.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-01.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-02.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-03.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-04.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-05.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-06.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-07.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-08.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-09.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-10.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/744c74ff-cdb6-495d-b8fc-320e7f053ce3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/worker-BcJkGrGm.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/onnx/encoder_model_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/onnx/decoder_model_merged_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/645182ab9d916c596e34c318/6afcce097dcf897f6df877ac776fe2e62710be99499d80e3c0a7e00d54eb602d",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/645182ab9d916c596e34c318/b1fe29d7b0b0f9d9ab83ac89c10f1505ce6d9bf35a9b1d3c59d2c8fd0213f9b2",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/42fcdcf6-886b-465f-880a-1974b63fa75f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/744c74ff-cdb6-495d-b8fc-320e7f053ce3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/ddce3276-bc13-48b5-94b8-3d7333f122ef",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/42fcdcf6-886b-465f-880a-1974b63fa75f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/29e30748-99b7-4305-bc0a-bfd1e14ef135",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/ddce3276-bc13-48b5-94b8-3d7333f122ef",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/8f88071a-7439-441b-8465-a9f98d248de6",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/29e30748-99b7-4305-bc0a-bfd1e14ef135",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/289051ed-295c-4fc7-a196-3b22edd66ec6",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/8f88071a-7439-441b-8465-a9f98d248de6",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/1c1850b9-5269-4490-9fd5-4835d455e9d4",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/289051ed-295c-4fc7-a196-3b22edd66ec6",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/1471ec5a-f0de-44f8-a2b1-8c365a610c46",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/1c1850b9-5269-4490-9fd5-4835d455e9d4",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/a55c98dc-71e8-4ae7-b507-94add14d57fb",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/1471ec5a-f0de-44f8-a2b1-8c365a610c46",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/2aa4710a-c129-40e0-a1b8-32884cad21c4",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/a55c98dc-71e8-4ae7-b507-94add14d57fb",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/2aa4710a-c129-40e0-a1b8-32884cad21c4",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/744c74ff-cdb6-495d-b8fc-320e7f053ce3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-01.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-02.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-03.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-04.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-05.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-06.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-07.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-08.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-09.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/samples/primock-10.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/92a26495-0f18-4e29-bd71-94585bfb971e",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/assets/worker-BcJkGrGm.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/onnx/encoder_model_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/onnx/decoder_model_merged_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/6452c1d05ac68a5b01a55829/64f472ab833dd670a5246e8465e281b26074f64fb8854bec30a417fd538b7273",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/6452c1d05ac68a5b01a55829/946bfe02ecd76e0874b30abd936ba01ab47dfa19c444082aeed590367cc3a7b8",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/92a26495-0f18-4e29-bd71-94585bfb971e",
+      "method": "GET"
+    }
+  ],
+  "hostingAcknowledgements": [],
+  "errors": []
+}

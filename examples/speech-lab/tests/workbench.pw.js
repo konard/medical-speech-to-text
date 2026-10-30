@@ -24,7 +24,7 @@ const files = (count) =>
   }));
 
 async function mockModel(page, delay = 0) {
-  await page.route('**/worker.js*', (route) =>
+  await page.route('**/worker*.js*', (route) =>
     route.fulfill({
       contentType: 'text/javascript',
       body: `

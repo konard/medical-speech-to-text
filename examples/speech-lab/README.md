@@ -1,16 +1,20 @@
 # Speech research lab
 
-Run real English Whisper tiny/base models in a browser, compare optional references
-and play audio with word highlighting. [Research plan](../../docs/case-studies/issue-1/README.md)
+A mobile-first React lab for real English Whisper tiny/base transcription and
+local SmolLM2 chat. Compare optional references and play audio with word highlighting.
+[Browser/device research and quality-service protocol](../../docs/case-studies/issue-3/README.md). [Research plan](../../docs/case-studies/issue-1/README.md)
 and [measured results](../../docs/case-studies/issue-1/verification.md).
 
-[Open the online demo](https://raw.githack.com/konard/medical-speech-to-text/issue-1-362226f4199c/examples/speech-lab/index.html).
+[Open the online demo](https://raw.githack.com/konard/medical-speech-to-text/issue-3-60721261c8eb/examples/speech-lab/index.html).
 If the source host shows **External Content Notice**, select **Open the page**.
 That host page has its own advertising and connection metadata; its empty
 acknowledgement POST happens before any recordings or references are selected.
 Use public/synthetic recordings: the demonstration loads global CDN/model assets
 and is **not an Australian clinical deployment**. Audio inference runs locally;
-there is no audio-upload endpoint, analytics or CRM executor.
+an optional quality comparison uploads one recording and its local transcript only
+after you configure an approved HTTPS endpoint, consent and select Compare. No
+endpoint, credentials, analytics or CRM executor is bundled. Editing the endpoint
+resets consent. See the [HTTP contract](../../docs/case-studies/issue-3/quality-service.md).
 
 ```sh
 npm ci --prefix examples/speech-lab
@@ -26,7 +30,9 @@ The export labels this value `decodedSampleRate`. Browser codec support varies;
 16 kHz mono PCM WAV is the
 reproducible interchange format. First use downloads approximately 75 MB (tiny)
 or 145 MB (base); CPU/WASM execution can take several seconds per short clip.
-Both models are English only and have five-minute per-file worker deadlines.
+Use the microphone button for a foreground recording up to 60 seconds; permission
+errors are recoverable and tracks stop before transcription. This records first,
+then transcribes; it is not live partial ASR. Both speech models are English only and have five-minute per-file worker deadlines.
 
 Optional reference JSON maps **exact unique filenames** to strings:
 
@@ -38,7 +44,8 @@ Omit a key to skip scoring; an empty string is a deliberate silence reference.
 Click a timed word to seek; the active word follows the audio clock and gaps remain
 unhighlighted. Timestamps are model estimates, and absent/invalid intervals are
 omitted while the full transcript remains visible. Clear releases local recording
-URLs/results; browser site-data controls remove cached model weights. Exported
+URLs/results. Device & storage exposes model-file counts and deletes only this
+demo's pinned entries; browser site-data controls handle all stored assets. Exported
 JSON includes audio SHA-256, exact model revision, parameters, raw chunks and
 scores. Secure the download like the source material. The optional command mode
 only illustrates a dry-run allowlist and requires confirmation; it writes nothing.
@@ -55,6 +62,14 @@ npx playwright install chromium
 npm run test:browser
 npm run test:model
 ```
+
+Local chat uses pinned SmolLM2-135M-Instruct q4 weights (about 182 MB plus assets),
+CPU/WASM, at most 1200 prompt characters, bounded context and 128 generated tokens.
+It is a general small model, not medical advice. Chat remains separate from
+recordings, lives in page memory and can be cleared. Stop terminates the worker;
+failed/cancelled prompts remain editable for retry. Explicit prepare/unload and
+progress controls manage first-use downloads. Cache presence alone does not prove
+complete offline support; only a loaded warm pipeline has been checked offline.
 
 Interface tests use an explicit fake worker for deterministic browser contracts;
 `test:model` separately executes actual pinned models on the supplied speech.

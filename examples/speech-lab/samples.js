@@ -1,10 +1,10 @@
-export async function loadSamples() {
+export async function loadSamples(signal) {
   // Vite serves public assets at the root; raw source hosting retains public/.
   const base = new URL(
     import.meta.env ? './samples/' : './public/samples/',
     globalThis.location.href
   );
-  const response = await fetch(new URL('manifest.json', base));
+  const response = await fetch(new URL('manifest.json', base), { signal });
   if (!response.ok) {
     throw new Error('Cannot load public sample manifest');
   }
@@ -12,7 +12,7 @@ export async function loadSamples() {
   const transfer = new globalThis.DataTransfer();
   const references = {};
   for (const record of manifest.records) {
-    const audio = await fetch(new URL(record.file, base));
+    const audio = await fetch(new URL(record.file, base), { signal });
     if (!audio.ok) {
       throw new Error(`Cannot load ${record.file}`);
     }

@@ -11,8 +11,20 @@ export default defineConfig({
     navigationTimeout: 30000,
     headless: true,
     launchOptions: process.env.CHROME_PATH
-      ? { executablePath: process.env.CHROME_PATH, args: ['--no-sandbox'] }
-      : {},
+      ? {
+          executablePath: process.env.CHROME_PATH,
+          args: [
+            '--no-sandbox',
+            '--use-fake-device-for-media-stream',
+            '--use-fake-ui-for-media-stream',
+          ],
+        }
+      : {
+          args: [
+            '--use-fake-device-for-media-stream',
+            '--use-fake-ui-for-media-stream',
+          ],
+        },
   },
   webServer: process.env.SPEECH_LAB_URL
     ? undefined

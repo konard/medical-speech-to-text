@@ -1,5 +1,6 @@
 import { DEADLINE_MS } from './config.js';
 
+/** One worker and one active request; Stop releases all model memory. */
 export class Inference {
   worker;
   reject;
@@ -11,7 +12,10 @@ export class Inference {
     this.reject?.(new Error('Inference stopped'));
     this.reject = undefined;
   }
-  run(samples, model, onProgress) {
+  request(data, onProgress = () => {}, onToken = () => {}) {
+    if (this.reject) {
+      return Promise.reject(new Error('Inference is already running'));
+    }
     this.worker ||= new Worker(new URL('./worker.js', import.meta.url), {
       type: 'module',
     });
@@ -21,20 +25,22 @@ export class Inference {
         clearTimeout(this.timer);
         this.reject = undefined;
       };
-      this.timer = setTimeout(() => {
-        this.stop();
-      }, DEADLINE_MS);
-      this.worker.onmessage = ({ data }) => {
-        if (data.type === 'progress') {
-          onProgress(data.message);
+      this.timer = setTimeout(() => this.stop(), DEADLINE_MS);
+      this.worker.onmessage = ({ data: result }) => {
+        if (result.type === 'progress') {
+          onProgress(result.message);
+          return;
+        }
+        if (result.type === 'token') {
+          onToken(result.text);
           return;
         }
         done();
-        if (data.type === 'error') {
+        if (result.type === 'error') {
           this.stop();
-          reject(new Error(data.message));
+          reject(new Error(result.message));
         } else {
-          resolve(data);
+          resolve(result);
         }
       };
       this.worker.onerror = (event) => {
@@ -42,7 +48,16 @@ export class Inference {
         this.stop();
         reject(new Error(event.message || 'Model worker failed'));
       };
-      this.worker.postMessage({ samples, model }, [samples.buffer]);
+      this.worker.postMessage(data, data.samples ? [data.samples.buffer] : []);
     });
+  }
+  run(samples, model, onProgress) {
+    return this.request({ samples, model }, onProgress);
+  }
+  prepare(model, onProgress) {
+    return this.request({ model, prepare: true }, onProgress);
+  }
+  chat(messages, model, onProgress, onToken) {
+    return this.request({ messages, model }, onProgress, onToken);
   }
 }

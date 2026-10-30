@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-30T17:23:44.014Z",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "label": "SmolLM2 135M · English · ~100 MB",
+    "task": "text-generation",
+    "dtype": "q4"
+  },
+  "bytes": 182068553,
+  "etag": "\"c0eb23b8d78e87204b0d87a3dc42fe734516a894fe1719a5f898c5c372ca880e\""
+}
