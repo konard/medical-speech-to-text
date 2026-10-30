@@ -1,0 +1,15 @@
+{
+  "version": "26.18.0",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "yargs": "^17.6.2",
+    "ci-info": "^4.2.0",
+    "fs-extra": "^10.1.0",
+    "lazy-val": "^1.0.5",
+    "dmg-builder": "26.18.0",
+    "builder-util": "26.16.0",
+    "app-builder-lib": "26.18.0",
+    "builder-util-runtime": "9.7.0",
+    "simple-update-notifier": "2.0.0"
+  }
+}

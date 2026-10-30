@@ -1,0 +1,5 @@
+158:Release Preflight	UNKNOWN STEP	2026-10-30T16:34:51.3493388Z ##[error]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+159:Release Preflight	UNKNOWN STEP	2026-10-30T16:34:51.3502389Z ##[error]release-preflight: refusing to release with 1 refused credential(s)
+160:Release Preflight	UNKNOWN STEP	2026-10-30T16:34:51.3507352Z ##[error]Process completed with exit code 1.
+20112:Pipeline Status	UNKNOWN STEP	2026-10-30T16:42:21.8939677Z ##[error]Failing jobs: release-preflight
+20113:Pipeline Status	UNKNOWN STEP	2026-10-30T16:42:21.8951868Z ##[error]Process completed with exit code 1.

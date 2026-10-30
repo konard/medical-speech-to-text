@@ -10,15 +10,12 @@ import { describe, expect, it } from 'test-anywhere';
  */
 const KNOWN = {
   'package-lock.json': {},
-  '.github/actions/artifact-transport/package-lock.json': {
-    'glob@10.5.0':
-      '@actions/artifact 6.3.1 -> archiver 7.0.1 -> archiver-utils 5.0.2; the official SDK still requires this dependency, with no npm audit advisories',
-  },
+  '.github/actions/artifact-transport/package-lock.json': {},
   'examples/universal-app/package-lock.json': {
     'temp/node_modules/rimraf@2.6.3':
-      'electron-builder-squirrel-windows -> electron-winstaller 5.4.4 -> temp 0.9.4, the latest temp; temp calls rimraf(path, options, callback), which rimraf 4 removed',
+      'electron-builder-squirrel-windows -> locked electron-winstaller 5.4.0 -> temp 0.9.4, also used by latest electron-winstaller 5.4.4; temp calls rimraf(path, options, callback), which rimraf 4 removed',
     'glob@7.2.3':
-      'app-builder-lib 26 pins @electron/asar 3.4.1, which uses the glob 7 callback API; electron-builder 27 moves to @electron/asar 4',
+      'app-builder-lib 26.18.0 (latest verified) pins @electron/asar 3.4.1, which uses the glob 7 callback API; removal requires an upstream migration to @electron/asar 4',
     'inflight@1.0.6': 'glob 7.2.3 above',
   },
 };

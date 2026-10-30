@@ -1,0 +1,17 @@
+universal-example-app@0.1.0 /tmp/gh-issue-solver-1793387566364/examples/universal-app
+├─┬ @capacitor/cli@7.6.4
+│ └─┬ rimraf@6.1.3
+│   └── glob@13.0.6
+└─┬ electron-builder@26.17.0
+  └─┬ app-builder-lib@26.17.0
+    ├─┬ @electron/asar@3.4.1
+    │ └── glob@7.2.3
+    ├─┬ @electron/universal@2.0.3
+    │ └── @electron/asar@3.4.1 deduped
+    └─┬ electron-builder-squirrel-windows@26.17.0
+      └─┬ electron-winstaller@5.4.0
+        ├── @electron/asar@3.4.1 deduped
+        └─┬ temp@0.9.4
+          └─┬ rimraf@2.6.3
+            └── glob@7.2.3 deduped
+

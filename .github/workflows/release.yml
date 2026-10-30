@@ -87,7 +87,7 @@ jobs:
   # === FAST CHECKS - run before slow tests for fastest feedback ===
   # See: hive-mind CI/CD best practices principle #5 (fast-fail job ordering)
 
-  # Syntax check all .mjs files with node --check (~7s)
+  # Syntax check tracked JavaScript recursively with node --check.
   test-compilation:
     name: Test Compilation
     runs-on: ubuntu-24.04
@@ -104,7 +104,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check .mjs syntax
+      - name: Check tracked JavaScript syntax
         run: bash scripts/check-mjs-syntax.sh
 
   # Enforce 1500-line limit on .mjs files and release.yml
@@ -950,7 +950,7 @@ jobs:
       - name: Download image digests
         uses: ./.github/actions/artifact-transport
         env:
-          NODE_OPTIONS: --disable-warning=DEP0005
+          NODE_OPTIONS: --pending-deprecation --throw-deprecation
         with:
           path: /tmp/digests
           pattern: docker-digest-*

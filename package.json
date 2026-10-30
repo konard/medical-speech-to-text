@@ -97,5 +97,8 @@
     ".husky/*": [
       "pipx run --spec shellcheck-py==0.11.0.1 shellcheck"
     ]
+  },
+  "allowScripts": {
+    "node-pty": false
   }
 }

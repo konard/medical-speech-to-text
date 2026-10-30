@@ -1,0 +1,43 @@
+158: Release Preflight	Probe every release credential	2026-10-30T18:47:48.3109008Z ##[error]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+159: Release Preflight	Probe every release credential	2026-10-30T18:47:48.3121154Z ##[error]release-preflight: refusing to release with 1 refused credential(s)
+160: Release Preflight	Probe every release credential	2026-10-30T18:47:48.3126326Z ##[error]Process completed with exit code 1.
+613: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-30T18:48:03.7366944Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+614: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-30T18:48:03.7367981Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+615: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-30T18:48:03.7368630Z npm warn install-scripts
+616: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-30T18:48:03.7369518Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+2104: Speech Lab Browser Acceptance	Install browser demo and Chromium	2026-10-30T18:48:33.3757904Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+2105: Speech Lab Browser Acceptance	Install browser demo and Chromium	2026-10-30T18:48:33.3758710Z npm warn install-scripts   esbuild@0.25.12 (postinstall: node install.js)
+2106: Speech Lab Browser Acceptance	Install browser demo and Chromium	2026-10-30T18:48:33.3759178Z npm warn install-scripts
+2107: Speech Lab Browser Acceptance	Install browser demo and Chromium	2026-10-30T18:48:33.3759730Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+2606: Speech Lab Browser Acceptance	Preserve model and browser evidence	2026-10-30T18:49:57.0297883Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2846: Lint and Format Check	Install dependencies	2026-10-30T18:48:06.1994709Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+2847: Lint and Format Check	Install dependencies	2026-10-30T18:48:06.1995658Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+2848: Lint and Format Check	Install dependencies	2026-10-30T18:48:06.1995993Z npm warn install-scripts
+2849: Lint and Format Check	Install dependencies	2026-10-30T18:48:06.1996327Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+4738: Test runtimes (macos-15, node)	Install dependencies (Node.js)	2026-10-30T18:48:29.9030800Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+4739: Test runtimes (macos-15, node)	Install dependencies (Node.js)	2026-10-30T18:48:29.9041850Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+4740: Test runtimes (macos-15, node)	Install dependencies (Node.js)	2026-10-30T18:48:29.9042680Z npm warn install-scripts
+4741: Test runtimes (macos-15, node)	Install dependencies (Node.js)	2026-10-30T18:48:29.9043470Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+6429: Test runtimes (windows-2025, node)	Install dependencies (Node.js)	2026-10-30T18:48:41.5859226Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+6430: Test runtimes (windows-2025, node)	Install dependencies (Node.js)	2026-10-30T18:48:41.5861090Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+6431: Test runtimes (windows-2025, node)	Install dependencies (Node.js)	2026-10-30T18:48:41.5862337Z npm warn install-scripts
+6432: Test runtimes (windows-2025, node)	Install dependencies (Node.js)	2026-10-30T18:48:41.5863456Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+8115: Test runtimes (ubuntu-24.04, node)	Install dependencies (Node.js)	2026-10-30T18:48:33.9015658Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+8116: Test runtimes (ubuntu-24.04, node)	Install dependencies (Node.js)	2026-10-30T18:48:33.9017252Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+8117: Test runtimes (ubuntu-24.04, node)	Install dependencies (Node.js)	2026-10-30T18:48:33.9018219Z npm warn install-scripts
+8118: Test runtimes (ubuntu-24.04, node)	Install dependencies (Node.js)	2026-10-30T18:48:33.9019166Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+9824: Test runtimes (ubuntu-24.04, bun)	Install dependencies (Bun)	2026-10-30T18:48:38.9309120Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+9825: Test runtimes (ubuntu-24.04, bun)	Install dependencies (Bun)	2026-10-30T18:48:38.9309884Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+9826: Test runtimes (ubuntu-24.04, bun)	Install dependencies (Bun)	2026-10-30T18:48:38.9310246Z npm warn install-scripts
+9827: Test runtimes (ubuntu-24.04, bun)	Install dependencies (Bun)	2026-10-30T18:48:38.9310748Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+11511: Test runtimes (windows-2025, bun)	Install dependencies (Bun)	2026-10-30T18:48:50.4584756Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+11512: Test runtimes (windows-2025, bun)	Install dependencies (Bun)	2026-10-30T18:48:50.4586677Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+11513: Test runtimes (windows-2025, bun)	Install dependencies (Bun)	2026-10-30T18:48:50.4587808Z npm warn install-scripts
+11514: Test runtimes (windows-2025, bun)	Install dependencies (Bun)	2026-10-30T18:48:50.4588934Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+18237: Test runtimes (windows-2025, deno)	Run tests (Deno)	2026-10-30T18:49:39.9770283Z ##[warning]Deno test suite has run for 70s of its 100s budget.
+18483: Test runtimes (macos-15, bun)	Install dependencies (Bun)	2026-10-30T18:48:48.2587540Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+18485: Test runtimes (macos-15, bun)	Install dependencies (Bun)	2026-10-30T18:48:48.2692800Z npm warn install-scripts   node-pty@1.1.0 (install: node scripts/prebuild.js || node-gyp rebuild; postinstall: node scripts/post-install.js)
+18487: Test runtimes (macos-15, bun)	Install dependencies (Bun)	2026-10-30T18:48:48.2799620Z npm warn install-scripts
+18489: Test runtimes (macos-15, bun)	Install dependencies (Bun)	2026-10-30T18:48:48.2903470Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+20222: Pipeline Status	Fail the run when a required job was cancelled or failed	2026-10-30T18:50:47.3243720Z ##[error]Failing jobs: release-preflight
+20223: Pipeline Status	Fail the run when a required job was cancelled or failed	2026-10-30T18:50:47.3253417Z ##[error]Process completed with exit code 1.

@@ -6,5 +6,13 @@
     "@actions/artifact": "6.3.1",
     "@actions/core": "3.0.1",
     "@actions/glob": "0.7.0"
+  },
+  "overrides": {
+    "archiver-utils": {
+      "glob": "13.0.6"
+    },
+    "@actions/artifact": {
+      "unzip-stream": "npm:unzipper@0.12.5"
+    }
   }
 }
