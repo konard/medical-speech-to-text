@@ -1,0 +1,7 @@
+{
+  "windowCapFrames": 2,
+  "acceptedQueueFrames": 1024,
+  "logicalQueuedBytes": 2097152,
+  "queueMaxsize": 0,
+  "modelExecuted": false
+}

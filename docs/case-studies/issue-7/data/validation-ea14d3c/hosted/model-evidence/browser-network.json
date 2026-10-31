@@ -1,0 +1,362 @@
+{
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/index.html",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/assets/index-C6eOqsHv.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/assets/index-BHliEUjV.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-01.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-02.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-03.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-04.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-05.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-06.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-07.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-08.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-09.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-10.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/b228503d-05a5-46dc-9fb9-3b74c350a10c",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/assets/worker-BcJkGrGm.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/onnx/encoder_model_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/onnx/decoder_model_merged_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/645182ab9d916c596e34c318/6afcce097dcf897f6df877ac776fe2e62710be99499d80e3c0a7e00d54eb602d",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-tiny.en/79fb389fc764e7c395bd330e9531d9d32ada7049/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/645182ab9d916c596e34c318/b1fe29d7b0b0f9d9ab83ac89c10f1505ce6d9bf35a9b1d3c59d2c8fd0213f9b2",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/e41fedec-50a7-4873-964e-6d0936036ab2",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/b228503d-05a5-46dc-9fb9-3b74c350a10c",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/7cac2529-da86-4a00-a2d5-229a50674c0f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/e41fedec-50a7-4873-964e-6d0936036ab2",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/0bf0da37-ec1b-4f50-9e6a-228b1752ec1f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/7cac2529-da86-4a00-a2d5-229a50674c0f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/701fa0d9-5d4e-4e9b-9c15-43829439fc74",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/0bf0da37-ec1b-4f50-9e6a-228b1752ec1f",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/7e58a024-dff5-42bd-82e6-76cb3f9e17cb",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/701fa0d9-5d4e-4e9b-9c15-43829439fc74",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/c2730e65-efea-4d77-b932-55e396138c38",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/7e58a024-dff5-42bd-82e6-76cb3f9e17cb",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/cf819cec-ab1d-4c74-87a5-63d8d17f8cce",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/c2730e65-efea-4d77-b932-55e396138c38",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/f7e941db-e7ce-46d6-9cac-9d696194ecdf",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/cf819cec-ab1d-4c74-87a5-63d8d17f8cce",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/c13adc6b-156f-4fc4-924e-7f5653430a2e",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/f7e941db-e7ce-46d6-9cac-9d696194ecdf",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/c13adc6b-156f-4fc4-924e-7f5653430a2e",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/b228503d-05a5-46dc-9fb9-3b74c350a10c",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/b228503d-05a5-46dc-9fb9-3b74c350a10c",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-01.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-02.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-03.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-04.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-05.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-06.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-07.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-08.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-09.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/samples/primock-10.wav",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/3d36d4d2-31cb-4f3a-a8b7-8070f171dab4",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175/medical-speech-to-text/assets/worker-BcJkGrGm.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/preprocessor_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/onnx/encoder_model_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/onnx/decoder_model_merged_quantized.onnx",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/whisper-base.en/resolve/95bf40a508535962c6483ead40270b2e32267508/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/6452c1d05ac68a5b01a55829/64f472ab833dd670a5246e8465e281b26074f64fb8854bec30a417fd538b7273",
+      "method": "GET"
+    },
+    {
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/whisper-base.en/95bf40a508535962c6483ead40270b2e32267508/generation_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/6452c1d05ac68a5b01a55829/946bfe02ecd76e0874b30abd936ba01ab47dfa19c444082aeed590367cc3a7b8",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4175http://127.0.0.1:4175/3d36d4d2-31cb-4f3a-a8b7-8070f171dab4",
+      "method": "GET"
+    }
+  ],
+  "hostingAcknowledgements": [],
+  "errors": []
+}

@@ -1,0 +1,7 @@
+{
+  "observedAt": "2026-10-31T22:27:00.111Z",
+  "url": "https://konard.github.io/medical-speech-to-text/",
+  "title": "Universal Example App",
+  "text": "PACKAGE FUNCTION UI\n\nUniversal Example App\nFirst value\nSecond value\nAddition\n5\nMultiplication\n6\nDesktop builds\n\nThe same React bundle is used by GitHub Pages, Electron, Android, and iOS.\n\nWindows\nInstaller or portable package from the latest desktop build.\nmacOS\nSigned archive when Apple credentials are configured.\nLinux\nZip, deb, or rpm output from Electron Forge.\nOpen desktop downloads",
+  "errors": []
+}

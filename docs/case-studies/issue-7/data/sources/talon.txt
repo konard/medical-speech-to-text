@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Write, code, and control your computer with Talon. Voice, eye tracking, noise recognition, and Python scripting for macOS, Windows, and Linux.">
+  <meta name="color-scheme" content="light dark">
+  <title>Talon - Powerful hands-free input</title>
+  <link rel="canonical" href="https://talonvoice.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Talon">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://talonvoice.com/">
+  <meta property="og:title" content="Talon - Powerful hands-free input">
+  <meta property="og:description" content="Write, code, and control your computer with Talon. Voice, eye tracking, noise recognition, and Python scripting for macOS, Windows, and Linux.">
+  <meta property="og:image" content="https://talonvoice.com/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Talon. Say the word. Write, code, browse, and game with hands-free input. A voice command types hello world above the Talon HUD.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Talon - Powerful hands-free input">
+  <meta name="twitter:description" content="Write, code, and control your computer with Talon. Voice, eye tracking, noise recognition, and Python scripting for macOS, Windows, and Linux.">
+  <meta name="twitter:image" content="https://talonvoice.com/social-preview.png">
+  <meta name="twitter:image:alt" content="Talon. Say the word. Write, code, browse, and game with hands-free input. A voice command types hello world above the Talon HUD.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11v1a7 7 0 0 0 14 0v-1m-7 8v3m-4 0h8"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="sound" viewBox="0 0 24 24"><path d="M4 10v4m4-8v12m4-15v18m4-15v12m4-8v4"/></symbol>
+    <symbol id="code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
+    <symbol id="terminal" viewBox="0 0 24 24"><path d="m4 5 7 7-7 7m10 0h7"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="external-link" viewBox="0 0 16 16"><path d="M9 2h5v5m0-5L7 9M6 3H3v10h10v-3"/></symbol>
+    <symbol id="external" viewBox="0 0 24 24"><path d="M6 18 18 6M7 6h11v11"/></symbol>
+  </svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#" aria-label="Talon home">Talon<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="https://talonvoice.com/docs/">Learn</a>
+      <a href="https://talonvoice.com/chat">Chat</a>
+      <a href="https://www.patreon.com/join/lunixbochs">Patreon</a>
+      <a href="https://twitter.com/lunixbochs">Twitter</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="headline">
+      <div class="hero-copy">
+        <h1 id="headline">
+          <span class="hero-phrase active">Say the <em>word.</em></span>
+          <span class="hero-phrase">All talk.<br><em>All action.</em></span>
+          <span class="hero-phrase">Sit back.<br><em>Get to work.</em></span>
+          <span class="hero-phrase">Give it a <em>talking-to.</em></span>
+          <span class="hero-phrase">Your wish.<br><em>Your command.</em></span>
+          <span class="hero-phrase">Well said.<br><em>Well done.</em></span>
+          <span class="hero-phrase">Now <em>you’re talking.</em></span>
+          <span class="hero-phrase">Command <em>performance.</em></span>
+          <span class="hero-phrase">Open mouth.<br><em>Close tabs.</em></span>
+          <span class="hero-phrase">Dear keyboard,<br><em>we need to talk.</em></span>
+        </h1>
+        <p class="intro"><span>Write.</span> <span>Code.</span> <span>Browse.</span> <span>Game.</span> <span>You name it.</span></p>
+        <div class="download-options">
+          <div class="downloads">
+            <p class="download-label" id="download-label">Download Talon</p>
+            <div class="hero-actions" id="download" role="group" aria-labelledby="download-label">
+              <a class="platform-download primary" data-platform="mac" href="https://talonvoice.com/dl/latest/talon-mac.dmg"><span>macOS</span><svg aria-hidden="true"><use href="#icon-download"/></svg></a>
+              <a class="platform-download" data-platform="windows" href="https://talonvoice.com/dl/latest/talon-windows.exe"><span>Windows</span><svg aria-hidden="true"><use href="#icon-download"/></svg></a>
+              <a class="platform-download" data-platform="linux" href="https://talonvoice.com/dl/latest/talon-linux.tar.xz"><span>Linux (X11)</span><svg aria-hidden="true"><use href="#icon-download"/></svg></a>
+            </div>
+            <p class="download-links">
+              <a href="https://talonvoice.com/dl/latest/changelog.html"><svg aria-hidden="true"><use href="#external-link"/></svg>Changelog</a>
+              <a href="https://talonvoice.com/EULA.txt"><svg aria-hidden="true"><use href="#external-link"/></svg>License agreement</a>
+            </p>
+          </div>
+          <a class="plus-cta" href="https://www.patreon.com/join/lunixbochs">
+            <span class="plus-title">Talon<span>+</span></span>
+            <span class="plus-benefits">More features.<br>Better support.</span>
+            <svg class="plus-arrow" aria-hidden="true"><use href="#external"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="demo" aria-label="Interactive voice command preview">
+        <div class="demo-scene">
+          <div class="document">
+            <div class="document-toolbar"><span class="document-icon">≡</span></div>
+            <div class="document-body"><p class="preview-text" aria-label="Note text"><span id="typed-text"></span><span class="caret" aria-hidden="true"></span></p></div>
+          </div>
+          <div class="demo-hud" aria-hidden="true"><span class="grip">⠿</span><svg class="hud-mic"><use href="#mic"/></svg><span class="hud-active"><svg><use href="#terminal"/></svg></span><span class="hud-dictation">T</span><span class="hamburger"><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="demo-controls">
+          <div class="demo-caption"><span>Try a command</span></div>
+          <div class="command-buttons" role="group" aria-label="Preview a voice command">
+            <button type="button" data-command="say"><svg aria-hidden="true"><use href="#mic"/></svg><span id="say-label">say hello this is my first time using Talon</span></button>
+            <button type="button" data-command="select">select all</button>
+            <button type="button" data-command="delete">delete word</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="customize wrap" aria-labelledby="customize-title">
+      <div class="input-grid" role="group" aria-label="Input methods">
+        <article><svg class="feature-icon"><use href="#mic"/></svg><p>Commands and dictation</p></article>
+        <article><svg class="feature-icon"><use href="#eye"/></svg><p>Mouse by just looking</p></article>
+        <article><svg class="feature-icon"><use href="#sound"/></svg><p>Pop to click, hiss to scroll</p></article>
+      </div>
+      <div class="customize-demo">
+      <div class="customize-copy"><p class="feature-row" id="customize-title"><svg class="feature-icon" aria-hidden="true"><use href="#code"/></svg>Custom commands</p></div>
+      <div class="code-example"><div class="code-toolbar"><span><svg><use href="#code"/></svg>hello.talon</span><button id="copy" type="button" aria-label="Copy example commands">Copy</button></div><pre><code><span class="comment"># say it: do it</span>
+<span class="syntax">hello talon</span>: <span class="string">"hello world"</span>
+<span class="syntax">select all</span>: key(<span data-modifier>cmd</span>-a)
+<span class="syntax">undo that</span>: key(<span data-modifier>cmd</span>-z)</code></pre><span class="sr-only" role="status" id="copy-status"></span></div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer wrap"><a class="wordmark" href="#">Talon<span class="brand-dot">.</span></a><p>Powerful hands-free input.</p></footer>
+</body>
+</html>

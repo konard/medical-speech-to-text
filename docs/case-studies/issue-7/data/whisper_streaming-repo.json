@@ -1,0 +1,17 @@
+{
+  "full_name": "ufal/whisper_streaming",
+  "html_url": "https://github.com/ufal/whisper_streaming",
+  "description": "Whisper realtime streaming for long speech-to-text transcription and translation",
+  "stargazers_count": 3679,
+  "forks_count": 411,
+  "pushed_at": "2025-11-12T16:45:41Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "default_branch": "main",
+  "revision": "6da90b44b7e50d79695e68166d2a2c7609c75abb"
+}

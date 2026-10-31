@@ -1,0 +1,17 @@
+{
+  "full_name": "OpenWhispr/openwhispr",
+  "html_url": "https://github.com/OpenWhispr/openwhispr",
+  "description": "Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.",
+  "stargazers_count": 10455,
+  "forks_count": 1357,
+  "pushed_at": "2026-10-31T13:19:41Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "default_branch": "main",
+  "revision": "b9e9ebefac4b961456c269164a93ddfdd53438b9"
+}

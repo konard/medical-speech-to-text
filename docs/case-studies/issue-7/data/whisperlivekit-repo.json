@@ -1,0 +1,17 @@
+{
+  "full_name": "QuentinFuxa/WhisperLiveKit",
+  "html_url": "https://github.com/QuentinFuxa/WhisperLiveKit",
+  "description": "Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and OpenAI/Deepgram-compatible APIs.",
+  "stargazers_count": 11196,
+  "forks_count": 1157,
+  "pushed_at": "2026-10-31T22:23:46Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "default_branch": "main",
+  "revision": "e77114331a755900202980c718cfe967f5fc843a"
+}

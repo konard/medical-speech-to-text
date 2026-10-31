@@ -1,0 +1,268 @@
+{
+  "revision": "956d94ce01de24df19fc299313feb862a5ea805b",
+  "node": "v24.22.2",
+  "results": [
+    {
+      "name": "node",
+      "exitCode": 1,
+      "seconds": 47.46,
+      "command": [
+        "npm",
+        "test"
+      ]
+    },
+    {
+      "name": "bun",
+      "exitCode": 1,
+      "seconds": 107.56,
+      "command": [
+        "bun",
+        "test",
+        "--timeout",
+        "30000"
+      ]
+    },
+    {
+      "name": "deno-prepare",
+      "exitCode": 0,
+      "seconds": 0.12,
+      "command": [
+        "deno",
+        "test",
+        "-A",
+        "--parallel",
+        "--no-run",
+        "--frozen"
+      ]
+    },
+    {
+      "name": "deno",
+      "exitCode": 1,
+      "seconds": 36.21,
+      "command": [
+        "deno",
+        "test",
+        "-A",
+        "--parallel"
+      ]
+    },
+    {
+      "name": "quality",
+      "exitCode": 0,
+      "seconds": 26.58,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ]
+    },
+    {
+      "name": "syntax",
+      "exitCode": 0,
+      "seconds": 11.54,
+      "command": [
+        "bash",
+        "scripts/check-mjs-syntax.sh"
+      ]
+    },
+    {
+      "name": "lines",
+      "exitCode": 0,
+      "seconds": 2.88,
+      "command": [
+        "bash",
+        "scripts/check-file-line-limits.sh"
+      ]
+    },
+    {
+      "name": "docs",
+      "exitCode": 0,
+      "seconds": 0.06,
+      "command": [
+        "bash",
+        "scripts/check-required-docs.sh"
+      ]
+    },
+    {
+      "name": "version",
+      "exitCode": 0,
+      "seconds": 0.13,
+      "command": [
+        "node",
+        "scripts/check-version.mjs"
+      ]
+    },
+    {
+      "name": "changeset",
+      "exitCode": 0,
+      "seconds": 0.14,
+      "command": [
+        "node",
+        "scripts/validate-changeset.mjs"
+      ]
+    },
+    {
+      "name": "workflow-policy",
+      "exitCode": 0,
+      "seconds": 0.11,
+      "command": [
+        "node",
+        "scripts/check-ci-workflows.mjs"
+      ]
+    },
+    {
+      "name": "status-gates",
+      "exitCode": 0,
+      "seconds": 0.09,
+      "command": [
+        "node",
+        "scripts/check-status-gate-covers-all-jobs.mjs",
+        ".github/workflows/release.yml",
+        ".github/workflows/links.yml",
+        ".github/workflows/security.yml",
+        ".github/workflows/workflows.yml",
+        ".github/workflows/example-app.yml"
+      ]
+    },
+    {
+      "name": "actionlint",
+      "exitCode": 0,
+      "seconds": 0.6,
+      "command": [
+        "/tmp/issue-7-tooling/bin/actionlint",
+        "-shellcheck",
+        "/tmp/issue-7-tooling/bin/shellcheck",
+        "-ignore",
+        "unexpected key .queue. for .concurrency. section"
+      ]
+    },
+    {
+      "name": "shellcheck",
+      "exitCode": 0,
+      "seconds": 1.96,
+      "command": [
+        "bash",
+        "-c",
+        "git ls-files -z '*.sh' '.husky/*' | xargs -0 /tmp/issue-7-tooling/bin/shellcheck"
+      ]
+    },
+    {
+      "name": "zizmor",
+      "exitCode": 0,
+      "seconds": 0.28,
+      "command": [
+        "/tmp/issue-7-tooling/bin/zizmor",
+        "--offline",
+        "--config",
+        ".github/zizmor.yml",
+        "--min-confidence",
+        "low",
+        "--persona",
+        "regular",
+        "."
+      ]
+    },
+    {
+      "name": "zizmor-pedantic",
+      "exitCode": 0,
+      "seconds": 0.19,
+      "command": [
+        "/tmp/issue-7-tooling/bin/zizmor",
+        "--offline",
+        "--config",
+        ".github/zizmor.yml",
+        "--persona",
+        "pedantic",
+        "--min-severity",
+        "high",
+        "--min-confidence",
+        "high",
+        "."
+      ]
+    },
+    {
+      "name": "secrets",
+      "exitCode": 0,
+      "seconds": 5.5,
+      "command": [
+        "npx",
+        "--yes",
+        "-p",
+        "secretlint@13.0.7",
+        "-p",
+        "@secretlint/secretlint-rule-preset-recommend@13.0.7",
+        "secretlint",
+        "**/*"
+      ]
+    },
+    {
+      "name": "audit",
+      "exitCode": 0,
+      "seconds": 1.47,
+      "command": [
+        "npm",
+        "audit",
+        "--package-lock-only",
+        "--audit-level=high"
+      ]
+    },
+    {
+      "name": "universal-build",
+      "exitCode": 0,
+      "seconds": 3.35,
+      "command": [
+        "npm",
+        "run",
+        "example:web:build"
+      ]
+    },
+    {
+      "name": "speech-build",
+      "exitCode": 0,
+      "seconds": 3.52,
+      "command": [
+        "npm",
+        "--prefix",
+        "examples/speech-lab",
+        "run",
+        "build"
+      ]
+    },
+    {
+      "name": "pages",
+      "exitCode": 0,
+      "seconds": 6.18,
+      "command": [
+        "npm",
+        "--prefix",
+        "examples/speech-lab",
+        "run",
+        "test:pages",
+        "--",
+        "--output",
+        "test-results/pages"
+      ]
+    },
+    {
+      "name": "browser",
+      "exitCode": 0,
+      "seconds": 22.93,
+      "command": [
+        "npm",
+        "--prefix",
+        "examples/speech-lab",
+        "run",
+        "test:browser"
+      ]
+    },
+    {
+      "name": "queue",
+      "exitCode": 0,
+      "seconds": 0.3,
+      "command": [
+        "python3",
+        "experiments/issue-7-whisper-flow-queue.py"
+      ]
+    }
+  ]
+}
