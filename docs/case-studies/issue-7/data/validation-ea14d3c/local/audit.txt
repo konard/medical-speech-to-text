@@ -1,0 +1,34 @@
+# npm audit report
+
+minimatch  <11.0.1
+Severity: moderate
+minimatch has potential denial of service via globparts amplification - https://github.com/advisories/GHSA-g3hv-75wg-m249
+fix available via `npm audit fix --force`
+Will install eslint@4.0.0, which is a breaking change
+node_modules/minimatch
+  @eslint/config-array  *
+  Depends on vulnerable versions of minimatch
+  node_modules/@eslint/config-array
+    eslint  0.7.1 - 2.0.0-rc.1 || >=4.1.0
+    Depends on vulnerable versions of @eslint-community/eslint-utils
+    Depends on vulnerable versions of @eslint/config-array
+    Depends on vulnerable versions of minimatch
+    node_modules/eslint
+      @eslint-community/eslint-utils  *
+      Depends on vulnerable versions of eslint
+      node_modules/@eslint-community/eslint-utils
+      @eslint/js  >=10.0.1
+      Depends on vulnerable versions of eslint
+      node_modules/@eslint/js
+      eslint-config-prettier  >=7.0.0
+      Depends on vulnerable versions of eslint
+      node_modules/eslint-config-prettier
+        eslint-plugin-prettier  >=3.0.0
+        Depends on vulnerable versions of eslint
+        Depends on vulnerable versions of eslint-config-prettier
+        node_modules/eslint-plugin-prettier
+
+7 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force

@@ -1,0 +1,23 @@
+
+> medical-speech-research-lab@0.1.0 test:browser
+> playwright test
+
+
+Running 13 tests using 1 worker
+
+  ✓   1 tests/build.pw.js:8:1 › production builds reject warnings and preserve Vite CLI options (1.2s)
+  ✓   2 tests/device.pw.js:16:1 › mobile layout, explicit downloads, local chat and stop/retry without uploads (2.1s)
+  ✓   3 tests/device.pw.js:61:1 › quality comparison sends only after consent and a per-recording action (3.2s)
+  ✓   4 tests/device.pw.js:115:1 › microphone permission denial is recoverable (1.3s)
+  ✓   5 tests/device.pw.js:128:1 › stopping a pending microphone request recovers immediately and releases a late stream (1.5s)
+  ✓   6 tests/device.pw.js:174:1 › real microphone adapter captures and releases tracks before local transcription (2.6s)
+  -   7 tests/pages.pw.js:3:1 › built medical landing page works under the GitHub Pages repository path
+  -   8 tests/real-model.pw.js:5:1 › real pinned Whisper model on ten attributed mock-consultation clips
+  -   9 tests/real-model.pw.js:128:1 › real pinned local chat, warm offline reply and model cache removal
+  ✓  10 tests/workbench.pw.js:39:1 › ten recordings, partial references, actual timed words and provenance export (3.6s)
+  ✓  11 tests/workbench.pw.js:114:1 › rejects bad references and excessive batches before inference (1.1s)
+  ✓  12 tests/workbench.pw.js:132:1 › retains a decode failure and continues to the next file (898ms)
+  ✓  13 tests/workbench.pw.js:151:1 › stops an active worker and marks remaining recordings cancelled (944ms)
+
+  3 skipped
+  10 passed (23.1s)

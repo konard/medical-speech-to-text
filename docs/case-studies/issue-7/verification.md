@@ -31,10 +31,62 @@ fixture tests then failed by trying to install Node inside their offline fixture
 [Calibration receipts](data/local-runner-calibration/results.json) and complete
 Node/Bun/Deno logs preserve this tooling failure. The corrected launcher places
 the installed Node 24 binary directly on PATH; it requires no source workaround.
-Final clean-environment local and hosted results will follow candidate validation.
 The 2.92 GiB container cannot safely validate the full speech/chat model set;
 those acceptance assertions remain enforced on the adequately provisioned
 hosted runner rather than reduced locally.
+
+## Verified source candidate
+
+Revision `ea14d3c1df34857a0e3471dbcf1933794d5f2699` passed all 23 local checks
+using Node 24.22.2: Node and Bun each passed 1083 tests; Deno passed 1082 with
+one explicit network skip. Lint/format/duplication, syntax, file limits,
+documentation, version/changeset guards, workflow/status policy, actionlint,
+shellcheck, both zizmor modes, secret scan, high-severity dependency audit,
+both web builds and the bounded queue probe passed. Source browser acceptance
+passed 10 tests with 3 explicit gated tests; built Pages acceptance passed
+separately. The isolated offline release-versioning dry run passed too.
+[Local commands, results and complete logs](data/validation-ea14d3c/local/results.json)
+are preserved with [checksums](data/validation-ea14d3c/index.json).
+The audit reports seven existing moderate vulnerabilities; passing its
+high-severity threshold does not mean the dependency tree has no advisories.
+
+All five workflows started at 31 October 2026 22:49:59 UTC on that exact SHA
+and completed successfully:
+
+| Workflow            | Complete run                                                                             | Raw log                                               |
+| ------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Checks and release  | [41249916726](https://github.com/konard/medical-speech-to-text/actions/runs/41249916726) | [log](data/validation-ea14d3c/hosted/41249916726.txt) |
+| Example app         | [41249916757](https://github.com/konard/medical-speech-to-text/actions/runs/41249916757) | [log](data/validation-ea14d3c/hosted/41249916757.txt) |
+| Security            | [41249916752](https://github.com/konard/medical-speech-to-text/actions/runs/41249916752) | [log](data/validation-ea14d3c/hosted/41249916752.txt) |
+| Workflows           | [41249916759](https://github.com/konard/medical-speech-to-text/actions/runs/41249916759) | [log](data/validation-ea14d3c/hosted/41249916759.txt) |
+| Broken Link Checker | [41249916710](https://github.com/konard/medical-speech-to-text/actions/runs/41249916710) | [log](data/validation-ea14d3c/hosted/41249916710.txt) |
+
+The runtime matrix passed Node/Bun/Deno on Linux, Windows and macOS. Desktop
+packaging passed on all three platforms. Android/iOS, PR preview and main-only
+publication/deployment retain their existing conditional gates; a skipped gate
+does not verify those delivery paths. All same-revision runs were collected
+before the evidence batch; there were no failed workflows to repair.
+
+The production-subpath browser test passed in the hosted web job (Example app
+log line 2055), followed by both unchanged real-model tests (line 2335).
+[Speech exports](data/validation-ea14d3c/hosted/model-evidence/browser-results.json)
+contain ten completed tiny-model samples; the
+[base-model check](data/validation-ea14d3c/hosted/model-evidence/browser-base-result.json)
+also completed with an absent reference left unscored. The aggregate displayed
+WER was 28.6% on this small demonstration corpus. This is smoke-test evidence,
+not a clinical evaluation or evidence of superiority to Wispr Flow.
+[Chat evidence](data/validation-ea14d3c/hosted/model-evidence/chat-results.json)
+records actual local generation, a warm offline follow-up and cache deletion;
+the warm follow-up took about 2.4 seconds with 1233 ms to first text. These
+observations do not meet or establish the proposed subsecond service target.
+
+Hosted [speech](data/validation-ea14d3c/hosted/model-evidence/result.png) and
+[mobile chat](data/validation-ea14d3c/hosted/model-evidence/chat.png) screenshots
+show the actual model runs. Network/model revisions, timings, device/runtime
+metadata and browser errors are retained in the same evidence directory.
+The final feedback refresh found no issue comments, required sub-issues,
+PR conversation comments, inline comments or reviews; the paginated responses
+are archived alongside these results.
 
 ## Unfinished external criteria
 

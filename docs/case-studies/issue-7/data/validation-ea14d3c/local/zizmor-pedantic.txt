@@ -1,0 +1,896 @@
+ INFO zizmor: 🌈 zizmor v1.30.1
+DEBUG zizmor::config: loading config from `.github/zizmor.yml`
+DEBUG collect_inputs: zizmor::config: config discovery: using global config: Config { raw: RawConfig { rules: {"unpinned-uses": AuditRuleConfig { disable: false, ignore: [], config: Some(Mapping {"policies": Mapping {"actions/*": String("ref-pin"), "github/*": String("ref-pin"), "docker/*": String("ref-pin"), "astral-sh/*": String("ref-pin"), "lycheeverse/*": String("ref-pin"), "zizmorcore/*": String("ref-pin"), "changesets/*": String("ref-pin"), "*": String("hash-pin")}}), remap: None }, "self-repository": AuditRuleConfig { disable: false, ignore: [WorkflowRule { filename: "release.yml", line: None, column: None }, WorkflowRule { filename: "example-app.yml", line: None, column: None }, WorkflowRule { filename: "action.yml", line: None, column: None }, WorkflowRule { filename: "javascript-first-example.yml", line: None, column: None }, WorkflowRule { filename: "links.yml", line: None, column: None }, WorkflowRule { filename: "security.yml", line: None, column: None }, WorkflowRule { filename: "workflows.yml", line: None, column: None }], config: None, remap: None }} }, dependabot_cooldown_config: DependabotCooldownConfig { days: 7 }, forbidden_uses_config: None, secrets_outside_env_policy: SecretsOutsideEnvPolicy { allow: {"github_token"} }, unpinned_uses_policies: UnpinnedUsesPolicies { policy_tree: {"docker": [(InOwner("docker"), RefPin)], "github": [(InOwner("github"), RefPin)], "astral-sh": [(InOwner("astral-sh"), RefPin)], "lycheeverse": [(InOwner("lycheeverse"), RefPin)], "actions": [(InOwner("actions"), RefPin)], "zizmorcore": [(InOwner("zizmorcore"), RefPin)], "changesets": [(InOwner("changesets"), RefPin)]}, default_policy: HashPin }, known_vulnerable_actions_config: KnownVulnerableActionsConfig { allow: {} } }
+DEBUG collect_inputs: ignore::gitignore: opened gitignore file: ./.gitignore
+DEBUG collect_inputs: globset: glob `Glob("**/npm-debug.log*")` converted to regex: `"(?-u)^(?:/?|.*/)npm\\-debug\\.log[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/yarn-debug.log*")` converted to regex: `"(?-u)^(?:/?|.*/)yarn\\-debug\\.log[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/yarn-error.log*")` converted to regex: `"(?-u)^(?:/?|.*/)yarn\\-error\\.log[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/lerna-debug.log*")` converted to regex: `"(?-u)^(?:/?|.*/)lerna\\-debug\\.log[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/.env.*")` converted to regex: `"(?-u)^(?:/?|.*/)\\.env\\.[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/.pnp.*")` converted to regex: `"(?-u)^(?:/?|.*/)\\.pnp\\.[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob(".yarn/*")` converted to regex: `"(?-u)^\\.yarn/[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/vite.config.js.timestamp-*")` converted to regex: `"(?-u)^(?:/?|.*/)vite\\.config\\.js\\.timestamp\\-[^/]*$"`
+DEBUG collect_inputs: globset: glob `Glob("**/vite.config.ts.timestamp-*")` converted to regex: `"(?-u)^(?:/?|.*/)vite\\.config\\.ts\\.timestamp\\-[^/]*$"`
+DEBUG collect_inputs: globset: built glob set; 9 literals, 38 basenames, 6 extensions, 0 prefixes, 2 suffixes, 2 required extensions, 9 regexes
+DEBUG collect_inputs: ignore::gitignore: opened gitignore file: ./.git/info/exclude
+DEBUG collect_inputs: globset: built glob set; 1 literals, 2 basenames, 0 extensions, 0 prefixes, 0 suffixes, 0 required extensions, 0 regexes
+DEBUG collect_inputs: ignore::gitignore: opened gitignore file: ./.husky/_/.gitignore
+DEBUG collect_inputs: globset: glob `Glob("**/*")` converted to regex: `"(?-u)^(?:/?|.*/)[^/]*$"`
+DEBUG collect_inputs: globset: built glob set; 0 literals, 0 basenames, 0 extensions, 0 prefixes, 0 suffixes, 0 required extensions, 1 regexes
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/prepare-commit-msg: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/post-rewrite: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/commit-msg: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/.gitignore: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-merge-commit: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/husky.sh: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-push: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/post-commit: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/applypatch-msg: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/post-applypatch: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/post-checkout: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-rebase: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/post-merge: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-commit: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-applypatch: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/pre-auto-gc: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.husky/_/h: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.husky/_/.gitignore"), original: "*", actual: "**/*", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./dev/log/issues/5/pulls/6/ci-logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "ci-logs/", actual: "**/ci-logs", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./ci-logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "ci-logs/", actual: "**/ci-logs", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./node_modules: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "node_modules/", actual: "**/node_modules", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./.git/logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "logs", actual: "**/logs", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./reports: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "reports/", actual: "**/reports", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: zizmor::registry::input: registering action input as with key file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG collect_inputs: zizmor::registry::input: registering action input as with key file://./.github/actions/artifact-transport/action.yml
+DEBUG collect_inputs: ignore::walk: ignoring ./.github/actions/artifact-transport/node_modules: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "node_modules/", actual: "**/node_modules", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: zizmor::registry::input: registering action input as with key file://./.github/actions/artifact-transport/run/action.yml
+DEBUG collect_inputs: zizmor::registry::input: registering action input as with key file://./.github/actions/publish-dockerhub/action.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/security.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/release.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/links.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/workflows.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/example-app.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/javascript-first-example.yml
+DEBUG collect_inputs: zizmor::registry::input: registering workflow input as with key file://./.github/workflows/javascript-first-gate.yml
+DEBUG collect_inputs: ignore::walk: ignoring ./examples/speech-lab/dist: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "dist", actual: "**/dist", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./examples/speech-lab/node_modules: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "node_modules/", actual: "**/node_modules", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./examples/speech-lab/test-results: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "**/test-results/", actual: "**/test-results", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./examples/universal-app/dist: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "dist", actual: "**/dist", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./examples/universal-app/node_modules: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "node_modules/", actual: "**/node_modules", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-21/ci-logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "ci-logs/", actual: "**/ci-logs", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-36/ci-logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "ci-logs/", actual: "**/ci-logs", is_whitelist: false, is_only_dir: true })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/npm-check-final-4.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/npm-install-universal-app-node20-compatible.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/example-desktop-package-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/npm-install-root.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/check-file-line-limits-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/deno-test-final.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/validate-changeset-final.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/changeset-status-after-stage.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/npm-test-final-3.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/universal-app-test-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/example-web-build-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/check-mjs-syntax-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/example-mobile-sync-final-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/bun-test-final.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-56/data/universal-app-test-before.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-install-universal-app.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/example-app-25733140224.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/validate-changeset.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/checks-and-release-25733140225.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-global-install.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/regression-after.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/checks-and-release-25743983223.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-test-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/check-mjs-syntax.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-check-final.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/secretlint.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/deno-test.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/example-mobile-sync.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/example-desktop-package.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-install.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/regression-after-2.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-install-after-metadata.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/regression-after-3.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/regression-before.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/check-file-line-limits.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/bun-test.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/npm-whoami.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-58/data/example-web-build.log: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "*.log", actual: "**/*.log", is_whitelist: false, is_only_dir: false })))
+DEBUG collect_inputs: ignore::walk: ignoring ./docs/case-studies/issue-33/ci-logs: Ignore(IgnoreMatch(Gitignore(Glob { from: Some("./.gitignore"), original: "ci-logs/", actual: "**/ci-logs", is_whitelist: false, is_only_dir: true })))
+DEBUG zizmor::registry: skipping impostor-commit: can't run without a GitHub API token
+DEBUG zizmor::registry: skipping ref-confusion: can't run without a GitHub API token
+DEBUG zizmor::registry: skipping known-vulnerable-actions: can't run without a GitHub API token
+DEBUG zizmor::registry: skipping stale-action-refs: can't run without a GitHub API token
+DEBUG zizmor::registry: skipping ref-version-mismatch: can't run without a GitHub API token
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/actions/artifact-transport/action.yml
+ INFO audit: zizmor: 🌈 completed ./.github/actions/artifact-transport/action.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/actions/artifact-transport/run/action.yml
+ INFO audit: zizmor: 🌈 completed ./.github/actions/artifact-transport/run/action.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/actions/publish-dockerhub/action.yml
+ INFO audit: zizmor: 🌈 completed ./.github/actions/publish-dockerhub/action.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/actions/setup-buildx-resilient/action.yml
+ INFO audit: zizmor: 🌈 completed ./.github/actions/setup-buildx-resilient/action.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/example-app.yml
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/example-app.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for example-app.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/example-app.yml",
+            native_path: "./.github/workflows/example-app.yml",
+            best_identifier: ".github/workflows/example-app.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "desktop-package",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                2,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/example-app.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for example-app.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/example-app.yml",
+            native_path: "./.github/workflows/example-app.yml",
+            best_identifier: ".github/workflows/example-app.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "desktop-package",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                3,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/example-app.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/example-app.yml",
+            native_path: "./.github/workflows/example-app.yml",
+            best_identifier: ".github/workflows/example-app.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "desktop-package",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                2,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/example-app.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/example-app.yml",
+            native_path: "./.github/workflows/example-app.yml",
+            best_identifier: ".github/workflows/example-app.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "desktop-package",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                3,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/example-app.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/javascript-first-example.yml
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/javascript-first-example.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/javascript-first-gate.yml
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/javascript-first-gate.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/links.yml
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/links.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/release.yml
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for release.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                3,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for release.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                4,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for release.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                9,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::use_trusted_publishing: use-trusted-publishing: couldn't determine shell type for release.yml step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "docker-publish-build",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                2,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                3,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                4,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "test",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                9,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+DEBUG audit:audit{input=Workflow(file://./.github/workflows/release.yml)}: zizmor::audit::adhoc_packages: adhoc-packages: couldn't determine shell for step SymbolicLocation {
+    key: Local(
+        LocalKey {
+            group: Group(
+                ".",
+            ),
+            verbatim_path: "./.github/workflows/release.yml",
+            native_path: "./.github/workflows/release.yml",
+            best_identifier: ".github/workflows/release.yml",
+        },
+    ),
+    annotation: "this step",
+    link: None,
+    route: Route {
+        route: [
+            Key(
+                "jobs",
+            ),
+            Key(
+                "docker-publish-build",
+            ),
+            Key(
+                "steps",
+            ),
+            Index(
+                2,
+            ),
+        ],
+    },
+    feature_kind: Normal,
+    kind: Related,
+}; assuming bash
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/release.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/security.yml
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/security.yml
+DEBUG audit: zizmor: scheduling artipacked on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unsound-contains on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unsound-ternary on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling excessive-permissions on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling dangerous-triggers on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling use-trusted-publishing on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling template-injection on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling hardcoded-container-credentials on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling self-hosted-runner on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unpinned-uses on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling undocumented-permissions on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling insecure-commands on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling github-env on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling cache-poisoning on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling secrets-inherit on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling bot-conditions on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling overprovisioned-secrets on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unredacted-secrets on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling forbidden-uses on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling obfuscation on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unpinned-images on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling anonymous-definition on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unsound-condition on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling dependabot-execution on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling dependabot-cooldown on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling concurrency-limits on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling archived-uses on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling typosquat-uses on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling misfeature on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling secrets-outside-env on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling superfluous-actions on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling github-app on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling unpinned-tools on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling adhoc-packages on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling insecure-url-scheme on file://./.github/workflows/workflows.yml
+DEBUG audit: zizmor: scheduling self-repository on file://./.github/workflows/workflows.yml
+ INFO audit: zizmor: 🌈 completed ./.github/workflows/workflows.yml
+No findings to report. Good job! (36 ignored, 14 suppressed)

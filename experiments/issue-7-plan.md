@@ -14,8 +14,9 @@ Objective: fully address issue 7 in PR 8, preserving existing behavior and accep
 - [x] Capture final mobile/desktop screenshots and update main links/docs and changeset.
 - [ ] Update PR description with final hosted checks and remaining external criteria.
 - [x] Install locked dependencies; run full Node/Bun/Deno tests sequentially, lint, format, duplication, syntax, workflow/static/security/docs/line/version/changeset checks; bounded local browser tests. Do not run memory-heavy real models locally if unsafe; enforce hosted model acceptance.
-- [ ] Merge current default branch when needed, review whole diff, commit useful batch and run checks at exact candidate revision.
-- [ ] Push once per batch only to prepared branch. Wait for every same-revision check; download every failing run before making next batch.
+- [x] Confirm current default branch is an ancestor, review whole diff, commit useful implementation batch and run checks at exact candidate revision.
+- [x] Push implementation batch once only to prepared branch. Wait for every same-revision check; collect all five successful workflows, full logs and actual model evidence before the documentation batch.
+- [ ] Validate and push the final evidence batch; wait for every final-revision check and preserve logs.
 - [ ] Finish dependent work, refresh all feedback and sub-issues, verify clean tree and PR consistency, mark ready when completed; leave unmerged and explicitly report any genuine external blockers.
 
 Build constraints: 2.92 GiB total memory, measure use, sequential heavy processes, CARGO_BUILD_JOBS=1 if relevant. No Rust migration is requested; native adapters/unsupported capabilities must be explicit. Logs go to files; read >1500-line files in chunks. Experiments remain in experiments/. No user-owned cache deletion.

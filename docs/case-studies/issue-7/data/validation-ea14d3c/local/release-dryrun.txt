@@ -1,0 +1,13 @@
+
+> @link-foundation/example-package-name@0.11.31 changeset:version
+> node scripts/changeset-version.mjs
+
+Detected single-language repository (package.json in root)
+Running changeset version...
+🦋 changeset v3.0.3
+
+All files have been updated. Review them and commit at your leisure
+
+Synchronizing package-lock.json...
+
+✅ Version bump complete with synchronized package-lock.json

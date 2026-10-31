@@ -1,0 +1,11 @@
+Validating changesets added by this PR...
+Detected single-language repository (package.json in root)
+Package: @link-foundation/example-package-name
+Found 1 changeset file(s) added by this PR
+Added changesets:
+  - medical-speech-pages.md
+Validating changeset: .changeset/medical-speech-pages.md
+Changeset validation passed
+   Type: patch
+   Description:
+Publish the medical speech lab as the Pages entrypoint and verify its production bundle, public samples and real models at the repository subpath. Preserve the universal app build and add current dictation and streaming research.
