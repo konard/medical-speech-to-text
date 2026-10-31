@@ -4,8 +4,9 @@ Research and evaluate speech recognition for medical histories and confirmed CRM
 commands, with an Australian AWS deployment plan.
 
 - [Research case study and complete requirement inventory](docs/case-studies/issue-1/README.md)
-- [Try the browser speech lab](https://raw.githack.com/konard/medical-speech-to-text/issue-3-60721261c8eb/examples/speech-lab/index.html)
+- [Try the browser speech lab](https://konard.github.io/medical-speech-to-text/)
 - [Mobile React, device research and CI audit](docs/case-studies/issue-3/README.md)
+- [Whisper Flow, dictation alternatives and Wispr-quality service plan](docs/case-studies/issue-7/README.md)
 - [Run locally and reproduce the browser checks](examples/speech-lab/README.md)
 - [Actual model results and limitations](docs/case-studies/issue-1/verification.md)
 
@@ -20,9 +21,10 @@ deployment requires the Australian boundary in the case study.
 
 A comprehensive template for AI-driven JavaScript/TypeScript development with full CI/CD pipeline support.
 
-This repository publishes the real test package
-`@link-foundation/example-package-name` so the template release pipeline is
-validated end to end with npm trusted publishing.
+The inherited npm release target is `@link-foundation/example-package-name`.
+Its first publication is blocked by missing package identity/bootstrap
+configuration; the strict release preflight reports the required action.
+The website build and Pages deployment do not depend on npm publication.
 
 ## Features
 
@@ -230,17 +232,32 @@ The CI/CD pipeline is designed to handle concurrent PRs gracefully:
 
 This design decouples PR validation from the need to pull changes from the default branch, reducing conflicts and ensuring that even if CI/CD fails, all unpublished changesets will still get published when the error is resolved.
 
-### Deploying the example app
+### Deploying the medical speech lab
 
-The `example-app.yml` workflow deploys the universal example app to GitHub
-Pages on every push to `main`. Before the first run on `main` in a new
-repository created from this template, open **Settings → Pages** and set
-**Source = GitHub Actions**. This is a one-time manual step and cannot be
-configured from a workflow because the Pages source defaults to
-_Deploy from a branch_. Without it, the `pages-deploy` job fails on
-`actions/deploy-pages` with `Get Pages site failed` /
-`Failed to create deployment`. After flipping the source, the workflow
-provisions the Pages site on its first run.
+The `example-app.yml` workflow builds the speech lab as the main GitHub Pages
+site at <https://konard.github.io/medical-speech-to-text/>. It keeps the universal
+calculator's web artifact, Electron packages and mobile build paths available.
+The speech build uses relative asset paths and is tested under the repository
+subpath with all ten public recordings, actual pinned speech/chat models and
+word playback before the Pages artifact is uploaded. No npm publication or API
+credential is needed for the public-data demo.
+
+Pages Source must be **GitHub Actions**; this repository already has that setting.
+The strict main-branch preflight explains any configuration failure. Pull requests
+build/test the same artifact without deploying. Production deployment retains the
+existing main-only environment policy and shared writer lock; merging a PR is a
+separate action. The [issue 7 case study](docs/case-studies/issue-7/README.md)
+records the observed calculator page, corrected candidate and live rollout status.
+
+Reproduce the production layout locally (from repository root):
+
+```sh
+npm ci --prefix examples/speech-lab
+npm --prefix examples/speech-lab run build
+node experiments/issue-7-serve-pages.mjs
+# In a second terminal:
+SPEECH_LAB_URL=http://127.0.0.1:4175/medical-speech-to-text/ npm --prefix examples/speech-lab run test:pages
+```
 
 ### Auto-regenerated preview screenshots
 

@@ -5,6 +5,9 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - 'examples/universal-app/**'
+      - 'examples/speech-lab/**'
+      - 'experiments/issue-7-**'
+      - 'tests/speech-pages.test.js'
       - 'src/**'
       - 'package.json'
       - 'package-lock.json'
@@ -20,6 +23,9 @@ on:
       - main
     paths:
       - 'examples/universal-app/**'
+      - 'examples/speech-lab/**'
+      - 'experiments/issue-7-**'
+      - 'tests/speech-pages.test.js'
       - 'src/**'
       - 'package.json'
       - 'package-lock.json'
@@ -46,7 +52,7 @@ jobs:
   web-build:
     name: Build web app
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     concurrency:
       group: check-${{ github.workflow }}-${{ github.ref }}-web-build
       cancel-in-progress: true
@@ -66,7 +72,10 @@ jobs:
         with:
           node-version: '24.x'
           cache: npm
-          cache-dependency-path: examples/universal-app/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            examples/universal-app/package-lock.json
+            examples/speech-lab/package-lock.json
 
       # Pull requests never deploy, so they only warn; main fails with the
       # setting a maintainer has to change.
@@ -97,13 +106,49 @@ jobs:
           path: examples/universal-app/dist
           if-no-files-found: error
 
+      - name: Validate native JavaScript before browser adapters
+        run: |
+          npm ci --no-audit --no-fund
+          npm test
+
+      - name: Build medical speech landing page
+        run: |
+          npm ci --prefix examples/speech-lab --no-audit --no-fund
+          npm --prefix examples/speech-lab run build
+          npm --prefix examples/speech-lab exec -- playwright install --with-deps chromium
+
+      - name: Verify built Pages app at the repository subpath
+        env:
+          SPEECH_LAB_URL: http://127.0.0.1:4175/medical-speech-to-text/
+        run: |
+          node experiments/issue-7-serve-pages.mjs &
+          server_pid=$!
+          trap 'kill "$server_pid"; wait "$server_pid" || true' EXIT
+          npm --prefix examples/speech-lab run test:pages -- --output test-results/pages
+          npm --prefix examples/speech-lab run test:model -- --output test-results/models
+
+      - name: Preserve Pages browser evidence
+        if: ${{ !cancelled() }}
+        uses: ./.github/actions/artifact-transport
+        with:
+          name: speech-pages-evidence
+          path: examples/speech-lab/test-results
+          if-no-files-found: error
+
+      - name: Upload medical speech web artifact
+        uses: ./.github/actions/artifact-transport
+        with:
+          name: medical-speech-web
+          path: examples/speech-lab/dist
+          if-no-files-found: error
+
       - name: Upload GitHub Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: ./.github/actions/artifact-transport
         with:
           name: github-pages
           pages: 'true'
-          path: examples/universal-app/dist
+          path: examples/speech-lab/dist
 
   # Requires Settings → Pages → Source = GitHub Actions to be set once
   # in the repository before this job can succeed. See README → "Deploying

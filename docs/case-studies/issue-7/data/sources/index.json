@@ -1,0 +1,66 @@
+[
+  {
+    "name": "wispr-home",
+    "url": "https://wisprflow.ai/",
+    "retrievedAt": "2026-10-31T22:27:56.929301+00:00",
+    "status": 200,
+    "finalUrl": "https://wisprflow.ai/",
+    "sha256": "19ce504cb24b1b1b6f5994ad9d8f383063bcdf9cd8bb11266f5302493ca4c240"
+  },
+  {
+    "name": "wispr-data-controls",
+    "url": "https://docs.wisprflow.ai/articles/9609615338-private-cloud-sync-and-data-sharing-preferences-in-wispr-flow",
+    "retrievedAt": "2026-10-31T22:27:57.077623+00:00",
+    "status": 200,
+    "finalUrl": "https://docs.wisprflow.ai/articles/9609615338-private-cloud-sync-and-data-sharing-preferences-in-wispr-flow",
+    "sha256": "4804b70a05f097d7b8781aed43674bebf8008dd56792b8fdc984fabadae67595"
+  },
+  {
+    "name": "wispr-security",
+    "url": "https://wisprflow.ai/security",
+    "retrievedAt": "2026-10-31T22:27:58.423483+00:00",
+    "status": 200,
+    "finalUrl": "https://wisprflow.ai/enterprise-privacy",
+    "sha256": "d8dea4716168141e315a9ab945da9dc259e1d8f11e143ee15bbfd516b0fad490"
+  },
+  {
+    "name": "superwhisper",
+    "url": "https://superwhisper.com/",
+    "retrievedAt": "2026-10-31T22:27:58.704859+00:00",
+    "status": 200,
+    "finalUrl": "https://superwhisper.com/",
+    "sha256": "c34badb9a9d6787c4c2185ee1a3dd4a862044f205e22219a400e4b958d22c07c"
+  },
+  {
+    "name": "aqua-voice",
+    "url": "https://aquavoice.com/",
+    "retrievedAt": "2026-10-31T22:27:58.763960+00:00",
+    "status": 200,
+    "finalUrl": "https://aquavoice.com/",
+    "sha256": "531b02b19411a1fea05ee02ec5a0fda4207fd491daa3929c483501d4926c1759"
+  },
+  {
+    "name": "macwhisper",
+    "url": "https://macwhisper.com/",
+    "retrievedAt": "2026-10-31T22:27:59.199497+00:00",
+    "status": 200,
+    "finalUrl": "https://www.macwhisper.com/",
+    "sha256": "87adbc3420c7b1fbda64ab5c1181487c6180619ff0527fba2765c869d6797d1f"
+  },
+  {
+    "name": "talon",
+    "url": "https://talonvoice.com/",
+    "retrievedAt": "2026-10-31T22:27:59.387075+00:00",
+    "status": 200,
+    "finalUrl": "https://talonvoice.com/",
+    "sha256": "8a75d8e5bdaa61fdd54d8b8b2b22addc06e3789d778b0ce1fb1f43edf924edc1"
+  },
+  {
+    "name": "pages-artifact",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages",
+    "retrievedAt": "2026-10-31T22:28:00.058314+00:00",
+    "status": 200,
+    "finalUrl": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages",
+    "sha256": "0b68590116f66c640b2e7c10b211d8b6ebe9843f6d6a7e7eb2e1173d24a16aae"
+  }
+]

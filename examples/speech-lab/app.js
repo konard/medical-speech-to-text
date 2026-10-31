@@ -400,7 +400,7 @@ function App() {
       h(
         'a',
         {
-          href: 'https://github.com/konard/medical-speech-to-text/tree/issue-3-60721261c8eb/docs/case-studies/issue-3',
+          href: 'https://github.com/konard/medical-speech-to-text/tree/main/docs/case-studies/issue-7',
         },
         'Research ↗'
       )

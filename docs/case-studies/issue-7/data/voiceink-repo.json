@@ -1,0 +1,17 @@
+{
+  "full_name": "Beingpax/VoiceInk",
+  "html_url": "https://github.com/Beingpax/VoiceInk",
+  "description": "The best open-source alternative to Superwhisper & Wispr Flow. Voice-to-text app for macOS with no subscription",
+  "stargazers_count": 6984,
+  "forks_count": 984,
+  "pushed_at": "2026-10-30T10:06:55Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "default_branch": "main",
+  "revision": "19546d2a7f85578f49efb538eb888b37ff2f8f8c"
+}

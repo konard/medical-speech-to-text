@@ -1,0 +1,55 @@
+▶ medical research Pages entrypoint
+  ✖ publishes the speech lab and keeps the universal app artifact (1.92456ms)
+  ✖ tests the built site at the Pages subpath with real models before uploading (0.456601ms)
+  ✖ rebuilds when speech lab or deployment contract tests change (0.425414ms)
+✖ medical research Pages entrypoint (5.133175ms)
+ℹ tests 3
+ℹ suites 1
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 136.196994
+
+✖ failing tests:
+
+test at node_modules/test-anywhere/src/index.js:174:12
+✖ publishes the speech lab and keeps the universal app artifact (1.92456ms)
+  Error: Expected "\n    name: Build web app\n    runs-on: ubuntu-24.04\n    timeout-minutes: 10\n    concurrency:\n      group: check-${{ github.workflow }}-${{ github.ref }}-web-build\n      cancel-in-progress: true\n    # check-pages.sh and configure-pages read the Pages API, which answers\n    # a request it does not authorise with the same 404 as a disabled site,\n    # so the read is granted explicitly.\n    permissions:\n      contents: read\n      pages: read\n    steps:\n      - uses: actions/checkout@v7\n        with:\n          persist-credentials: false\n\n      - name: Setup Node.js\n        uses: actions/setup-node@v7\n        with:\n          node-version: '24.x'\n          cache: npm\n          cache-dependency-path: examples/universal-app/package-lock.json\n\n      # Pull requests never deploy, so they only warn; main fails with the\n      # setting a maintainer has to change.\n      - name: Check GitHub Pages source\n        env:\n          GH_TOKEN: ${{ github.token }}\n          REPOSITORY: ${{ github.repository }}\n          PAGES_MODE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'require' || 'warn' }}\n        run: bash scripts/check-pages.sh\n\n      - name: Configure GitHub Pages\n        if: github.event_name == 'push' && github.ref == 'refs/heads/main'\n        uses: actions/configure-pages@v6\n\n      - name: Install app dependencies\n        run: npm ci --prefix examples/universal-app --no-audit --no-fund\n\n      - name: Build app\n        run: npm run example:web:build\n        env:\n          GITHUB_PAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}\n          VITE_REPOSITORY_URL: https://github.com/${{ github.repository }}\n\n      - name: Upload web build artifact\n        uses: ./.github/actions/artifact-transport\n        with:\n          name: universal-example-web\n          path: examples/universal-app/dist\n          if-no-files-found: error\n\n      - name: Upload GitHub Pages artifact\n        if: github.event_name == 'push' && github.ref == 'refs/heads/main'\n        uses: ./.github/actions/artifact-transport\n        with:\n          name: github-pages\n          pages: 'true'\n          path: examples/universal-app/dist\n\n  # Requires Settings → Pages → Source = GitHub Actions to be set once\n  # in the repository before this job can succeed. See README → \"Deploying\n  # the example app\". The Pages source cannot be configured from a workflow." to match /pages: 'true'\s+path: examples\/speech-lab\/dist/
+      at Object.toMatch (file:///tmp/gh-issue-solver-1793485446350/node_modules/test-anywhere/src/index.js:574:15)
+      at TestContext.<anonymous> (file:///tmp/gh-issue-solver-1793485446350/tests/speech-pages.test.js:9:17)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at node:internal/test_runner/test:1903:71
+      at node:internal/per_context/primordials:505:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:479:3)
+      at node:internal/per_context/primordials:505:9
+
+test at node_modules/test-anywhere/src/index.js:174:12
+✖ tests the built site at the Pages subpath with real models before uploading (0.456601ms)
+  Error: Expected "\n    name: Build web app\n    runs-on: ubuntu-24.04\n    timeout-minutes: 10\n    concurrency:\n      group: check-${{ github.workflow }}-${{ github.ref }}-web-build\n      cancel-in-progress: true\n    # check-pages.sh and configure-pages read the Pages API, which answers\n    # a request it does not authorise with the same 404 as a disabled site,\n    # so the read is granted explicitly.\n    permissions:\n      contents: read\n      pages: read\n    steps:\n      - uses: actions/checkout@v7\n        with:\n          persist-credentials: false\n\n      - name: Setup Node.js\n        uses: actions/setup-node@v7\n        with:\n          node-version: '24.x'\n          cache: npm\n          cache-dependency-path: examples/universal-app/package-lock.json\n\n      # Pull requests never deploy, so they only warn; main fails with the\n      # setting a maintainer has to change.\n      - name: Check GitHub Pages source\n        env:\n          GH_TOKEN: ${{ github.token }}\n          REPOSITORY: ${{ github.repository }}\n          PAGES_MODE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'require' || 'warn' }}\n        run: bash scripts/check-pages.sh\n\n      - name: Configure GitHub Pages\n        if: github.event_name == 'push' && github.ref == 'refs/heads/main'\n        uses: actions/configure-pages@v6\n\n      - name: Install app dependencies\n        run: npm ci --prefix examples/universal-app --no-audit --no-fund\n\n      - name: Build app\n        run: npm run example:web:build\n        env:\n          GITHUB_PAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}\n          VITE_REPOSITORY_URL: https://github.com/${{ github.repository }}\n\n      - name: Upload web build artifact\n        uses: ./.github/actions/artifact-transport\n        with:\n          name: universal-example-web\n          path: examples/universal-app/dist\n          if-no-files-found: error\n\n      - name: Upload GitHub Pages artifact\n        if: github.event_name == 'push' && github.ref == 'refs/heads/main'\n        uses: ./.github/actions/artifact-transport\n        with:\n          name: github-pages\n          pages: 'true'\n          path: examples/universal-app/dist\n\n  # Requires Settings → Pages → Source = GitHub Actions to be set once\n  # in the repository before this job can succeed. See README → \"Deploying\n  # the example app\". The Pages source cannot be configured from a workflow." to contain "node experiments/issue-7-serve-pages.mjs"
+      at Object.toContain (file:///tmp/gh-issue-solver-1793485446350/node_modules/test-anywhere/src/index.js:566:15)
+      at TestContext.<anonymous> (file:///tmp/gh-issue-solver-1793485446350/tests/speech-pages.test.js:15:17)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at node_modules/test-anywhere/src/index.js:174:12
+✖ rebuilds when speech lab or deployment contract tests change (0.425414ms)
+  Error: Expected 0 to be 2
+      at Object.toBe (file:///tmp/gh-issue-solver-1793485446350/node_modules/test-anywhere/src/index.js:391:15)
+      at TestContext.<anonymous> (file:///tmp/gh-issue-solver-1793485446350/tests/speech-pages.test.js:23:76)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)

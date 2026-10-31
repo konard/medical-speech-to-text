@@ -1,0 +1,47 @@
+initial-checks-41248035557.txt: lines 1-1500
+170: Release Preflight	Probe every release credential	2026-10-31T22:24:28.3257236Z ##[warning]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+initial-checks-41248035557.txt: lines 1501-3000
+2265: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-31T22:25:04.3057365Z ℹ tests 1077
+2267: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-31T22:25:04.3057788Z ℹ pass 1076
+2268: Speech Lab Browser Acceptance	Validate native JavaScript before browser adapters	2026-10-31T22:25:04.3057990Z ℹ fail 0
+initial-checks-41248035557.txt: lines 3001-3109
+initial-security-41248035506.txt: lines 1-1500
+initial-security-41248035506.txt: lines 1501-3000
+initial-security-41248035506.txt: lines 3001-4500
+initial-security-41248035506.txt: lines 4501-6000
+initial-security-41248035506.txt: lines 6001-6291
+main-pages-41128568901.txt: lines 1-1500
+main-pages-41128568901.txt: lines 1501-2228
+2006: Deploy GitHub Pages	UNKNOWN STEP	2026-10-30T21:08:45.8700543Z Evaluated environment url: https://konard.github.io/medical-speech-to-text/
+main-release-41128568954.txt: lines 1-1500
+158: Release Preflight	UNKNOWN STEP	2026-10-30T21:07:19.1952702Z ##[error]release-preflight: npm has no package @link-foundation/example-package-name yet, and npm configures trusted publishing only for published packages. Add an NPM_TOKEN repository secret (a granular token allowed to publish @link-foundation/example-package-name) at https://github.com/konard/medical-speech-to-text/settings/secrets/actions for the first release, then add a trusted publisher for konard/medical-speech-to-text, workflow release.yml, at https://www.npmjs.com/package/@link-foundation/example-package-name/access and delete the secret
+159: Release Preflight	UNKNOWN STEP	2026-10-30T21:07:19.1962356Z ##[error]release-preflight: refusing to release with 1 refused credential(s)
+160: Release Preflight	UNKNOWN STEP	2026-10-30T21:07:19.1967631Z ##[error]Process completed with exit code 1.
+main-release-41128568954.txt: lines 1501-3000
+1850: Speech Lab Browser Acceptance	UNKNOWN STEP	2026-10-30T21:07:53.2512156Z ℹ tests 1077
+1852: Speech Lab Browser Acceptance	UNKNOWN STEP	2026-10-30T21:07:53.2512583Z ℹ pass 1076
+1853: Speech Lab Browser Acceptance	UNKNOWN STEP	2026-10-30T21:07:53.2512805Z ℹ fail 0
+main-release-41128568954.txt: lines 3001-4500
+main-release-41128568954.txt: lines 4501-6000
+main-release-41128568954.txt: lines 6001-7500
+6681: Test runtimes (windows-2025, node)	UNKNOWN STEP	2026-10-30T21:09:02.6668409Z ℹ tests 1077
+6683: Test runtimes (windows-2025, node)	UNKNOWN STEP	2026-10-30T21:09:02.6668641Z ℹ pass 999
+6684: Test runtimes (windows-2025, node)	UNKNOWN STEP	2026-10-30T21:09:02.6668749Z ℹ fail 0
+main-release-41128568954.txt: lines 7501-9000
+8404: Test runtimes (ubuntu-24.04, node)	UNKNOWN STEP	2026-10-30T21:08:30.9496005Z ℹ tests 1077
+8406: Test runtimes (ubuntu-24.04, node)	UNKNOWN STEP	2026-10-30T21:08:30.9496488Z ℹ pass 1076
+8407: Test runtimes (ubuntu-24.04, node)	UNKNOWN STEP	2026-10-30T21:08:30.9496715Z ℹ fail 0
+main-release-41128568954.txt: lines 9001-10500
+main-release-41128568954.txt: lines 10501-12000
+main-release-41128568954.txt: lines 12001-13500
+main-release-41128568954.txt: lines 13501-15000
+main-release-41128568954.txt: lines 15001-16500
+15443: Test runtimes (macos-15, node)	UNKNOWN STEP	2026-10-30T21:09:05.4022830Z ℹ tests 1077
+15445: Test runtimes (macos-15, node)	UNKNOWN STEP	2026-10-30T21:09:05.4023150Z ℹ pass 1076
+15446: Test runtimes (macos-15, node)	UNKNOWN STEP	2026-10-30T21:09:05.4023310Z ℹ fail 0
+main-release-41128568954.txt: lines 16501-18000
+main-release-41128568954.txt: lines 18001-19500
+main-release-41128568954.txt: lines 19501-21000
+main-release-41128568954.txt: lines 21001-21061
+21044: Pipeline Status	UNKNOWN STEP	2026-10-30T21:10:36.0925390Z ##[error]Failing jobs: release-preflight
+21045: Pipeline Status	UNKNOWN STEP	2026-10-30T21:10:36.0937956Z ##[error]Process completed with exit code 1.

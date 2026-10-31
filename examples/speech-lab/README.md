@@ -5,10 +5,9 @@ local SmolLM2 chat. Compare optional references and play audio with word highlig
 [Browser/device research and quality-service protocol](../../docs/case-studies/issue-3/README.md). [Research plan](../../docs/case-studies/issue-1/README.md)
 and [measured results](../../docs/case-studies/issue-1/verification.md).
 
-[Open the online demo](https://raw.githack.com/konard/medical-speech-to-text/issue-3-60721261c8eb/examples/speech-lab/index.html).
-If the source host shows **External Content Notice**, select **Open the page**.
-That host page has its own advertising and connection metadata; its empty
-acknowledgement POST happens before any recordings or references are selected.
+[Open the main medical speech demo](https://konard.github.io/medical-speech-to-text/).
+The Pages workflow publishes this production build after subpath and real-model
+acceptance. See [rollout evidence](../../docs/case-studies/issue-7/README.md).
 Use public/synthetic recordings: the demonstration loads global CDN/model assets
 and is **not an Australian clinical deployment**. Audio inference runs locally;
 an optional quality comparison uploads one recording and its local transcript only
@@ -88,3 +87,10 @@ also works on an HTTPS host with correct JavaScript MIME types and relative path
 global model/runtime delivery needs CORS. For restricted Australian deployment,
 mirror **all** code, WASM, tokenizer and weights in Australian AWS and remove
 external fetch/telemetry paths as described in the architecture.
+
+To test the exact Pages build, run the root-level
+`node experiments/issue-7-serve-pages.mjs` after building, then set
+`SPEECH_LAB_URL=http://127.0.0.1:4175/medical-speech-to-text/` and run
+`npm run test:pages` followed by `npm run test:model` from this directory.
+The first test mocks inference to isolate asset/subpath contracts; the second
+executes the actual models. `PAGES_DEBUG=1` traces local static requests.
