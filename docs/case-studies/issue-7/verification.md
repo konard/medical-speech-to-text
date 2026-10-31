@@ -20,7 +20,18 @@ candidate production bundle. No physical phone or full native app was tested.
 The queue experiment uses a 256 MiB limit and 1024 finite frames, with no model
 execution; its adapter and limits are documented in the requirement inventory.
 
-Final local and hosted results will be recorded here after candidate validation.
+Before the final candidate, native tests passed on Node 26 (1083), Bun (1083)
+and Deno (1082, one explicit network skip). The bounded browser suite passed
+10 tests, with the two existing real-model tests and the external-URL-only Pages
+test explicitly gated; built Pages acceptance passed separately.
+
+An initial Node 24 validation launcher used `npm exec --package=node@24`, which
+propagated `npm_config_package=node@24.22.2` to nested `npx` calls. Three release
+fixture tests then failed by trying to install Node inside their offline fixture.
+[Calibration receipts](data/local-runner-calibration/results.json) and complete
+Node/Bun/Deno logs preserve this tooling failure. The corrected launcher places
+the installed Node 24 binary directly on PATH; it requires no source workaround.
+Final clean-environment local and hosted results will follow candidate validation.
 The 2.92 GiB container cannot safely validate the full speech/chat model set;
 those acceptance assertions remain enforced on the adequately provisioned
 hosted runner rather than reduced locally.
@@ -36,7 +47,10 @@ public endpoint, despite a working and tested production artifact.
 
 Main's separate npm release preflight is still blocked by an unpublished
 placeholder package and no bootstrap credential. Q06's main-CI requirement
-remains unfinished. The explicit main-branch error is retained. An authorized
+remains unfinished. The explicit main-branch error is retained. Fresh
+[secret metadata](data/current-secret-metadata.json) contains no configured
+Actions secrets, and the [current registry response](data/npm-registry-current.json)
+is HTTP 404, independently confirming the unresolved configuration. An authorized
 owner must select/confirm the intended npm identity, establish publish rights
 and first-publication credentials, authorize publication, then configure the
 trusted publisher. PR report-mode success and a successful Pages deployment

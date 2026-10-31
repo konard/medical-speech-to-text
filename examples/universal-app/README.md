@@ -1,8 +1,11 @@
 # Universal Example App
 
 This example turns the package functions in `src/index.js` into a React UI and
-uses the same build output for GitHub Pages, Electron desktop packages, and
+uses the same build output for static web hosting, Electron desktop packages, and
 Capacitor mobile projects.
+
+This repository publishes the medical speech lab at its main Pages URL. The
+workflow retains this calculator as the `universal-example-web` build artifact.
 
 ![Universal example app preview](../../docs/screenshots/example-app/example-app.png)
 
@@ -25,8 +28,8 @@ npm run example:web:preview
 ```
 
 The Vite config uses `./` as the default asset base so the bundle also works
-when loaded by Electron or copied into Capacitor. In GitHub Pages CI,
-`GITHUB_PAGES=true` switches the base path to `/<repository>/`.
+when loaded by Electron or copied into Capacitor. For a separate GitHub Pages
+deployment, `GITHUB_PAGES=true` switches the base path to `/<repository>/`.
 
 ## Desktop
 
@@ -37,7 +40,7 @@ npm run example:desktop:make
 
 `desktop:package` creates a local Electron package under
 `examples/universal-app/out`. `desktop:make` creates distributable artifacts
-for the current platform. The GitHub Pages UI links to the latest GitHub
+for the current platform. The calculator UI links to the latest GitHub
 release so users can download desktop packages once release artifacts are
 published.
 

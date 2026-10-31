@@ -129,7 +129,7 @@ The template includes `examples/universal-app`, a Vite React app that imports
 `add` and `multiply` from `src/index.js` and renders a visual calculator UI.
 The same static build is used by:
 
-- GitHub Pages (`npm run example:web:build`)
+- Static web artifact (`npm run example:web:build`); the main Pages site uses the speech lab
 - Electron desktop packaging (`npm run example:desktop:package`)
 - Capacitor Android/iOS sync (`npm run example:mobile:sync`)
 
